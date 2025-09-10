@@ -1,0 +1,9 @@
+# Hindamine
+
+Et me teaksime, mida sa tead ja oskad, viime alguses läbi lähtetesti, milles on ülesanded suureneva keerukuse järjekorras. Selles testis tuleb sul nii palju ülesandeid lahendada, kui oskad. Vastavalt testi tulemustele kehtestan igale õpilasele individuaalse õpijärje. Sama õpijärjega õpilased hakkavad õppima koos.
+
+Hindan iga õpiväljundi saavutatust õppeprotsessi käigus kohapeal.
+
+Kokkuvõttev hindamine toimub kursuse lõpus testiga, milles on õpilasele ülesanded vaid õpiväljundite kohta, mida ta on seni saavutanud.
+
+Iga õpiväljund on määratud tasemega Bloomi taksonoomia järgi ning kõik hinded kaalutakse selle tasemega.

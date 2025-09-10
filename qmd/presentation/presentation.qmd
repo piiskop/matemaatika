@@ -4,9 +4,8 @@ author:
 bibliography: presentation.bib
 csl: ../../apa-numeric-superscript-brackets.csl
 title: |
-    | Individual experiences with
-    | chlorine dioxide solution
-    | (CDS)
+    | Matemaatiline
+    | analüüs
 output-file: presentation.html
 format:
   revealjs:
@@ -18,7 +17,26 @@ format:
 
 ---
 
-## *Quarto*
+## Nimed
+
+nimede mäng
+
+## Õpetaja
+
+e-portfoolio[@_2025_sissejuhatus]
+
+## Õpiväljundid
+
+skeem[@a2025_matemaatikakitsas3drawio]
+
+## Korraldus
+
+1. Teooria,
+2. väikese variatsiooniga harjutusülesanded,
+3. suure variatsiooniga harjutusülesanded,
+4. test.
+
+## Reeglite ettepanekud
 
 ```{r label="preamble"}
 #' This function displays external graphics by making the appropriate conversion aforehead.
@@ -44,203 +62,81 @@ include_external_graphics = function(path) {
 
 ```
 
-- does not link between files,
-- every presentation is separate,
-- looks so much better than *bookdown*-presentations.
+1. Ole üksi või kahekesi või kolmekesi rühmas!
+2. Mõtle ja kui oled rühmas, arutage omavahel, millised kokkulepped võiksid meil olla, et oleks tõhus õppida.
+3. Kirjuta(ge) oma ettepanekud üles!
 
-What version of *Quarto* do I have[@how]?
+## Reeglite arutelu ja kehtestamine
 
-```
-quarto check
+1. Igast rühmast öeldakse ühekaupa üks reegli ettepanek.
 
-```
+2. Arutame igat ettepanekut ühekaupa konsensuseni või kõrvalejätmiseni.
 
-## Setup
+3. Otsustame, kas kehtestame selle reegli.
 
-1. For every presentation a subfolder inside the subfolder *qmd*.
+4. Kui kehtestame reegli, märgin selle üles.
 
-2. Link to the presentation in *js.js*:
+5. Reeglite komplekti suhtes räägime läbi ja otsustame sanktsiooni(d) ja boonuse(d), mille märgin ka üles.
 
-```
-  let nameOfPresentation = "<name-of-presentation>";
-  createLink(div, "presentation-" + nameOfPresentation, nameOfPresentation + ".html", "<The title of the presentation>");
+6. Reeglite komplekti allkirjastame kõik lepinguks ja igaüks saab oma eksemplari.
 
-```
+## Reeglid
 
-## Preparing for remote controlling
+1. Kui õppepäeval on meil vähemalt kaks õppesessiooni järjest, mängime valikvastustega küsimustega õppemängu 15 minutit.
 
-1. Cloning *multiplex* [@a2023_multiplex].
+2. Vahel vaatame õppeteemaga seotud filmi.
 
-2.  In the *multiplex*'s folder:
+3. Kokkuvõtva hinde testi sooritamisel on lubatud arutada kaasõpilasega ja kasutada oma vihikut, muudes hindelistes testides mitte.
 
-    ```
-    npm install reveal-multiplex
-    
-    ```
-    
-3.  Creating the service:
+4. Tunnis on lubatud süüa ja juua, kui see ei häiri, välja arvatud juhul, kui häirimine on osa õppeprotsessist.
 
-    ```
-    sudo emacs /etc/systemd/system/multiplex.service
-    
-    ```
-    
-4.  Starting the server:
+5. Kalkulaatori kasutamine on lubatud ainult õpetaja loal ja ainult eraldiseisva kalkulaatori kujul (mitte nutitelefonis).
 
-    ```
-    sudo systemctl start multiplex.service
-    
-    ```
+## Hindamine: lähtetest
 
-5. Directing traffic to port 1948 into the server machine.
+1. Lähtetest, et me teaksime, mida sa oskad, tead, mäletad.
 
-## Remote controlling
+2. Lähtetesti tulemuste põhjal individuaalne õpijärg.
 
-1.  Configuring:
+## Õppeprotsess
 
-    ```
-    format:
-  revealjs:
-    multiplex:
-      url: 'http://manual-for-rstudio.tennis24.ee:1948/'
-      secret: "16759825730498538629"
-      socketId: "f3edf0ff0d09982e"
-      
-    ```
+Sama järjega õpilased õpivad koos sammhaaval iga õpiväljundi suunas täites kõik oma lüngad teadmistes-oskustes:
 
-2. Opening the main presentation HyperText Markup Language file for the audience.
+1. Selgitan teooriat.
 
-3. Opening the file with the ending "-speaker.html" for remote controlling.
+2. Väikese variatsiooniga harjutusülesanded.
 
-## Metadata: author
+3. Suure variatsiooniga harjutusülesanded.
 
-```
-    author:
-      - name: <the name of the first author>
-      - name: '<the name of the second author>'
-    <further names if necessary>
+4. Võimalusel testime teooriat praktiliselt.
 
-```
+5. Sulandsortimine.
 
-## Metadata: title
+Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lubatud.
 
-```
-title: |
-    | <first line of the title>
-    | <second line of the title>
+## Hindamine: sulandsortimine
 
-```
+1. Kaks õpilast, kel harjutusülesanded sooritatud, lahendavad üheaegselt sama ülesannet.
 
-## Metadata: output file
+2. Õpilane, kes esitab mulle õige lahendi esimesena, saab maksimaalse hinde selle õpiväljundi saavutatuse kohta. Moodustub kahene edetabel.
 
-```
-    output-file: ../../_book/<the-name-of-the-output-file>.html
+3. Võrreldakse kõiki moodustunud edetabeleid omavahel samamoodi paarikaupa võisteldes, kuni meil on selle õpiväljundi kohta lõplik edetabel.
 
-```
+4. Edetabeli viimane õpilane saab eritoetust, edetabeli esimestelt on mõistlik nõu küsida.
 
-## Metadata: format
+## Hindamine: kokkuvõttev hindamine
 
-```
-    format:
-      revealjs:
-        incremental: true
-        self-contained: true
+- Kursuse lõpus on kokkuvõttev hindamine testiga, milles on ülesanded läbisegi või komplekssena ainult nende õpiväljundite kohta, mille kohta õpilasel juba on hinne.
+- Iga teema kohta on ülesanded vastavalt Bloomi taksonoomiale[@blooms], mille põhjal kaalutakse hinne, mis on määratud vastavalt SOLO taksonoomiale[@a2025_the].
 
-```
+## Lisaõppevara
 
-`incremental: true` displays list items one by one [@quarto]
+- ELMAR REIMERS "MATEMAATILISE ANALÜÜSI PRAKTIKUM I"[@a2025_reimers_matemaatilise_1_ocrpdf],
+- ELMAR REIMERS "MATEMAATILISE ANALÜÜSI PRAKTIKUM II"[@a2025_reimers_matemaatilise_2_ocrpdf],
+- Krista King[@krista],
+- Pauls Online Math Notes[@dawkins_pauls].
 
-`self-contained: false` results with missing files or undated content
-
-## Table
-
-```
-| Product | Price |
-|---------|-----:|
-| SET: NaClO2 Mouth Rinse and HCl Hair Rinse      | 25.00   |
-| DMSO (DIMETHYLSULFOXIDE)     | 24.00  |
-
-: The reagents for making CDS with their prices were bought on 2021/05/04.
-
-```
-
-| Product | Price |
-|---------|-----:|
-| SET: NaClO2 Mouth Rinse and HCl Hair Rinse      | 25.00   |
-| DMSO (DIMETHYLSULFOXIDE)     | 24.00  |
-
-: The reagents for making CDS with their prices were bought on 2021/05/04.
-
-## Figures
-
-With a caption:
-
-```
-![Pillikeel ja lainepikkus.](vibstr1.gif)
-
-```
-
-![Pillikeel ja lainepikkus.](vibstr1.gif)
-
-Without a caption:
-
-```
-![](vibstr1.gif)
-
-```
-
-![](vibstr1.gif)
-
-## Managing external references
-
-A separate BIB-file in the subfolder of the presentation with records like this:
-
-```
-@misc{silent,
-  title = {Silent Teacher},
-  url = {https://silentteacher.toxicode.fr/},
-  urldate = {2022-09-29},
-  organization = {silentteacher.toxicode.fr}
-}
-
-```
-
-In the metadata:
-
-```
-    bibliography: <the-name-of-the-presentation>.bib
-
-```
-
-A reference:
-
-```
-@quarto
-
-```
-
-@quarto
-
-```
-[@quarto]
-
-```
-
-[@quarto]
-
-```
-[@quarto(p. 41)]
-
-```
-
-[@quarto(p. 41)]
-
-## List of references at the end
-
-````
-[<The name of the main site>](/)
-
-## External references
+## Välised allikad
 
 ```{=tex}
 \hyphenpenalty=10000
@@ -248,224 +144,4 @@ A reference:
 
 ```
 
-````
-
-## List
-
-```
--   no instructions:
-
-    - no formulas,
-  
-    - no theorems,
-
--   no explanations
-
-```
-
--   no instructions:
-
-    - no formulas,
-  
-    - no theorems,
-
--   no explanations
-
-## Quantities
-
-- Comma without braces causes a space is not inside braces a space would be added[@a2022_l, lk 146; @a2019_how] (@quantities-incorrect).
-
-    (@quantities-incorrect) An example of incorrect punctuation:
-    
-      :::: {layout="[ 60, 40 ]"}
-      
-      ::: {#quantities-1}
-  
-      ```
-      $$30,0^{\circ} \ne 30^{\circ}$$
-      
-      ```
-      
-      :::
-
-      ::: {#quantities-2}
-      
-      $$30,0^{\circ} \ne 30^{\circ}$$
-      
-      :::
-      
-      ::::
-
-- Comma with braces causes no space (@quantities-correct).
-
-    (@quantities-correct) An example of correct punctuation:
-
-      :::: {layout="[ 60, 40 ]"}
-      
-      ::: {#quantities-3}
-  
-      ```
-      $$30{,}0^{\circ} \ne 30^{\circ}$$
-      
-      ```
-      :::
-
-      ::: {#quantities-4}
-      
-      $$30{,}0^{\circ} \ne 30^{\circ}$$
-      :::
-      
-      ::::
-
-## Columns
-
-Column layout (@columns)[@quarto-block-layout].
-
-(@columns) An example of column layout:
-
-:::: {layout="[50, 50]"}
-
-::: {#columns-1}
-
-```
-:::: {layout="[ 60, 40 ]"}
-
-::: {#columns-3}
-first column
-
-:::
-
-::: {#columns-4}
-second column
-
-:::
-
-::::
-
-```
-
-:::
-
-::: {#columns-2}
-:::: {layout="[ 60, 40 ]"}
-
-::: {#columns-3}
-first column
-
-:::
-
-::: {#columns-4}
-second column
-
-:::
-
-::::
-
-:::
-
-::::
-
-## Translations[@quarto]
-
-- for built-in strings
-
-- file *<2-letter language code>.yml*
-
-- as metadata: `language: <file name>`
-
-## Non-breaking hyphen off
-
-Non-breaking hyphen (@non-breaking-hyphen-false)[@insert].
-
-(@non-breaking-hyphen-false) An example of a breaking hyphen.
-
-:::: {layout="[50, 50]"}
-
-::: {#columns-1}
-
-    ``{r label="fig-f-orbitals-example-hyphen-off", eval=FALSE, fig.cap="Nende olemasolu on oluline d-ploki elementide omaduste mõistmiseks. Tumedam värv tähistab positiivset[@atkins_2010_chemical(lk 30)]."}
-    include_external_graphics("f-orbitaalid.svg")
-
-    ``
-
-:::
-
-::: {#columns-2}
-
-```{r label="fig-f-orbitals-hyphen-off", echo=FALSE, fig.cap="Nende olemasolu on oluline d-ploki elementide omaduste mõistmiseks. Tumedam värv tähistab positiivset[@atkins_2010_chemical(lk 30)]."}
-include_external_graphics("f-orbitaalid.svg")
-
-```
-
-:::
-
-::::
-
-## Non-breaking hyphen on
-
-Non-breaking hyphen (@non-breaking-hyphen-true)[@insert].
-
-(@non-breaking-hyphen-true) An example of a breaking hyphen.
-
-:::: {layout="[50, 50]"}
-
-::: {#columns-1}
-
-    ``{r label="fig-f-orbitals-example-hyphen-on", eval=FALSE, fig.cap="Nende olemasolu on oluline d\u2011ploki elementide omaduste mõistmiseks. Tumedam värv tähistab positiivset[@atkins_2010_chemical(lk 30)]."}
-    include_external_graphics("f-orbitaalid.svg")
-
-    ``
-
-:::
-
-::: {#columns-2}
-
-```{r label="fig-f-orbitals-hyphen-on", echo=FALSE, fig.cap="Nende olemasolu on oluline d\u2011ploki elementide omaduste mõistmiseks. Tumedam värv tähistab positiivset[@atkins_2010_chemical(lk 30)]."}
-include_external_graphics("f-orbitaalid.svg")
-
-```
-
-:::
-
-::::
-
-## Equation
-
-Equation (@equation)[@quarto-equations].
-
-(@equation) An example of an equation.
-
-:::: {layout="[50, 50]"}
-
-::: {#columns-1}
-
-    Keha kiirendus on võrdeline kehale mõjuva jõuga ja pöördvõrdeline keha massiga[@ekoolikottee] (@eq-newton-ii).
-    
-    $$
-    \vec{\bf{a}} = \frac{\vec{\bf{F}}}{m}
-    $${#eq-newton-ii}
-
-:::
-
-::: {#columns-2}
-
-
-Keha kiirendus on võrdeline kehale mõjuva jõuga ja pöördvõrdeline keha massiga[@ekoolikottee] (@eq-newton-ii).
-
-$$
-\vec{\bf{a}} = \frac{\vec{\bf{F}}}{m}
-$${#eq-newton-ii}
-
-:::
-
-::::
-
-## External references
-
-```{=tex}
-\hyphenpenalty=10000
-\fontspec{Symbola}
-
-```
-
-[Manual for RStudio Server](/)
+[Matemaatika](/../../)

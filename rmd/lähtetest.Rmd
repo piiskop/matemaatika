@@ -1,0 +1,1003 @@
+# Lähtetest
+
+<!-- ## Ülesanded -->
+
+```{r label="tasks", echo=FALSE, results='asis'}
+librarian::shelf(c(
+  "profvis"
+))
+# profvis({
+goals <- list(
+  list( # 1
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 2
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 3
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 4
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 5
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 6
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 7
+    goal = "kasutab (igapäevaelu) ülesannete lahendamisel otstarbekat osamäära esitusviisi (protsent, harilik murd, kümnendmurd)",
+    level = 3
+  ),
+  list( # 8
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 9
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 10
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 11
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 12
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 13
+    goal = "ümardab ratsionaalarve etteantud järguni",
+    level = 3
+  ),
+  list( # 14
+    goal = "selgitab naturaalarvulise astendajaga astendamise tähendust",
+    level = 2
+  ),
+  list( # 15
+    goal = "selgitab arvu ruutjuure tähendust",
+    level = 2
+  ),
+  list( # 16
+    goal = "leiab peast või taskuarvutil ruutjuure",
+    level = 3
+  ),
+  list( # 17
+    goal = "põhjendab ja kasutab astendamisreegleid",
+    level = 4
+  ),
+  list( # 18
+    goal = "liidab, lahutab, korrutab, jagab ja astendab naturaalarvulise astendajaga ratsionaalarve peast,
+kirjalikult ja taskuarvutiga ning rakendab tehete järjekorda",
+    level = 4
+  ),
+  list( # 19
+    goal = "lihtsustab kuni kolmetehtelisi täisavaldisi",
+    level = 3
+  ),
+  list( # 20
+    goal = "korrastab üks- ja hulkliikmeid, liidab, lahutab ning korrutab üks- ja hulkliikmeid ning jagab
+üksliikmeid ja hulkliiget üksliikmega",
+    level = 3
+  ),
+  list( # 21
+    goal = "üldistab harilike murdude arvutusreeglid algebralistele murdudele",
+    level = 5
+  ),
+  list( # 22
+    goal = "lihtsustab kahetehtelisi ratsionaalavaldisi",
+    level = 3
+  ),
+  list( # 23
+    goal = "tegurdab hulkliikmeid (toob teguri sulgude ette, kasutab ja põhjendab ruutude vahe, summa
+ruudu ja vahe ruudu abivalemeid, tegurdab ruutkolmliiget)",
+    level = 4
+  ),
+  list( # 24
+    goal = "taandab ja laiendab algebralist murdu ning liidab, lahutab, korrutab ja jagab kaht algebralist
+murdu (D)",
+    level = 3
+  ),
+  list( # 25
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 26
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 27
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 28
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 29
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 30
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 31
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 32
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 33
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 34
+    goal = "nimetab võrrandi põhiomadusi (D)",
+    level = 1
+  ),
+  list( # 35
+    goal = "mõistab ja tunneb ära võrdelise ja pöördvõrdelise seose (nt liikumisel teepikkus, aeg, kiirus) (E)",
+    level = 2
+  ),
+  list( # 36
+    goal = "selgitab eluliste näidete põhjal võrdelise, lineaarse ja pöördvõrdelise sõltuvuse tähendust",
+    level = 2
+  ),
+  list( # 37
+    goal = "lahendab lineaar- ja võrdekujulisi võrrandeid ning lineaarvõrrandisüsteeme kasutades
+võrrandi põhiomadusi (sh graafiliselt ning arvutiprogrammide abil) (C, B)",
+    level = 3
+  ),
+  list( # 38
+    goal = "lahendab täielikke ja mittetäielikke ruutvõrrandeid",
+    level = 3
+  ),
+  list( # 39
+    goal = "koostab ja lahendab tekstülesandeid, mis lahenduvad võrrandi või võrrandisüsteemi abil (sh
+võrdelise jaotamise ülesandeid)",
+    level = 6
+  ),
+  list( # 40
+    goal = "selgitab ruutfunktsiooni nullkohtade ja haripunkti tähendust ja omavahelist seost, leiab need valemist ning jooniselt",
+    level = 3
+  ),
+  list( # 41
+    goal = "joonestab etteantud funktsiooni graafiku (sirge, hüperbooli, parabooli) (nii käsitsi kui ka arvutiprogrammiga) ning loeb graafikult funktsiooni ja argumendi väärtusi",
+    level = 3
+  ),
+  list( # 42
+    goal = "selgitab arvutiga tehtud dünaamilisi jooniseid kasutades funktsiooni graafiku asendi ja kuju sõltuvust funktsiooni avaldises olevatest kordajatest (ruutfunktsiooni korral ainult ruutliikme kordajast ja vabaliikmest)",
+    level = 4
+  ),
+  list( # 43
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 44
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 45
+    goal = "anonüümne",
+    level = 3
+  ),
+  list( # 46
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 47
+    goal = "selgitab oma algebra- ja geomeetriateadmiste elulisi rakendusvõimalusi",
+    level = 2
+  ),
+  list( # 48
+    goal = "teeb midagi",
+    level = 3
+  ),
+  list( # 49
+    goal = "arvutab arvu 10 negatiivse täisarvulise astendajaga astme väärtuse",
+    level = 4
+  ),
+  list( # 50
+    goal = "kirjutab suuri ja väikseid arve standardkujul",
+    level = 4
+  )
+)
+
+tasks <- list(
+  list(
+    goal = 1,
+    level = 1,
+    task = "$$\\mathrm{f}(x)=2x^2+3x-5.$$
+    $$\\mathrm{g}(x)=12-2x.$$
+    $$\\mathrm{f}(1)=\\blank{99}.$$
+    $$\\mathrm{g}(-3)=\\blank{99}.$$
+    $$\\mathrm{f}(\\mathrm{g}(x))=\\blank{999}.$$
+    $$\\mathrm{g}(\\mathrm{f}(x))=\\blank{999}.$$"
+  ),
+  list(
+    goal = 2,
+    level = 3,
+    task = "Joonesta graafik: $\\begin{cases}3x+4y=10\\\\
+    x-y=1\\end{cases}$. \\vspace{0.2\\textheight}"
+  ),
+  list(
+    goal = 3,
+    level = 3,
+    task = "$15,08+103,92=\\blank{999}$."
+  ),
+  list(
+    goal = 4,
+    level = 3,
+    task = "$12,37-8,054=\\blank{999}.$"
+  ),
+  list(
+    goal = 5,
+    level = 3,
+    task = "$0,35 \\times 20,4 = \\blank{999}.$"
+  ),
+  list(
+    goal = 6,
+    level = 3,
+    task = "$8,5:0,1=\\blank{85}.$"
+  ),
+  list(
+    goal = 7,
+    level = 3,
+    task = "$\\frac{3}{5}+\\frac{4}{9}=\\blank{99}.$"
+  ),
+  list(
+    goal = 8,
+    level = 3,
+    task = "$\\frac{5}{6}+\\frac{2}{13}=\\blank{99}.$"
+  ),
+  list(
+    goal = 9,
+    level = 3,
+    task = "$\\frac{\\frac{3}{4}+\\frac{7}{9}}{2}=\\blank{99}.$"
+  ),
+  list(
+    goal = 10,
+    level = 3,
+    task = "$[(3 \\cdot 2+5)2]2-4=\\blank{99}.$"
+  ),
+  list(
+    goal = 11,
+    level = 3,
+    task = "$x^3(x-1)^2(2+x)(2-x)=\\blank{999}.$"
+  ),
+  list(
+    goal = 12,
+    level = 3,
+    task = "$\\frac{x-\\frac{5x}{x+5}}{x+\\frac{5x}{x-5}}=\\blank{999}.$"
+  ),
+  list(
+    goal = 17,
+    level = 3,
+    task = "$70^{-8,4} \\times 7^{4,4}:10^{-2,4}=\\blank{999999}.$"),
+  list(
+    goal = 17,
+    level = 4,
+    task = "Milline väide on tõene?
+  \\begin{itemize}
+    \\item[\\Square] $x^2 \\cdot x^3 = x^6$.
+    \\item[\\Square] $x^2 \\cdot x^4 = x^6$.
+  \\end{itemize}"),
+  list(
+    goal = 17,
+    level = 4,
+    task = "Milline väide on tõene?
+  \\begin{itemize}
+    \\item[\\Square] $b^{10}:b^5=b^2$.
+    \\item[\\Square] $b^{10}:b^8=b^2$.
+  \\end{itemize}"),
+  list(
+    goal = 17,
+    level = 4,
+    task = "$(5^{\\blank{2}})^4 = 5^8.$"),
+  list(
+    goal = 18,
+    level = 4,
+    task = "$-(-4)^0=$
+    \\begin{itemize}
+      \\item{\\Circle} 4.
+      \\item{\\Circle} -4.
+      \\item{\\Circle} -1.
+      \\item{\\Circle} 1.
+    \\end{itemize}"
+  ),
+  list(
+    goal = 20,
+    level = 3,
+    task = "Vali alljärgnevatest avaldistest üksliikme $4x^2 \\cdot (-xy) \\cdot (-y)$ normaalkuju:
+    \\begin{itemize}
+      \\item[\\Circle] $4x^3y^2.$
+      \\item[\\Circle] $4x^2y^2.$
+      \\item[\\Circle] $-4x^3y^2.$
+      \\item[\\Circle] $-4x^2y^2.$
+    \\end{itemize}"
+  ),
+  list(
+    goal = 20,
+    level = 3,
+    task = "$2(a-b)-(3a+b)=$
+    \\begin{itemize}
+      \\item[Square] $1a-1b.$
+      \\item[Square] $-1a-3b.$
+    \\end{itemize}"
+  ),
+  list(goal = 22, level = 3, task = "$-6 + 13+6-20-7=$\\leavevmode\\
+  \\begin{itemize}
+    \\item[\\Square] \\num{-14}.
+    \\item[\\Square] \\num{-13}.
+    \\item[\\Square] \\num{-2}.
+  \\end{itemize}"),
+  list(goal = 22, level = 3, task = "$\\frac{1}{3}-0,5=$\\leavevmode\\
+  \\begin{itemize}
+    \\item[\\Square] $-\\frac{1}{6}$.
+    \\item[\\Square] \\num{-0,2}.
+    \\item[\\Square] \\num{0,2}.
+    \\item[\\Square] $\\frac{1}{6}$.
+  \\end{itemize}"),
+  list(
+    goal = 25,
+    level = 3,
+    task = "$(2x+y)(2x-y)=4x(x-1).$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 26,
+    level = 3,
+    task = "$R=\\frac{a}{1-a}.$\\leavevmode\\
+    $a=\\blank{9}$."
+  ),
+  list(
+    goal = 27,
+    level = 3,
+    task = "$7n+2[3(1-n)-2(1+n)]=14.$\\leavevmode\\
+    $n=\\blank{9}$."
+  ),
+  list(
+    goal = 28,
+    level = 3,
+    task = "$3x^2-41x=-60.$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 29,
+    level = 3,
+    task = "$4x^4+21x^2-18=0.$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 30,
+    level = 3,
+    task = "$\\frac{1}{y}-\\frac{2}{1-y}=\\frac{8}{y^2-y}.$\\leavevmode\\
+    $y=\\blank{9}$."
+  ),
+  list(
+    goal = 31,
+    level = 3,
+    task = "$9^{4+x} \\cdot 81^x=\\frac{1}{3}.$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 32,
+    level = 3,
+    task = "$\\mathrm{log}_2(2+5x)=3.$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 33,
+    level = 3,
+    task = "$\\sqrt{9-7x}+6=10.$\\leavevmode\\
+    $x=\\blank{9}$."
+  ),
+  list(
+    goal = 34,
+    level = 1,
+    task = "Vali võrrandiga $x-5=9$ samaväärne võrrand:
+  \\begin{itemize}
+    \\item[\\Circle] $2x-10=19$.
+    \\item[\\Circle] $x+5=14$.
+    \\item[\\Circle] $x=-9+5$.
+    \\item[\\Circle] $x=5+9$.
+  \\end{itemize}"),
+  list(
+    goal = 34,
+    level = 1,
+    task = "Vai võrrandiga $\\frac{2}{x} = \\frac{7}{3}$ samaväärne võrrand:
+  \\begin{itemize}
+    \\item[\\Circle] $\\frac{3}{x} = \\frac{2}{7}$.
+    \\item[\\Circle] $\\frac{x}{3} = \\frac{7}{2}$.
+    \\item[\\Circle] $2x=7 \\cdot 3$.
+    \\item[\\Circle] $2 \\cdot 3=7x$.
+  \\end{itemize}"),
+  list(
+    goal = 37,
+    level = 3,
+    task = "On antud võrrand $5x+7=x-1$. Milline arv on selle võrrandi lahendiks?
+  \\begin{itemize}
+    \\item[\\Circle] \\num{2}.
+    \\item[\\Circle] \\num{-2}.
+    \\item[\\Circle] \\num{-3}.
+    \\item[\\Circle] \\num{-1}.
+  \\end{itemize}"),
+  list(
+    goal = 37,
+    level = 3,
+    task = "Täida lünk nii, et võrrandi lahend oleks $x=1$:\\leavevmode\\
+    $2x+4=\\blank{7}-x$."
+  ),
+  list(
+    goal = 37,
+    level = 3,
+    task = "Võrrandi $\\frac{5x-2}{5}=x+1$ lahendamisel korrutatakse võrrandi mõlemat poolt arvuga 5:
+    $$\\frac{5x-2}{5}=x+1|\\cdot 5.$$
+    Millise võrrandi saad? Kirjuta lünkadesse sobivad arvud:
+    $$\\blank{5}x-\\blank{2}=\\blank{5}x+5$$.
+    Milline allpool olevatest lausetest esitab saadud võrrandi lahendit?
+  \\begin{itemize}
+    \\item[\\Circle] Võrrandil lahendid puuduvad.
+    \\item[\\Circle] Võrrandi lahend on $x=0$.
+    \\item[\\Circle] Võrrandi lahend on $x=7$.
+    \\item[\\Circle] Võrrandil on lõpmata palju lahendeid..
+  \\end{itemize}"),
+  list(
+    goal = 37,
+    level = 3,
+    task = "Lahenda võrrand $0,5x+4=5$! Võrrandi lahend on
+  \\begin{itemize}
+    \\item[\\Square] $2$.
+    \\item[\\Square] $2x$.
+  \\end{itemize}"),
+  list(
+    goal = 37,
+    level = 3,
+    task = "Lahenda võrrand $7-3y=10$! Võrrandi lahend on
+  \\begin{itemize}
+    \\item[\\Square] $1y$.
+    \\item[\\Square] $1x$.
+    \\item[\\Square] $-1$.
+  \\end{itemize}"),
+  list(
+    goal = 39,
+    level = 6,
+    task = "Loe teksti ja koosta tekstile vastav võrrand:\\leavevmode\\
+    Kolm sõpra Markus, Tõnis ja Karl kulutasid poes taskuvaluutat. Markusel jäi pärast poes käiku valuutat alles \\num{4,5} euro võrra vähem kui Karlil. Karlil jäi valuutat alles kaks korda rohkem kui Tõnisel. Kokku jäi poistel raha alles \\num{49,5} eurot.\\leavevmode\\
+    Koosta võrrand, mis näitab, kui palju valuutat jäi kokku sõpradel alles peale poes käiku, kui Karlil alles jäänud valuuta hulka esitab arv $x$:
+    $$\\underbrace{\\blank{x-4,5}}_\\text{Markus}+\\underbrace{x}_\\text{Karl}+\\underbrace{\\blank{\\frac{x}{4}}}_\\text{Tõnis}=49,5.$$
+    Lahenda saadud võrrand ning kirjuta välja võrrandi lahend!\\leavevmode\\
+    Võrrandi lahend on $x=\\blank{24}$."
+  ),
+  list(
+    goal = 41,
+    level = 3,
+    task = "Uuri tabelit \\@ref(tab:tasks-tables-x-y) ja otsusta, milline võrdus esitab seost muutujate $x$ ja $y$ vahel:
+    \\begin{itemize}
+      \\item[\\Circle] $y=-12x.$
+      \\item[\\Circle] $y=-\\frac{12}{x}.$
+      \\item[\\Circle] $y=\\frac{12}{x}.$
+      \\item[\\Circle] $y=12x.$
+    \\end{itemize}
+    Millises punktis lõikab funktsiooni $y=-2x-5$ graafik $y$-telge?\\leavevmode\\
+    Funktsiooni graafik lõikab $y$-telge punktis (\\blank{0}; \\blank{-5})."
+  ),
+  list(
+    goal = 41,
+    level = 3,
+    task = "Millist seost esitab valem $y=-2x-5$?
+    \\begin{itemize}
+      \\item[\\Circle] Lineaarset seost ehk lineaarfunktsiooni.
+      \\item[\\Circle] Võrdelist seost.
+      \\item[\\Circle] Pöördvõrdelist seost.
+      \\item[\\Circle] Ei esita ühtegi seost..
+    \\end{itemize}"
+  ),
+  list(
+    goal = 42,
+    level = 4,
+    task = "Lineaarfunktsioonide $y=ax-3$ ja $y=4x+3$ graafikud on paralleelsed, kui lineaarliikme kordaja $a=$
+    \\begin{itemize}
+      \\item[\\Square] 3.
+      \\item[\\Square] 4.
+    \\end{itemize}"
+  ),
+  list(
+    goal = 42,
+    level = 4,
+    task = "Joonisel \\@ref(fig:tasks-figures-linear-graphs) on kahe funktsiooni graafikud. Sinine graafik esindab funktsiooni
+    \\begin{itemize}
+      \\item[\\Square] $y=-2x+2$.
+      \\item[\\Square] $y=2x-2$.
+      \\item[\\Square] $y=-2x$.
+      \\item[\\Square] $y=-0,5x$.
+    \\end{itemize}
+    Oranž graafik esindab funktsiooni
+    \\begin{itemize}
+      \\item[\\Square] $y=-2x+2$.
+      \\item[\\Square] $y=2x-2$.
+      \\item[\\Square] $y=-2x$.
+      \\item[\\Square] $y=-0,5x$.
+    \\end{itemize}"
+  ),
+  list(
+    goal = 43,
+    level = 3,
+    task = "Joonesta graafik: $\\mathrm{f}(x) =
+\\begin{cases}
+1, & x \\le 2,\\\\
+-x, & -2 < x \\le 3,\\\\
+4, & x > 3.
+\\end{cases}$ \\vspace{0.2\\textheight}"
+  ),
+  list(
+    goal = 44,
+    level = 3,
+    task = "Joonesta graafik: $\\frac{x}{4}+y=0.$ \\vspace{0.2\\textheight}"
+  ),
+  list(
+    goal = 45,
+    level = 3,
+    task = "Joonesta graafik: $y=x^2-3x.$ \\vspace{0.2\\textheight}"
+  ),
+  list(
+    goal = 46,
+    level = 3,
+    task = "Sul on \\SI{2100}{\\euro}, millest kulutad $\\frac{2}{3}$ ehk \\blank{1400}\\ensuremath{\\thinspace}€."
+  ),
+  list(
+    goal = 48,
+    level = 1,
+    task = "$3+3 \\times (-4) -1=\\blank{-10}$."
+  ),
+  list(
+    goal = 50,
+    level = 4,
+    task = "$0,0001=10^{\\blank{-4}}.$"
+  ),
+  list(
+    goal = 50,
+    level = 4,
+    task = "$100000=10^{\\blank{4}}.$"
+  )
+)
+
+# Putting together all the tasks
+
+tasks <- c(
+  tasks
+)
+
+# print(" tasks ")
+# View(tasks)
+# print(" lõpp tasks ")
+# })
+
+
+
+# Kontrolli, kas tasks sees on kusagil vektor task-väljal
+# probleemsed <- sapply(tasks, function(x) length(x$task) > 1)
+# which(probleemsed) # annab indeksi, kus probleem tekib
+# print(" proble ")
+# print(tasks[probleemsed]) # kuvab täpse probleemi koha
+# print(" lõpp proble ")
+
+dataframe_tasks <- do.call(rbind, lapply(tasks, as.data.frame, stringsAsFactors = FALSE))
+number_goals <- length(goals)
+
+librarian::shelf(c(
+  "dplyr"
+))
+
+number_of_pupils <- 64
+
+goals_in_use <- unique(dataframe_tasks$goal)
+# print(" dataframe_tasks ")
+# print(dataframe_tasks)
+# print(" lõpp dataframe_tasks ")
+number_of_goals_in_use <- length(goals_in_use)
+random_sample_df <- function(df, new_size) { # 64
+  base_size <- floor(new_size / nrow(df))  
+  remaining <- new_size %% nrow(df)
+
+  repeated_df <- df[rep(1:nrow(df), each = base_size), , drop = FALSE]
+
+  extra_rows <- df[sample(1:nrow(df), remaining, replace = FALSE), , drop = FALSE]
+
+  final_df <- rbind(repeated_df, extra_rows)
+  final_df <- final_df[sample(1:nrow(final_df)), , drop = FALSE]
+
+  return(final_df)
+}
+
+number_of_tasks_at_level_per_pupil <- 8 # 8
+# number_of_tasks <- number_of_pupils * number_of_tasks_at_level_per_pupil
+ 
+number_of_tasks <- nrow(dataframe_tasks)
+df_segatud <- dataframe_tasks[sample(number_of_tasks), ]
+arranged_sampled_tasks <- arrange(df_segatud, goal, level)
+# print(" arranged_sampled_tasks ")
+# View(arranged_sampled_tasks)
+# print(" lõpp arranged_sampled_tasks ")
+# })
+
+
+
+# chosen_tasks <- c()
+# # })
+# 
+# 
+# for (index_of_task in 1:number_of_tasks) { # 1-512
+# 
+#   for (index in 1:number_of_goals_in_use) {
+#     tasks_of_goal <- subset(arranged_sampled_tasks, goals_in_use[index] == `goal`)
+#     levels_in_use <- unique(tasks_of_goal$level)
+#     number_of_levels_in_use <- length(levels_in_use)
+#     
+#     for (index_of_level in 1:number_of_levels_in_use) {
+#       tasks_at_level <- subset(tasks_of_goal, levels_in_use[index_of_level] == `level`)
+#       print(" number tasks_at_level ")
+#       print(goals_in_use[index])
+#       print(levels_in_use[index_of_level])
+#       print(nrow(tasks_at_level))
+#       print(" lõpp number tasks_at_level ")
+#       # sampled_tasks_at_level <- random_sample_df(df = tasks_at_level, new_size = number_of_pupils)
+#       if (number_of_tasks_at_level_per_pupil > nrow(tasks_at_level)) {
+#         number_of_chosen_tasks_at_level <- nrow(tasks_at_level)
+#       } else {
+#         number_of_chosen_tasks_at_level <- number_of_tasks_at_level_per_pupil
+#       }
+#       if (length(chosen_tasks) > 0) {
+#         chosen_tasks <- rbind(chosen_tasks, tasks_at_level[1:number_of_chosen_tasks_at_level, ])
+#       } else {
+#         chosen_tasks <- tasks_at_level[1:number_of_chosen_tasks_at_level, ]
+#       }
+#       
+#     }
+#       
+#   }
+#   
+# }
+# print(" unique sampled_tasks ")
+# print(unique(sampled_tasks$task[grep("c\\(", sampled_tasks$task)]))
+# print(" lõpp unique ")
+# probleemsed_taskid <- sampled_tasks[grep("c\\(", sampled_tasks$task), ]
+# print(probleemsed_taskid)
+# print(" täitsa lõpp unique ")
+# sampled_tasks <- arrange(sampled_tasks, goal, level)
+# })
+
+```
+
+
+
+
+## Üks ülesanne õpilase kohta
+
+Vastused sinu soovide ja tausta kohta aitavad sul ja mul paremat selgust saada sinu õppimisprotsessis, et edaspidi tõhusalt edasi liikuda. Palun vasta igale sellisele küsimusele ja täida lüngad jäädes kõigile peale enda ja õpetaja anonüümseks:
+
+Milline on sinu eesmärk seoses Tartu Ülikooliga (TÜ), st miks sa õpid TÜ's?
+
+\vspace{0.1\textheight}
+
+Mida sa oled valmis selle eesmärgi saavutamiseks tegema?
+
+\vspace{0.2\textheight}
+
+Mis sind takistab selle eesmärgi saavutamises?
+
+\vspace{0.2\textheight}"
+
+Kuidas õpetaja saab sind selle eesmärgi saavutamiseks aidata?
+
+\vspace{0.2\textheight}"
+
+Millise hinde sa soovid matemaatikaeksamis saavutada? \blank{A.}
+
+Tänane kuupäev on \blank{2024-4-29}.
+
+Sinu nimi on \blank{peacecop kalmer:}.
+
+Matemaatikaülesannetest palun lahenda ainult nii palju, kui oskad tuginedes iseenda mälule. Nende lahenduste põhjal tekitan sulle individuaalse õpijärje kursuse jaoks. Arutlemine kaastudengitega ja üldse kõrvaliste vahendite, isegi kalkulaatori kasutamine ei ole lubatud, sest see rikuks testi. Et mõistaksin, kuidas sa mõtled, palun näita võimalusel lahenduskäik.
+
+```{r label="list-of-tasks-one-per-pupil", echo=FALSE, results='asis'}
+# profvis({
+
+for (index_of_pupil in 1:number_of_pupils) {
+  cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
+
+  for (index in 1:number_of_goals_in_use) {
+    # print(" index_goals_in_use ")
+    # print(index)
+    # print(" lõpp index_goals_in_use ")
+    cat(paste(
+      "**\\color[hsb]{0.",
+      goals[[goals_in_use[index]]]$level - 1,
+      ", 1, .75}{Õpiväljund:}** Õpilane ",
+      goals[[goals_in_use[index]]]$goal,
+      ".\n\n", 
+      sep = ""
+    ))
+    
+    # tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
+    # levels_in_use <- unique(x = tasks_of_goal$level)
+    # number_of_levels_in_use <- length(levels_in_use)
+
+    for (index_of_levels in 1:6) {
+      tasks_goal_level <- subset(arranged_sampled_tasks, index_of_levels == `level` & goals_in_use[index] == `goal`)
+      number_of_tasks_goal_level <- nrow(tasks_goal_level)
+      if (number_of_tasks_goal_level > 0) {
+        
+        cat(
+          "**",
+          index_of_levels,
+          ". taseme ülesanne:** ",
+          sep = ""
+        )
+      
+        cat(tasks_goal_level[index_of_pupil %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
+      }
+
+      # tasks_at_level <- subset(
+      #   tasks_of_goal,
+      #   levels_in_use[index_of_levels] == `level`
+      # )
+    }
+
+  }
+
+}
+
+# })
+
+```
+
+## Mitu ülesannet õpilase kohta
+
+```{r label="tasks-many-per-pupil", echo=FALSE, results='asis'}
+# profvis({
+# 
+# for (index_of_pupil in 1:number_of_pupils) {
+#   cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
+# 
+#   for (index in 1:number_of_goals_in_use) {
+#     # print(" index_goals_in_use ")
+#     # print(index)
+#     # print(" lõpp index_goals_in_use ")
+#     cat(paste(
+#       "**\\color[hsb]{0.",
+#       goals[[goals_in_use[index]]]$level - 1,
+#       ", 1, .75}{Õpiväljund:}** Õpilane ",
+#       goals[[goals_in_use[index]]]$goal,
+#       ".\n\n", 
+#       sep = ""
+#     ))
+#     
+#     # tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
+#     # levels_in_use <- unique(x = tasks_of_goal$level)
+#     # number_of_levels_in_use <- length(levels_in_use)
+# 
+#     for (index_of_levels in 1:5) {
+#       tasks_goal_level <- subset(arranged_sampled_tasks, index_of_levels == `level` & goals_in_use[index] == `goal`)
+#       number_of_tasks_goal_level <- nrow(tasks_goal_level)
+#       if (number_of_tasks_goal_level > 1) {
+#         
+#         cat(
+#           "**",
+#           index_of_levels,
+#           ". taseme ülesanded:**\n\n",
+#           sep = ""
+#         )
+#       
+#         # cat(tasks_goal_level[index_of_pupil %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
+#       } else if (number_of_tasks_goal_level > 0) {
+#         
+#         cat(
+#           "**",
+#           index_of_levels,
+#           ". taseme ülesanne:** ",
+#           sep = ""
+#         )
+#         
+#       }
+#       
+#       if (number_of_tasks_goal_level > 0) {
+#         max_number_of_tasks <- 8 - 1
+#         # cat("\\begin{enumerate}[label=\\alph*.]\n")
+#         for (index_of_task_goal_level in 0:max_number_of_tasks) {
+#           cat(index_of_pupil, "-", index, "-", index_of_levels, "-", index_of_task_goal_level, ". ", tasks_goal_level[(index_of_pupil + index_of_task_goal_level) %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
+#         }
+#         # cat("\\end{enumerate}\n")
+#       }
+# 
+#       # tasks_at_level <- subset(
+#       #   tasks_of_goal,
+#       #   levels_in_use[index_of_levels] == `level`
+#       # )
+#     }
+# 
+#   }
+# 
+# }
+# })
+# current_pupil <- 1
+# 
+# for (index_of_pupil in 1:number_of_pupils) {
+#   cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
+# 
+#   for (index in 1:number_of_goals_in_use) {
+#     
+#     cat(paste(
+#       "**\\color[hsb]{0.",
+#       goals[[goals_in_use[index]]]$level - 1,
+#       ", 1, 1}{Õpiväljund:}** Õpilane ",
+#       goals[[goals_in_use[index]]]$goal,
+#       ".\n\n", 
+#       sep = ""
+#     ))
+# 
+#     tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
+#     levels_in_use <- unique(x = tasks_of_goal$level)
+#     number_of_levels_in_use <- length(levels_in_use)
+# 
+#     for (index_of_levels in 1:number_of_levels_in_use) {
+#           
+#       cat(
+#         "**",
+#         levels_in_use[index_of_levels],
+#         ". taseme ülesanded:**\n\n ",
+#         sep = ""
+#       )
+# 
+#       tasks_at_level <- subset(
+#         tasks_of_goal,
+#         levels_in_use[index_of_levels] == `level`
+#       )
+#       
+#       number_of_tasks_at_level <- nrow(tasks_at_level)
+#       last_task_for_pupil <- current_pupil + number_of_tasks_at_level_per_pupil - 1
+#       
+#       for (index_of_task in current_pupil:last_task_for_pupil) {
+#         cat(index_of_task, ". ", tasks_at_level[index_of_task, ]$task, "\n\n", sep = "")
+#       }
+#       
+#       current_pupil <- current_pupil + number_of_tasks_at_level_per_pupil
+#     }
+# 
+#   }
+# 
+# }
+
+```
+
+## Tabelid
+
+```{r label="tasks-tables-x-y", echo=FALSE}
+rownames <- c("x", "y"
+              )
+data <- data.frame(
+  c( # 1
+  	-4, # x
+  	3 # y
+  ),
+  c( # 2
+  	2, # x
+  	-6 # y
+  ),
+  c( # 3
+  	3, # x
+  	-4 # y
+  )
+)
+
+data_frame <- data[1]
+for (data_identifier in 2:3) {
+  data_frame <- cbind(data_frame, data[data_identifier])
+}
+
+colnames(data_frame) <- seq(from=1, to=ncol(data_frame))
+rownames(data_frame) <- rownames
+
+table <- print_table(
+  table = data_frame,
+  caption = "Muutujate $x$ ja $y$ väärtused."
+)
+
+table
+
+```
+
+## Joonised
+
+```{r label = "tasks-sector-diagram", echo=FALSE, fig.cap = "Roosioksa talu pererahva maade jaotus."}
+include_external_graphics("rmd/sektor1.png")
+
+```
+
+```{r label = "tasks-discount-book", echo=FALSE, fig.cap = "Allahinnatud raamat."}
+include_external_graphics("rmd/reisijuht.png")
+
+```
+
+```{r label = "tasks-lines-angles", echo=FALSE, fig.cap = "Kahe sirge lõikamisel kolmandaga nurgad."}
+include_external_graphics("rmd/Def2.png")
+
+```
+
+```{r label = "tasks-lines-side-angles", echo=FALSE, fig.cap = "Kahe sirge lõikamisel kolmandaga kõrvunurgad."}
+include_external_graphics("rmd/joon2.png")
+
+```
+
+```{r label = "tasks-lines-top-angles", echo=FALSE, fig.cap = "Kahe sirge lõikamisel kolmandaga tippnurgad."}
+include_external_graphics("rmd/joon4.png")
+
+```
+
+```{r label = "tasks-lines-skewed-angles", echo=FALSE, fig.cap = "Kahe sirge lõikamisel kolmandaga põiknurgad."}
+include_external_graphics("rmd/joon1.png")
+
+```
+
+```{r label = "tasks-lines-close-angles", echo=FALSE, fig.cap = "Kahe sirge lõikamisel kolmandaga lähisnurgad."}
+include_external_graphics("rmd/joon3.png")
+
+```
+
+```{r label = "tasks-triangle-central-line", echo=FALSE, fig.cap = "Kolmnurga teatud lisajoon."}
+include_external_graphics("rmd/DEF3.png")
+
+```
+
+```{r label = "tasks-triangle-gravitational-center", echo=FALSE, fig.cap = "Kolmnurga raskuskese."}
+include_external_graphics("rmd/DEF5.png")
+
+```
+
+```{r label = "tasks-trapecoid-height-triangle", echo=FALSE, fig.cap = "Kolmnurgast ja trapetsist moodustuv kujund."}
+include_external_graphics("rmd/trapets.png")
+
+```
+
+```{r label = "tasks-trapecoid-central-line", echo=FALSE, fig.cap = "Trapets kesklõiguta."}
+include_external_graphics("rmd/trapets_DEF8.png")
+
+```
+
+```{r label = "tasks-trapecoid-diagonal", echo=FALSE, fig.cap = "Trapets diagonaaliga."}
+include_external_graphics("rmd/DEF9.png")
+
+```
+
+```{r label = "tasks-figures-linear-graphs", echo=FALSE, fig.cap = "Lineaarsed graafikud."}
+include_external_graphics("rmd/fun6_joonis.png")
+
+```
+
+```{r label = "tasks-figures-multiangle", echo=FALSE, fig.cap = "Mitme nurgaga kujund."}
+include_external_graphics("rmd/hlkn1_joonis.png")
+
+```
+
+```{r label = "tasks-figures-parallelogram", echo=FALSE, fig.cap = "Rööpkülik."}
+include_external_graphics("rmd/hlkn3_joonis.png")
+
+```
+
+```{r label = "tasks-figures-rhombus", echo=FALSE, fig.cap = "Romb."}
+include_external_graphics("rmd/hlkn5_joonis.png")
+
+```

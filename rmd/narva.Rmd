@@ -1,0 +1,19 @@
+# Matemaatiline analüüs
+
+Funktsioon. Elementaarsed põhifunktsioonid. Liit- ja pöördfunktsioon.
+1	loeng 1	
+Funktsiooni piirväärtus. Funktsiooni pidevus. Pidevate funktsioonide omadused.
+1	loeng 1	
+Tuletise definitsioon. Elementaarsete põhifunktsioonide tuletised. Ilmutamata funktsiooni ja parameetrilisel kujul antud funktsiooni tuletis. Funktsiooni diferentsiaal. Kõrgemat järku tuletised ja diferentsiaalid.
+1	loeng 1	
+Tuletise rakendusi. Taylori valem. Funktsiooni uurimine.
+1	loeng 1	
+Matemaatilise planeerimise ülesanded.
+1	loeng 1	
+Mitme muutuja funktsioonid. Osatuletised.
+1	loeng 1	
+Diferentsiaalvõrrandid ja nende lahendamisvõtted.
+1	loeng 1	
+Maatriksid. Determinandid. Maatriksi astak ja pöördmaatriks. Lineaarsed võrrandisüsteemid ja nende lahendamine. Maatriksi omaväärtused ja omavektorid.
+1	loeng 1	
+Määramata integraal. Määratud integraal. Määratud integraali rakendused.

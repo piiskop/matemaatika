@@ -1,0 +1,59 @@
+# Kokkulepe 8
+
+See kokkulepe siin on sõlmitud Sinimäe Põhikooli 2025. a alguse saanud kaheksanda taseme õpilaste ning fundamentaalsete loodusteaduste ja matemaatika õpetaja vahel sisaldades järgmisi konsensuslikult kokku lepitud reegleid:
+
+1. Kui õppepäeval on meil vähemalt kaks õppesessiooni järjest, mängime valikvastustega küsimustega õppemängu 15 minutit.
+
+2. Vahel vaatame õppeteemaga seotud filmi.
+
+3. Kokkuvõtva hinde testi sooritamisel on lubatud arutada kaasõpilasega ja kasutada oma vihikut, muudes hindelistes testides mitte.
+
+4. Tunnis on lubatud süüa ja juua, kui see ei häiri, välja arvatud juhul, kui häirimine on osa õppeprotsessist.
+
+5. Kalkulaatori kasutamine on lubatud ainult õpetaja loal ja ainult eraldiseisva kalkulaatori kujul (mitte nutitelefonis).
+
+6. Kui õpilane lõpetab kokkuvõtva hinde testi enne testi sooritamiseks ettenähtud aja lõppu, võib ta ülejäänud aja kasutada nutitelefoniga, tingimusel et see ei sega teisi.
+
+7. Kui õpilane tunnis magab, peab ta põhjendama, miks see juhtus, ja leidma lahenduse, et see ei korduks.
+
+8. Kui õpilane rikub korduvalt mõnda reeglit *1*–*7*, peab ta sooritama koheselt 10-minutilise hindelise testi õpitava õpiväljundi kohta.
+
+Kinnitan oma allkirjaga tabelis \@ref(tab:agreement-8) oma nime real, et kohustun vabatahtlikult täielikult järgima selle kokkuleppe kõiki reegleid.
+
+\renewcommand{\arraystretch}{2}
+
+```{r label="agreement-8", echo=FALSE}
+rows <- data.frame(
+  rep(
+    "\\blank{2025-09-05}",
+    10
+  ), # kuupäev
+  rep(
+    "\\blank{peacecop kalmer:}",
+    10
+  ) # allkiri
+)
+
+data_frame <- rows[1]
+for (row_identifier in 2:2) {
+  data_frame <- cbind(data_frame, rows[row_identifier])
+}
+
+colnames(data_frame) <- c("Kuupäev", "Allkiri")  
+
+rownames(data_frame) <- c(names_8, "peacecop kalmer:")
+
+librarian::shelf(c(
+  "dplyr",
+  "kableExtra"
+))
+
+table <- print_table(
+  table = data_frame,
+  caption = "Kokkuleppes osalejate kinnitused."
+) %>% landscape()
+
+table
+
+```
+\renewcommand{\arraystretch}{1}
