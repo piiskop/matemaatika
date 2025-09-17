@@ -236,22 +236,22 @@ tasks <- list(
   list(
     goal = 3,
     level = 3,
-    task = "$15,08+103,92=\\blank{999}$."
+    task = "$\\num{15,08}+\\num{103,92}=\\blank{999}$."
   ),
   list(
     goal = 4,
     level = 3,
-    task = "$12,37-8,054=\\blank{999}.$"
+    task = "$\\num{12,37}-\\num{8,054}=\\blank{999}.$"
   ),
   list(
     goal = 5,
     level = 3,
-    task = "$0,35 \\times 20,4 = \\blank{999}.$"
+    task = "$\\num{0,35} \\times \\num{20,4} = \\blank{999}.$"
   ),
   list(
     goal = 6,
     level = 3,
-    task = "$8,5:0,1=\\blank{85}.$"
+    task = "$\\num{8,5}:\\num{0,1}=\\blank{85}.$"
   ),
   list(
     goal = 7,
@@ -418,7 +418,7 @@ tasks <- list(
   list(
     goal = 34,
     level = 1,
-    task = "Vai võrrandiga $\\frac{2}{x} = \\frac{7}{3}$ samaväärne võrrand:
+    task = "Vali võrrandiga $\\frac{2}{x} = \\frac{7}{3}$ samaväärne võrrand:
   \\begin{itemize}
     \\item[\\Circle] $\\frac{3}{x} = \\frac{2}{7}$.
     \\item[\\Circle] $\\frac{x}{3} = \\frac{7}{2}$.

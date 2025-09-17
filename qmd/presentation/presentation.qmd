@@ -66,32 +66,6 @@ include_external_graphics = function(path) {
 2. Mõtle ja kui oled rühmas, arutage omavahel, millised kokkulepped võiksid meil olla, et oleks tõhus õppida.
 3. Kirjuta(ge) oma ettepanekud üles!
 
-## Reeglite arutelu ja kehtestamine
-
-1. Igast rühmast öeldakse ühekaupa üks reegli ettepanek.
-
-2. Arutame igat ettepanekut ühekaupa konsensuseni või kõrvalejätmiseni.
-
-3. Otsustame, kas kehtestame selle reegli.
-
-4. Kui kehtestame reegli, märgin selle üles.
-
-5. Reeglite komplekti suhtes räägime läbi ja otsustame sanktsiooni(d) ja boonuse(d), mille märgin ka üles.
-
-6. Reeglite komplekti allkirjastame kõik lepinguks ja igaüks saab oma eksemplari.
-
-## Reeglid
-
-1. Kui õppepäeval on meil vähemalt kaks õppesessiooni järjest, mängime valikvastustega küsimustega õppemängu 15 minutit.
-
-2. Vahel vaatame õppeteemaga seotud filmi.
-
-3. Kokkuvõtva hinde testi sooritamisel on lubatud arutada kaasõpilasega ja kasutada oma vihikut, muudes hindelistes testides mitte.
-
-4. Tunnis on lubatud süüa ja juua, kui see ei häiri, välja arvatud juhul, kui häirimine on osa õppeprotsessist.
-
-5. Kalkulaatori kasutamine on lubatud ainult õpetaja loal ja ainult eraldiseisva kalkulaatori kujul (mitte nutitelefonis).
-
 ## Hindamine: lähtetest
 
 1. Lähtetest, et me teaksime, mida sa oskad, tead, mäletad.
@@ -135,6 +109,20 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 - ELMAR REIMERS "MATEMAATILISE ANALÜÜSI PRAKTIKUM II"[@a2025_reimers_matemaatilise_2_ocrpdf],
 - Krista King[@krista],
 - Pauls Online Math Notes[@dawkins_pauls].
+
+## Eelõpiväljundite saavutamine
+
+1. Kirjalik korrutamine.
+
+2. Kirjalik jagamine.
+
+18. Tehete järjekord.
+
+20. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
+
+21. Algebralised osamäärad[@a2021_algebralised], *Algebra*: 1.6: kõik näited, *Algebra ülesanded*: 1.6.
+
+Ülejäänud: *Ruutvõrrand*, *Algebra*: 2.5-2.7, 2.9 kõik näited, inglise keele oskuse korral ka 2.8.
 
 ## Välised allikad
 
