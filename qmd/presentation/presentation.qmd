@@ -9,6 +9,7 @@ title: |
 output-file: presentation.html
 format:
   revealjs:
+    hash: true
     incremental: false
     multiplex:
       url: 'http://manual-for-rstudio.ons.ee:1948/'
@@ -110,19 +111,33 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 - Krista King[@krista],
 - Pauls Online Math Notes[@dawkins_pauls].
 
-## Eelõpiväljundite saavutamine
+## Eelsihtide saavutamine 1 {data-state="eelopiväljundite-saavutamine-1"}
 
-1. Kirjalik korrutamine.
+1. Kirjalik korrutamine ja jagamine.
 
-2. Kirjalik jagamine.
+3\. Liitfunktsioon[@kolk2013, lk 41], *Algebra*: 3.6 (en), *Algebra ülesanded*: 3.6.
 
-18. Tehete järjekord.
+4\. Liitmine[@taskutark2025; @corbett2018].
 
-20. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
+6\. Eksponentvõrrand[@welovemath2024; @moodle2024].
 
-21. Algebralised osamäärad[@a2021_algebralised], *Algebra*: 1.6: kõik näited, *Algebra ülesanded*: 1.6.
+7\. Tehted harilike osamääradega[@lepikult2010; @corbett2018fractions; @corbett2018dividingfractions].
 
-Ülejäänud: *Ruutvõrrand*, *Algebra*: 2.5-2.7, 2.9 kõik näited, inglise keele oskuse korral ka 2.8.
+17\. Astendamise reeglid.
+
+18\. Tehete järjekord[@taskutark2025order; @kutasoftware_order].
+
+## Eelsihtide saavutamine 2
+
+20\. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
+
+24\. Algebralised osamäärad[@a2021_algebralised], *Algebra*: 1.6: kõik näited, *Algebra ülesanded*: 1.6.
+
+37\. Lineaarvõrrand.
+
+38\. *Ruutvõrrand*, *Algebra*: 2.5-2.7, 2.9 kõik näited, inglise keele oskuse korral ka 2.8.
+
+41\. Funktsiooni graafiku tegemine[@afanasjeva2013], *Algebra*: 3.5 (en), *Algebra ülesanded*: 3.5.
 
 ## Välised allikad
 

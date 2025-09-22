@@ -113,9 +113,9 @@ print_table <- function(table, caption, digits = 2, additional_header = NULL, fo
       table,
       bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
       latex_options = c("condensed", "striped", "repeat_header"),
-      repeat_header_text = paste(caption, "$\\textit{(Continued...)}$"),
+      repeat_header_text = paste(caption, "$\\textit{(Jätkub...)}$"),
       repeat_header_method = "replace",
-      repeat_header_continued = TRUE # "Tabel järgneb järgmisel leheküljel..."
+      repeat_header_continued = "Tabel järgneb järgmisel leheküljel..."
     ))
     
     if (!is.null(footnotes)) {
@@ -229,3 +229,4 @@ render_color <- function(color, text) {
 
 # Sissejuhatus {-}
 
+Palun vaata tabelist \@ref(tab:achievements), millises teemas on sinule märgitud *NA*, misjärel suundu [eelõpiväljundite slaidile](http://matemaatika.ons.ee/qmd/presentation/presentation.html#/eelsihtide-saavutamine-1), leia selle teema õppeallikad ja asu õppima! Kui õpiväljundi kohta on märgitud ülaindeks, siis liigu hiirekursoriga sellele, misjärel ilmub modaalaken, kus sees on linke, kuhu vajutada. Kui õpiväljundi kohta pole märgitud ülaindeksit, siis leiad vastava teema faili [Moodle'st](https://moodle.ut.ee/course/section.php?id=247629).
