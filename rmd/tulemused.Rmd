@@ -18,7 +18,8 @@
 
 7. kasutab (igapäevaelu) ülesannete lahendamisel otstarbekat osamäära esitusviisi (protsent, harilik murd, kümnendmurd).
 
-8.
+8. lahendab ühe tundmatuga lineaar-, ruut-, murd- ja lihtsamaid juurvõrrandeid (kuni kaks juurt)
+ning nendeks taanduvaid võrrandeid.
 
 9.
 
@@ -100,40 +101,40 @@ võrrandi põhiomadusi (sh graafiliselt ning arvutiprogrammide abil).
 targets <- 1:41
 
 names <- c(
-	"Daniil Bondar", # ü
-	"Oleksandr Bosiuk", # 20
-	"Alger Bronzov", # 20
-	"Tikhon Cherkay", # 20
-	"Daniil Doronin", # 2
-	"Ksenija Frolova", # ü
-	"Sofja Gubatšjova", # 20
+	"Daniil Bondar", # 
+	"Oleksandr Bosiuk", # 
+	"Alger Bronzov", # 
+	"Tikhon Cherkay", # 
+	"Daniil Doronin", #
+	"Ksenija Frolova", # 
+	"Sofja Gubatšjova", # 
 	"Jelena Ivleva",
 	"Arno Kaseniit",
-	"Oxana Klein", # 21
-	"Hlib Klyha", # 20
-	"Maksym Kotkov", # 2
+	"Oxana Klein", # 
+	"Hlib Klyha", # 
+	"Maksym Kotkov", # 
 	"Ene Kruzman",
 	"Maria Laanemäe",
-	"Jan-Eerik Laende", # 21
+	"Jan-Eerik Laende", # 
 	"Anna Levchenko",
-	"Olesja Makarova", # 2
-	"Egor Mikhaylov", # 21
-	"Sergey Mikheev", # 21
+	"Olesja Makarova", # 
+	"Egor Mikhaylov", # 
+	"Sergey Mikheev", # 
 	"Ruslana Nekrakha",
-	"Irina Nitsenko", # ü
-	"Nikita Norman", # 20
+	"Irina Nitsenko", # 
+	"Nikita Norman", # 
 	"Angelina Pajuni",
 	"Ivan Puzanov",
 	"Uuno Puus",
-	"Azhar Ryskhan", # 20
+	"Azhar Ryskhan", # 
 	"Andrii Shnayder",
 	"Vladislav Smirnov",
-	"Mihhail Startsev", # 20
-	"Semjon Suhhotin", # 20
-	"Arina Šiškova", # 18
-	"Anton Zakharchenko", # 18
-	"Ivanna Zimina", # 2
-	"Marie Tombu", # ü
+	"Mihhail Startsev", # 
+	"Semjon Suhhotin", # 
+	"Arina Šiškova", # 
+	"Anton Zakharchenko", # 
+	"Ivanna Zimina", # 
+	"Marie Tombu", # 
 	"Max Välja"
 )
 
@@ -338,11 +339,11 @@ grades <- data.frame(
   	NA, # Maksym Kotkov
   	NA, # Ene Kruzman
   	NA, # Maria Laanemäe
-  	1, # Jan-Eerik Laende
+  	NA, # Jan-Eerik Laende
   	NA, # Anna Levchenko
   	NA, # Olesja Makarova
   	NA, # Egor Mikhaylov
-  	1, # Sergey Mikheev
+  	NA, # Sergey Mikheev
   	NA, # Ruslana Nekrakha
   	NA, # Irina Nitsenko
   	NA, # Nikita Norman
@@ -357,8 +358,8 @@ grades <- data.frame(
   	NA, # Arina Šiškova
   	NA, # Anton Zakharchenko
   	NA, # Ivanna Zimina
-  	1, # Marie Tombu
-  	1 # Max Välja
+  	NA, # Marie Tombu
+  	NA # Max Välja
   ),
   c( # 7
   	1, # Daniil Bondar
@@ -399,12 +400,12 @@ grades <- data.frame(
   ),
   c( # 8
   	NA, # Daniil Bondar
-  	NA, # Oleksandr Bosiuk
+  	1, # Oleksandr Bosiuk
   	NA, # Alger Bronzov
   	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
   	NA, # Ksenija Frolova
-  	NA, # Sofja Gubatšjova
+  	1, # Sofja Gubatšjova
   	NA, # Jelena Ivleva
   	NA, # Arno Kaseniit
   	NA, # Oxana Klein
@@ -425,13 +426,13 @@ grades <- data.frame(
   	NA, # Uuno Puus
   	NA, # Azhar Ryskhan
   	NA, # Andrii Shnayder
-  	NA, # Vladislav Smirnov
+  	1, # Vladislav Smirnov
   	NA, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
   	NA, # Anton Zakharchenko
   	NA, # Ivanna Zimina
-  	NA, # Marie Tombu
+  	1, # Marie Tombu
   	NA # Max Välja
   ),
   c( # 9
@@ -1661,8 +1662,9 @@ data_frame <- grades[1]
 for (target_identifier in 3:4) {
   data_frame <- cbind(data_frame, grades[target_identifier])
 }
-data_frame <- cbind(data_frame, grades[6])
-data_frame <- cbind(data_frame, grades[7])
+for (target_identifier in 6:8) {
+  data_frame <- cbind(data_frame, grades[target_identifier])
+}
 data_frame <- cbind(data_frame, grades[17])
 data_frame <- cbind(data_frame, grades[18])
 data_frame <- cbind(data_frame, grades[20])
@@ -1671,7 +1673,7 @@ data_frame <- cbind(data_frame, grades[37])
 data_frame <- cbind(data_frame, grades[38])
 data_frame <- cbind(data_frame, grades[41])
 
-colnames(data_frame) <- c(targets[1], targets[3:4], targets[6], targets[7], targets[17], targets[18], targets[20], targets[24], targets[37], targets[38], targets[41])
+colnames(data_frame) <- c(targets[1], targets[3:4], targets[6:8], targets[17], targets[18], targets[20], targets[24], targets[37], targets[38], targets[41])
 
 rownames(data_frame) <- names
 table <- print_table(

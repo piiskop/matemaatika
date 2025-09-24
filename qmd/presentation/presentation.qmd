@@ -111,7 +111,7 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 - Krista King[@krista],
 - Pauls Online Math Notes[@dawkins_pauls].
 
-## Eelsihtide saavutamine 1 {data-state="eelopiväljundite-saavutamine-1"}
+## Eelsihtide saavutamine: 1-17 {data-state="eelopiväljundite-saavutamine-1"}
 
 1. Kirjalik korrutamine ja jagamine.
 
@@ -119,15 +119,17 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 
 4\. Liitmine[@taskutark2025; @corbett2018].
 
-6\. Eksponentvõrrand[@welovemath2024; @moodle2024].
+6\. Eksponent- ja logaritmvõrrand[@welovemath2024; @moodle2024], *Algebra*: 6.3-6.5 (en), *Algebra ülesanded*: 6.3-6.5.
 
 7\. Tehted harilike osamääradega[@lepikult2010; @corbett2018fractions; @corbett2018dividingfractions].
 
+8\. Juurvõrrand[@lepikult2010murdjuur], *Algebra*: 2.10 (en), *Algebra ülesanded*: 2.10.
+
 17\. Astendamise reeglid.
 
-18\. Tehete järjekord[@taskutark2025order; @kutasoftware_order].
+## Eelsihtide saavutamine 18-41
 
-## Eelsihtide saavutamine 2
+18\. Tehete järjekord[@taskutark2025order; @kutasoftware_order].
 
 20\. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
 
