@@ -111,13 +111,15 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 - Krista King[@krista],
 - Pauls Online Math Notes[@dawkins_pauls].
 
-## Eelsihtide saavutamine: 1-17 {data-state="eelopiväljundite-saavutamine-1"}
+## Eelsihtide saavutamine: 1-8 {data-state="eelopiväljundite-saavutamine-1"}
 
 1. Kirjalik korrutamine ja jagamine.
 
-3\. Liitfunktsioon[@kolk2013, lk 41], *Algebra*: 3.6 (en), *Algebra ülesanded*: 3.6.
+2. Tehete järjekord: liitmine, korrutamine, sulud[@taskutark2025order; @kutasoftware_order].
 
-4\. Liitmine[@taskutark2025; @corbett2018].
+3. Liitfunktsioon[@kolk2013, lk 41], *Algebra*: 3.6 (en), *Algebra ülesanded*: 3.6.
+
+4. Liitmine[@taskutark2025; @corbett2018].
 
 6\. Eksponent- ja logaritmvõrrand[@welovemath2024; @moodle2024], *Algebra*: 6.3-6.5 (en), *Algebra ülesanded*: 6.3-6.5.
 
@@ -125,21 +127,33 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 
 8\. Juurvõrrand[@lepikult2010murdjuur], *Algebra*: 2.10 (en), *Algebra ülesanded*: 2.10.
 
+## Eelsihtide saavutamine: 9-37
+
+9\. Osamäära arvutamine[@taskutark2025partofnumber; @maurus2022mat7].
+
 17\. Astendamise reeglid.
 
-## Eelsihtide saavutamine 18-41
-
-18\. Tehete järjekord[@taskutark2025order; @kutasoftware_order].
+18\. Tehete järjekord astendamisega[@real2025; @k5learning_pemdas].
 
 20\. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
 
 24\. Algebralised osamäärad[@a2021_algebralised], *Algebra*: 1.6: kõik näited, *Algebra ülesanded*: 1.6.
 
+34\. Võrrandi põhiomadused[@taskutark2025eqprops].
+
 37\. Lineaarvõrrand.
+
+## Eelsihtide saavutamine: 38-50
 
 38\. *Ruutvõrrand*, *Algebra*: 2.5-2.7, 2.9 kõik näited, inglise keele oskuse korral ka 2.8.
 
+39\. Tekstülesanded[@welovemath2022eqineq; @moodle2024eqsystems].
+
 41\. Funktsiooni graafiku tegemine[@afanasjeva2013], *Algebra*: 3.5 (en), *Algebra ülesanded*: 3.5.
+
+42\. Paralleelsed graafikud.
+
+50\. Standardkuju[@welovemath2024standard].
 
 ## Välised allikad
 

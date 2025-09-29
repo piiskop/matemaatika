@@ -21,7 +21,8 @@
 8. lahendab ühe tundmatuga lineaar-, ruut-, murd- ja lihtsamaid juurvõrrandeid (kuni kaks juurt)
 ning nendeks taanduvaid võrrandeid.
 
-9.
+9. lahendab protsentarvutuse tüüpülesandeid (osa leidmine, terviku leidmine, osamäära
+leidmine, suuruse muutumine).
 
 10.
 
@@ -85,11 +86,30 @@ võrrandi põhiomadusi (sh graafiliselt ning arvutiprogrammide abil).
 
 38. lahendab täielikke ja mittetäielikke ruutvõrrandeid.
 
-39.
+39. koostab ja lahendab tekstülesandeid, mis lahenduvad võrrandi või võrrandisüsteemi abil (sh
+võrdelise jaotamise ülesandeid).
 
 40.
 
 41. joonestab etteantud funktsiooni graafiku (sirge, hüperbooli, parabooli) (nii käsitsi kui ka arvutiprogrammiga) ning loeb graafikult funktsiooni ja argumendi väärtusi.
+
+42. selgitab arvutiga tehtud dünaamilisi jooniseid kasutades funktsiooni graafiku asendi ja kuju sõltuvust funktsiooni avaldises olevatest kordajatest (ruutfunktsiooni korral ainult ruutliikme kordajast ja vabaliikmest).
+
+43.
+
+44.
+
+45.
+
+46.
+
+47.
+
+48.
+
+49.
+
+50. kirjutab suuri ja väikseid arve standardkujul.
 
 ## Saavutatused
 
@@ -98,8 +118,6 @@ võrrandi põhiomadusi (sh graafiliselt ning arvutiprogrammide abil).
 <!-- \begin{landscape} -->
 
 ```{r label="achievements", echo=FALSE}
-targets <- 1:41
-
 names <- c(
 	"Daniil Bondar", # 
 	"Oleksandr Bosiuk", # 
@@ -177,41 +195,41 @@ grades <- data.frame(
   	1 # Max Välja
   ),
   c( # 2
-  	1, # Daniil Bondar
+  	NA, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
-  	1, # Tikhon Cherkay
+  	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	1, # Ksenija Frolova
+  	NA, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
   	1, # Oxana Klein
   	NA, # Hlib Klyha
-  	1, # Maksym Kotkov
+  	NA, # Maksym Kotkov
   	NA, # Ene Kruzman
   	NA, # Maria Laanemäe
   	NA, # Jan-Eerik Laende
   	1, # Anna Levchenko
   	NA, # Olesja Makarova
-  	1, # Egor Mikhaylov
-  	1, # MikhSergey Mikheev
-  	1, # Ruslana Nekrakha
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	1, # Nikita Norman
-  	1, # Angelina Pajuni
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
   	NA, # Ivan Puzanov
   	NA, # Uuno Puus
-  	1, # Azhar Ryskhan
-  	1, # Andrii Shnayder
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
   	1, # Vladislav Smirnov
-  	1, # Mihhail Startsev
-  	1, # Semjon Suhhotin
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
   	NA, # Anton Zakharchenko
   	NA, # Ivanna Zimina
-  	1, # Marie Tombu
-  	1 # Max Välja
+  	NA, # Marie Tombu
+  	NA # Max Välja
   ),
   c( # 3
   	1, # Daniil Bondar
@@ -437,26 +455,26 @@ grades <- data.frame(
   ),
   c( # 9
   	NA, # Daniil Bondar
-  	NA, # Oleksandr Bosiuk
+  	1, # Oleksandr Bosiuk
   	NA, # Alger Bronzov
   	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
   	NA, # Ksenija Frolova
-  	NA, # Sofja Gubatšjova
+  	1, # Sofja Gubatšjova
   	NA, # Jelena Ivleva
   	NA, # Arno Kaseniit
   	NA, # Oxana Klein
   	NA, # Hlib Klyha
-  	NA, # Maksym Kotkov
+  	1, # Maksym Kotkov
   	NA, # Ene Kruzman
   	NA, # Maria Laanemäe
   	NA, # Jan-Eerik Laende
   	NA, # Anna Levchenko
-  	NA, # Olesja Makarova
-  	NA, # Egor Mikhaylov
-  	NA, # MikhSergey Mikheev
+  	1, # Olesja Makarova
+  	1, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
   	NA, # Ruslana Nekrakha
-  	NA, # Irina Nitsenko
+  	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
   	NA, # Ivan Puzanov
@@ -464,11 +482,11 @@ grades <- data.frame(
   	NA, # Azhar Ryskhan
   	NA, # Andrii Shnayder
   	NA, # Vladislav Smirnov
-  	NA, # Mihhail Startsev
+  	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
   	NA, # Anton Zakharchenko
-  	NA, # Ivanna Zimina
+  	1, # Ivanna Zimina
   	NA, # Marie Tombu
   	NA # Max Välja
   ),
@@ -1361,9 +1379,9 @@ grades <- data.frame(
   	NA # Max Välja
   ),
   c( # 34
-  	NA, # Daniil Bondar
-  	NA, # Oleksandr Bosiuk
-  	NA, # Alger Bronzov
+  	1, # Daniil Bondar
+  	1, # Oleksandr Bosiuk
+  	1, # Alger Bronzov
   	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
   	NA, # Ksenija Frolova
@@ -1372,29 +1390,29 @@ grades <- data.frame(
   	NA, # Arno Kaseniit
   	NA, # Oxana Klein
   	NA, # Hlib Klyha
-  	NA, # Maksym Kotkov
+  	1, # Maksym Kotkov
   	NA, # Ene Kruzman
   	NA, # Maria Laanemäe
   	NA, # Jan-Eerik Laende
-  	NA, # Anna Levchenko
-  	NA, # Olesja Makarova
-  	NA, # Egor Mikhaylov
-  	NA, # MikhSergey Mikheev
+  	1, # Anna Levchenko
+  	1, # Olesja Makarova
+  	1, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
   	NA, # Ruslana Nekrakha
-  	NA, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Irina Nitsenko
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	NA, # Azhar Ryskhan
   	NA, # Andrii Shnayder
-  	NA, # Vladislav Smirnov
-  	NA, # Mihhail Startsev
+  	1, # Vladislav Smirnov
+  	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
-  	NA, # Ivanna Zimina
-  	NA, # Marie Tombu
+  	1, # Arina Šiškova
+  	1, # Anton Zakharchenko
+  	1, # Ivanna Zimina
+  	1, # Marie Tombu
   	NA # Max Välja
   ),
   c( # 35
@@ -1547,7 +1565,7 @@ grades <- data.frame(
   ),
   c( # 39
   	NA, # Daniil Bondar
-  	NA, # Oleksandr Bosiuk
+  	1, # Oleksandr Bosiuk
   	NA, # Alger Bronzov
   	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
@@ -1566,7 +1584,7 @@ grades <- data.frame(
   	NA, # Egor Mikhaylov
   	NA, # MikhSergey Mikheev
   	NA, # Ruslana Nekrakha
-  	NA, # Irina Nitsenko
+  	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
   	NA, # Ivan Puzanov
@@ -1579,7 +1597,7 @@ grades <- data.frame(
   	NA, # Arina Šiškova
   	NA, # Anton Zakharchenko
   	NA, # Ivanna Zimina
-  	NA, # Marie Tombu
+  	1, # Marie Tombu
   	NA # Max Välja
   ),
   c( # 40
@@ -1622,10 +1640,47 @@ grades <- data.frame(
   c( # 41
   	NA, # Daniil Bondar
   	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 42
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	NA, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	1, # Ksenija Frolova
+  	NA, # Ksenija Frolova
   	NA, # Sofja Gubatšjova
   	NA, # Jelena Ivleva
   	NA, # Arno Kaseniit
@@ -1638,9 +1693,305 @@ grades <- data.frame(
   	1, # Anna Levchenko
   	1, # Olesja Makarova
   	NA, # Egor Mikhaylov
-  	NA, # MikhSergey Mikheev
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	1, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	1, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	1, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 43
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
   	NA, # Ruslana Nekrakha
   	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 44
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 45
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 46
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 47
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 48
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 49
+  	NA, # Daniil Bondar
+  	NA, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	NA, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	NA, # Jan-Eerik Laende
+  	NA, # Anna Levchenko
+  	NA, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	NA, # Irina Nitsenko
+  	NA, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	NA, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	NA, # Azhar Ryskhan
+  	NA, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	NA, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	NA, # Anton Zakharchenko
+  	NA, # Ivanna Zimina
+  	NA, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 50
+  	NA, # Daniil Bondar
+  	1, # Oleksandr Bosiuk
+  	NA, # Alger Bronzov
+  	NA, # Tikhon Cherkay
+  	NA, # Daniil Doronin
+  	NA, # Ksenija Frolova
+  	1, # Sofja Gubatšjova
+  	NA, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	NA, # Oxana Klein
+  	NA, # Hlib Klyha
+  	NA, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	1, # Jan-Eerik Laende
+  	1, # Anna Levchenko
+  	1, # Olesja Makarova
+  	NA, # Egor Mikhaylov
+  	NA, # Sergey Mikheev
+  	NA, # Ruslana Nekrakha
+  	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
   	NA, # Ivan Puzanov
@@ -1650,30 +2001,38 @@ grades <- data.frame(
   	1, # Vladislav Smirnov
   	NA, # Mihhail Startsev
   	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Arina Šiškova
+  	1, # Anton Zakharchenko
   	NA, # Ivanna Zimina
-  	1, # Marie Tombu
+  	NA, # Marie Tombu
   	NA # Max Välja
   )
+
+)
+
+included_goals <- c(
+  3,
+  4,
+  6:9,
+  17,
+  18,
+  20,
+  24,
+  34,
+  37,
+  38,
+  39,
+  41,
+  42,
+  50
 )
 
 data_frame <- grades[1]
-for (target_identifier in 3:4) {
-  data_frame <- cbind(data_frame, grades[target_identifier])
+for (goal_identifier in included_goals) {
+  data_frame <- cbind(data_frame, grades[goal_identifier])
 }
-for (target_identifier in 6:8) {
-  data_frame <- cbind(data_frame, grades[target_identifier])
-}
-data_frame <- cbind(data_frame, grades[17])
-data_frame <- cbind(data_frame, grades[18])
-data_frame <- cbind(data_frame, grades[20])
-data_frame <- cbind(data_frame, grades[24])
-data_frame <- cbind(data_frame, grades[37])
-data_frame <- cbind(data_frame, grades[38])
-data_frame <- cbind(data_frame, grades[41])
 
-colnames(data_frame) <- c(targets[1], targets[3:4], targets[6:8], targets[17], targets[18], targets[20], targets[24], targets[37], targets[38], targets[41])
+colnames(data_frame) <- c(1, included_goals)
 
 rownames(data_frame) <- names
 table <- print_table(
