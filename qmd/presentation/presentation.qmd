@@ -15,6 +15,10 @@ format:
       url: 'http://manual-for-rstudio.ons.ee:1948/'
       secret: "16759825730498538629"
       socketId: "f3edf0ff0d09982e"
+language: et.yml
+crossref: 
+  exm-prefix: näide
+  exm-title: Näide
 
 ---
 
@@ -154,6 +158,22 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 42\. Paralleelsed graafikud.
 
 50\. Standardkuju[@welovemath2024standard].
+
+## Suhe
+
+suhe
+: järjestatud paaride hulk (@exm-relation).
+
+::: {#exm-relation}
+$$\{(-2; 5); (-1; 0); (2; -3)\}.$$
+:::
+
+## Graafiku näide
+
+::: {#exm-graph}
+$$.$$
+:::
+
 
 ## Välised allikad
 
