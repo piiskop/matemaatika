@@ -19,6 +19,8 @@ language: et.yml
 crossref: 
   exm-prefix: näide
   exm-title: Näide
+  exr-prefix: ülesanne
+  exr-title: Ülesanne
 
 ---
 
@@ -161,7 +163,7 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 
 ## Suhe
 
-suhe
+Suhe
 : järjestatud paaride hulk (@exm-relation).
 
 ::: {#exm-relation}
@@ -171,9 +173,202 @@ $$\{(-2; 5); (-1; 0); (2; -3)\}.$$
 ## Graafiku näide
 
 ::: {#exm-graph}
-$$.$$
+$$y=(x-1)^2-4.$$
+$$\{(-2; 5); (-1; 0); (0; -3); (1; -4); (2; -3); (3; 0); (4; 5)\}.$$
+$$\{(-1; 0); (0; -3);(2; -3); (3; 0); (4; 5)\}.$$
+$$\{(3; 0); (4; 5)\}.$$
 :::
 
+## Funktsioon
+
+Funktsioon
+: seos, mille korral järjestatud paaride esimeste komponentide hulga iga väärtus on seotud väärtusega järjestatud paaride teiste komponentide hulgas (@exm-function).
+
+::: {#exm-function}
+$$\{(-1; 0); (0; -3); (2; -3); (3; 0); (4; 5)\}.$$
+:::
+
+## Komponendid funktioonis
+
+Näites @exm-function:
+
+$X$
+: esimesed komponendid,
+
+$Y$
+: teised komponendid.
+
+:::{#exm-function-components}
+$$X =\{(-1; 0; 2; 3; 4)\}.$$
+$$Y=\{ (0; -3; 0; 5)\}.$$
+:::
+
+## Ühene funktsioon
+
+Ühene funktsioon
+: seos, mille korral järjestatud paaride esimeste komponentide hulga iga väärtus on seotud täpselt ühe väärtusega järjestatud paaride teiste komponentide hulgas.
+
+## Mitmene funktsioon[@a2025_reimers_matemaatilise_1_ocrpdf(lk 20)]
+
+Näites @exm-not-function esitatud seos on mitmene funktsioon.
+
+::: {#exm-not-function}
+$$\{(6; 10); (-7; 3); (0; 4); (6; -4)\}.$$
+$$X =\{(6; -7; 0)\}.$$
+$$Y=\{ (10; 3; 4; -4)\}.$$
+:::
+
+## Funktsiooni tüüp: ülesanded
+
+Kas ühene või mitmene funktsioon (@exr-determining-weather-function-1 kuni @exr-determining-weather-function-3)?
+
+::: {#exr-determining-weather-function-1}
+$$y=5x+1.$$
+:::
+
+::: {#exr-determining-weather-function-2}
+$$y=x^2+1.$$
+:::
+
+::: {#exr-determining-weather-function-3}
+$$y^2=x+1.$$
+:::
+
+## Funktsiooni tüüp: lahendused
+
+Seosed @exr-determining-weather-function-1 ja @exr-determining-weather-function-2 on ühesed funktsioonid, sest igale $x$'i väärtusele vastab täpselt üks $y$'i väärtus.
+
+Seos @exr-determining-weather-function-3 on mitmene funktsioon, sest kui $x \neq 0$, siis igale $x$'i väärtusele vastab kaks $y$'i väärtust.
+
+## Funktsiooni tähistamine
+
+Funktsiooni võib tähistada muutujaga (@exm-function-notation-with-variable) või nimetusega(@exm-function-notation-with-designation).
+
+::: {#exm-function-notation-with-variable}
+$$y=(x-1)^2-4.$$
+:::
+
+::: {#exm-function-notation-with-designation}
+$$\mathrm{f}(x)=(x-1)^2-4.$$
+:::
+
+## Funktsiooni tähistuse vea vältimine
+
+Funktsiooni nimi ei ole muutuja (@exm-function-designation-not-variable).
+
+::: {#exm-function-designation-not-variable}
+$$\mathrm{f}(x) \neq f \cdot x.$$
+:::
+
+## Funktsiooni väärtustamine
+
+Funktsiooni väärtustamiseks asendatakse muutuja konkreetse arvuga (@exm-function-evaluation).
+
+:::{#exm-function-evaluation}
+$$\mathrm{f}(x)=(x-1)^2-4 \rightarrow \mathrm{f}(4)=(4-1)^2-4=5.$$
+:::
+
+## Väärtustamine: ülesanded
+
+$$\mathrm{f}(x)=x^2-2x+8 \land \mathrm{g}(x)=\sqrt{x+6} \rightarrow$$
+
+::: {#exr-function-evaluation-1}
+$$\mathrm{f}(3)=\ldots.$$
+:::
+
+::: {#exr-function-evaluation-2}
+$$\mathrm{g}(3)=\ldots.$$
+:::
+
+::: {#exr-function-evaluation-3}
+$$\mathrm{f}(0)=\ldots.$$
+:::
+
+## Väärtustamine: lahendused
+
+$$\mathrm{f}(x)=x^2-2x+8 \land \mathrm{g}(x)=\sqrt{x+6} \rightarrow$$
+
+$$\mathrm{f}(3)=3^2-2 \times 3+8=11,$$
+$$\mathrm{g}(3)=\sqrt{3+6}=3,$$
+$$\mathrm{f}(0)=0^2-2 \times 0 +8 = 8.$$
+
+## Intervallfunktsioon
+
+Intervallfunktsiooni väärtus sõltub sisendile seatud tingimusest (@exm-piecewise-function).
+
+::: {#exm-piecewise-function}
+$$\mathrm{f}(x)=\begin{cases}
+  x \geq 0 \rightarrow x\\
+  x < 0 \rightarrow -x
+\end{cases}.$$
+:::
+
+## Intervallfunktsioon: ülesanne
+
+$$\mathrm{g}(t)=\begin{cases}
+  t \leq -4 \rightarrow 3t^2+4\\
+  -4 < t \leq 15 \rightarrow 10\\
+  t > 15 \rightarrow 1-6t
+\end{cases} \rightarrow$$
+
+::: {#exr-pieacewise-function-1}
+$$\mathrm{g}(-6)=\ldots.$$
+:::
+
+::: {#exr-pieacewise-function-2}
+$$\mathrm{g}(1)=\ldots.$$
+:::
+
+## Intervallfunktsioon: lahendused
+
+$$\mathrm{g}(t)=\begin{cases}
+  t \leq -4 \rightarrow 3t^2+4\\
+  -4 < t \leq 15 \rightarrow 10\\
+  t > 15 \rightarrow 1-6t
+\end{cases} \rightarrow$$
+
+$$\mathrm{g}(-6)=3 \cdot (-6)^2+4=112,$$
+$$\mathrm{g}(1)=10.$$
+
+## Määramispiirkond
+
+Valemi määramispiirkond
+: kõikide selle valemi sisendite hulk.
+
+## Määramispiirkond: ülesanded
+
+Määra ülesannetes @exr-domain-1 ja @exr-domain-2 esitatud funktsiooni määramispiirkond $X$!
+
+::: {#exr-domain-1}
+$$\mathrm{g}(x)=\frac{x+3}{x^2+3x-10} \rightarrow X=\ldots.$$
+:::
+
+::: {#exr-domain-2}
+$$\mathrm{h}(x)=\frac{\sqrt{7x+8}}{x^2+4} \rightarrow X=\ldots.$$
+:::
+
+## Määramispiirkond: lahendused
+
+$$\mathrm{g}(x)=\frac{x+3}{x^2+3x-10} \rightarrow X=\mathbb{C} \setminus{\{2; -5\}} ,$$
+
+$$\mathrm{h}(x)=\frac{\sqrt{7x+8}}{x^2+4} \rightarrow X=\mathbb{C}.$$
+
+## Muutumispiirkond
+
+Valemi muutumispiirkond
+: kõikide selle valemi väljundite hulk.
+
+## Funktsioon: iseseisev harjutamine
+
+Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.4[@dawkins2022algebra(lk 30-31)]:
+
+1-6: Kas funktsioon on ühene või mitmene?
+
+7-11: Väärtusta funktsioon!
+
+12-13: Arvuta avaldise väärtus!
+
+14-18: Määra määramispiirkond!
 
 ## Välised allikad
 
