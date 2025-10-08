@@ -200,7 +200,7 @@ $Y$
 
 :::{#exm-function-components}
 $$X =\{(-1; 0; 2; 3; 4)\}.$$
-$$Y=\{ (0; -3; 0; 5)\}.$$
+$$Y=\{ (0; -3; 5)\}.$$
 :::
 
 ## Ühene funktsioon
@@ -238,7 +238,7 @@ $$y^2=x+1.$$
 
 Seosed @exr-determining-weather-function-1 ja @exr-determining-weather-function-2 on ühesed funktsioonid, sest igale $x$'i väärtusele vastab täpselt üks $y$'i väärtus.
 
-Seos @exr-determining-weather-function-3 on mitmene funktsioon, sest kui $x \neq 0$, siis igale $x$'i väärtusele vastab kaks $y$'i väärtust.
+Seos @exr-determining-weather-function-3 on mitmene funktsioon, sest kui $x \neq -1$, siis igale $x$'i väärtusele vastab kaks $y$'i väärtust.
 
 ## Funktsiooni tähistamine
 
@@ -369,6 +369,16 @@ Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.4[@dawkin
 12-13: Arvuta avaldise väärtus!
 
 14-18: Määra määramispiirkond!
+
+## Pöördfunktsioon
+
+Reegel on esitatud valemiga @eq-inverse-function.
+
+$$\mathrm{f}(\mathrm{g}(x)) = x \land \mathrm{g}(\mathrm{f}(x)) = x \rightarrow \mathrm{f}(x) = \mathrm{g}^{-1}(x) \land \mathrm{g}(x) = \mathrm{f}(x).$${#eq-inverse-function}
+
+Pöördfunktsioon ei ole pöördväärtus (@eq-inverse-function-not-reciprocal)!
+
+$$\mathrm{f}^{-1}(x) \neq \frac{1}{\mathrm{f}(x)}.$${#eq-inverse-function-not-reciprocal}
 
 ## Välised allikad
 
