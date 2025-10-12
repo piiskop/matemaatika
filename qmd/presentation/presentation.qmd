@@ -374,11 +374,329 @@ Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.4[@dawkin
 
 Reegel on esitatud valemiga @eq-inverse-function.
 
-$$\mathrm{f}(\mathrm{g}(x)) = x \land \mathrm{g}(\mathrm{f}(x)) = x \rightarrow \mathrm{f}(x) = \mathrm{g}^{-1}(x) \land \mathrm{g}(x) = \mathrm{f}(x).$${#eq-inverse-function}
+$$\mathrm{f}(\mathrm{g}(x)) = x \land \mathrm{g}(\mathrm{f}(x)) = x \rightarrow \mathrm{f}(x) = \mathrm{g}^{-1}(x) \land \mathrm{g}(x) = \mathrm{f}^{-1}(x).$${#eq-inverse-function}
 
 Pöördfunktsioon ei ole pöördväärtus (@eq-inverse-function-not-reciprocal)!
 
 $$\mathrm{f}^{-1}(x) \neq \frac{1}{\mathrm{f}(x)}.$${#eq-inverse-function-not-reciprocal}
+
+## Pöördfunktsiooni arvutamine 1-2
+
+$$\mathrm{f}(x) = x + 1.$$
+
+1.  Vaheta kõikjal omavahel sisend ja väljund (@exm-inverting-function-replacing)!
+    
+    ::: {#exm-inverting-function-replacing}
+    $$x = \mathrm{f}(x) + 1.$$
+    :::
+
+2.  Lahenda võrrand uue tundmatu suhtes (@exm-inverting-function-solving)!
+    
+    ::: {#exm-inverting-function-solving}
+    $$\mathrm{f}(x) = x - 1.$$
+    :::
+
+## Pöördfunktsiooni arvutamine 3-4
+
+3.  Asenda väljund pöördväljundiga (@exm-inverting-function-designating)!
+    
+    ::: {#exm-inverting-function-designating}
+    $$\mathrm{f}^{-1}(x) = x - 1.$$
+    :::
+
+4.  Kontrolli, et funktsiooni ja pöördfunktsiooni liitfunktsioon võrduks sisendiga kumbagi pidi (@exm-inverting-function-checking)!
+    
+    ::: {#exm-inverting-function-checking}
+    $$\mathrm{f}^{-1}(\mathrm{f}(x)) = (x + 1) - 1 = x.$$
+    $$\mathrm{f}(\mathrm{f}^{-1}(x)) = (x - 1) + 1 = x.$$
+    :::
+
+## Pöördfunktsioon: ülesanded (@exr-inverting-function-1 kuni @exr-inverting-function-3)
+
+::: {#exr-inverting-function-1}
+$$\mathrm{f}(x) = 3 \cdot x - 2 \rightarrow \mathrm{f}^{-1}(x) = \ldots.$$
+:::
+
+::: {#exr-inverting-function-2}
+$$\mathrm{g}(x) = \sqrt{x - 3} \land x \geq 0 \rightarrow \mathrm{g}^{-1}(x) = \ldots.$$
+:::
+
+::: {#exr-inverting-function-3}
+$$\mathrm{h}(x) = \frac{x+4}{2 \cdot x - 5} \rightarrow \mathrm{h}^{-1}(x) = \ldots.$$
+:::
+
+## Pöördfunktsioon: lahendus 1
+
+$$\mathrm{f}(x) = 3 \cdot x - 2 \rightarrow x = 3 \cdot \mathrm{f}^{-1}(x) - 2$$
+
+$$3 \cdot \mathrm{f}^{-1}(x) = x + 2 \Rightarrow \mathrm{f}^{-1}(x) = \frac{x + 2}{3}.$$
+
+Kontroll:
+
+$$\mathrm{f}(\mathrm{f}^{-1}(x)) = 3 \cdot \frac{x + 2}{3} - 2 = x.$$
+
+$$\mathrm{f}^{-1}(\mathrm{f}(x)) = \frac{(3 \cdot x - 2) + 2}{3} = x.$$
+
+## Pöördfunktsioon: graafik 1
+
+```{r label="inverse-function-graph-1", fig.cap="Funktsiooni $\\mathrm{f}(x)=3x-2$ ja selle pöördfunktsiooni $\\mathrm{f}^{-1}(x)=\\dfrac{x+2}{3}$ graafik."}
+
+library(ggplot2)
+library(grid)
+
+# f ja f^{-1}
+f    <- function(x) 3*x - 2
+finv <- function(x) (x + 2)/3
+
+xs     <- seq(-2, 5, by = 0.01)
+df     <- data.frame(x = xs, y = f(xs))
+df_inv <- data.frame(x = xs, y = finv(xs))
+
+xticks <- seq(-2, 5, by = 1)
+yticks <- seq(-2, 8, by = 1)
+
+ggplot(df, aes(x, y)) +
+  # Ruudustik
+  geom_hline(yintercept = yticks, linewidth = 0.3, color = "gray85") +
+  geom_vline(xintercept = xticks, linewidth = 0.3, color = "gray85") +
+  # Sümmeetriajoon y=x
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", linewidth = 0.4, color = "gray60") +
+  # f(x)
+  geom_line(linewidth = 1) +
+  # f^{-1}(x)
+  geom_line(data = df_inv, linewidth = 1, linetype = "longdash") +
+  # Teljed nooltega
+  geom_segment(aes(x = min(xs), xend = max(xs), y = 0, yend = 0),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+  geom_segment(aes(x = 0, xend = 0, y = min(yticks), yend = max(yticks)),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+  # Teljemärgised: x (kursiivis) ja y (kursiivis)
+  annotate("text", x = max(xs) - 0.1, y = 0.25,
+           label = "italic(x)", parse = TRUE,
+           hjust = 1, vjust = 0.5, size = 4) +
+  annotate(
+    "text",
+    x = 0.18, y = max(yticks) + 0.35,
+    label = "plain('f')*'('*italic(x)*')'",
+    parse = TRUE,
+    hjust = 0, vjust = 2, size = 4
+  ) +
+  annotate(
+    "text",
+    x = 0.18, y = max(yticks) + 0.05,
+    label = "plain('f')^{-1}*'('*italic(x)*')'",
+    parse = TRUE,
+    hjust = 0, vjust = 2, size = 4
+  ) +
+  # Joonte sildid otse joonel: f(x) (f püstine, x kursiivis) ja f^{-1}(x)
+  annotate("text", x = 2.0, y = f(3.0) + 0.35,
+           label = "plain('f')*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 0, size = 4) +
+  annotate("text", x = 4.0, y = finv(5.0) + 0.35,
+           label = "plain('f')^{-1}*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 0, size = 4) +
+  # Skaala: y-sildid telje kõrval, x-sildid telje all
+  geom_text(data = data.frame(y = yticks),
+            aes(x = 0, y = y, label = y),
+            inherit.aes = FALSE, hjust = 1.2, vjust = 0.35, size = 3.5) +
+  geom_text(data = data.frame(x = xticks),
+            aes(x = x, y = 0, label = x),
+            inherit.aes = FALSE, vjust = 1.5, size = 3.5) +
+  # Proportsioon, vahemikud, klipp välja (et y-silt mahuks)
+  coord_fixed(ratio = 1, xlim = c(-2, 5), ylim = c(-2, 8), expand = FALSE, clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 24, 14, 24))
+
+```
+
+## Pöördfunktsioon: lahendus 2
+
+$$\mathrm{g}(x) = \sqrt{x - 3} \land x \geq 0 \rightarrow$$
+
+$$x = \sqrt{\mathrm{g}^{-1}(x) - 3}$$
+
+$$x^2 = \mathrm{g}^{-1}(x) - 3 \Rightarrow \mathrm{g}^{-1}(x) = x^2 + 3.$$
+
+Kontroll:
+
+$$x \geq 0 \rightarrow \mathrm{g}(\mathrm{g}^{-1}(x)) = \sqrt{(x^2 + 3) - 3} = x.$$
+
+$$x \geq 0 \rightarrow \mathrm{g}^{-1}(\mathrm{g}(x)) = (\sqrt{x - 3})^2 + 3 = x.$$
+
+## Pöördfunktsioon: graafik 2
+
+```{r label="inverse-function-graph-2", fig.cap="Funktsiooni $\\sqrt{x - 3}$ ja selle pöördfunktsiooni $x^2 + 3 \\land x \\geq 0$ graafik."}
+
+library(ggplot2)
+library(grid)
+
+# f ja f^{-1}
+f    <- function(x) sqrt(x - 3)      # domeen: x >= 3
+finv <- function(x) x^2 + 3
+
+xs     <- seq(-2, 5, by = 0.01)
+df     <- data.frame(x = xs, y = f(xs))
+df     <- subset(df, !is.na(y) & is.finite(y))     # ⟵ hoia vaid x>=3
+df_inv <- data.frame(x = seq(0, 5, by = 0.01), y = finv(seq(0, 5, by = 0.01)))
+
+xticks <- seq(-2, 5, by = 1)
+yticks <- seq(-2, 8, by = 1)
+
+ggplot(df, aes(x, y)) +
+  # Ruudustik
+  geom_hline(yintercept = yticks, linewidth = 0.3, color = "gray85") +
+  geom_vline(xintercept = xticks, linewidth = 0.3, color = "gray85") +
+  # Sümmeetriajoon y = x
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", linewidth = 0.4, color = "gray60") +
+  # f(x)
+  geom_line(linewidth = 1) +
+  # f^{-1}(x)
+  geom_line(data = df_inv, linewidth = 1, linetype = "longdash") +
+
+  # Teljed nooltega
+  geom_segment(aes(x = min(xs), xend = max(xs), y = 0, yend = 0),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+  geom_segment(aes(x = 0, xend = 0, y = min(yticks), yend = max(yticks)),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+
+  # Teljemärgised: x (kursiivis) ja y-otsa informatiivne silt kahel real
+  annotate("text", x = max(xs) - 0.1, y = 0.25,
+           label = "italic(x)", parse = TRUE,
+           hjust = 1, vjust = 0.5, size = 4) +
+  annotate("text", x = 0.18, y = max(yticks) + 0.35,
+           label = "plain('f')*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 2, size = 4) +
+  annotate("text", x = 0.18, y = max(yticks) + 0.05,
+           label = "plain('f')^{-1}*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 2, size = 4) +
+
+  # Joonte sildid otse joontel — valitud punktid, mis jäävad paneeli sisse
+  annotate("text", x = 3.8, y = f(3.8) + 0.35,     # f(3.8) ~ 0.894
+           label = "plain('f')*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 0, size = 4) +
+  annotate("text", x = 2.0, y = finv(2.0) + 0.35,  # finv(2)=7  (≤ ylim max 8)
+           label = "plain('f')^{-1}*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 0, size = 4) +
+
+  # Skaala: y-sildid telje kõrval, x-sildid telje all
+  geom_text(data = data.frame(y = yticks),
+            aes(x = 0, y = y, label = y),
+            inherit.aes = FALSE, hjust = 1.2, vjust = 0.35, size = 3.5) +
+  geom_text(data = data.frame(x = xticks),
+            aes(x = x, y = 0, label = x),
+            inherit.aes = FALSE, vjust = 1.5, size = 3.5) +
+
+  # Proportsioon & vahemikud; klipp välja, et y-otsa sildid mahuksid
+  coord_fixed(ratio = 1, xlim = c(-2, 5), ylim = c(-2, 8), expand = FALSE, clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 24, 14, 24))
+
+```
+
+## Pöördfunktsioon: lahendus 3
+
+$$\mathrm{h}(x) = \frac{x+4}{2 \cdot x - 5} \rightarrow$$
+
+$$x = \frac{\mathrm{h}^{-1}(x) + 4}{2 \cdot \mathrm{h}^{-1}(x) - 5}$$
+
+$$x \cdot 2 \cdot \mathrm{h}^{-1}(x) - 5 \cdot x = \mathrm{h}^{-1}(x) + 4$$
+
+$$\mathrm{h}^{-1}(x) \cdot (2 \cdot x - 1) = 4 + 5 \cdot x$$
+
+$$\mathrm{h}^{-1}(x) = \frac{5 \cdot x + 4}{2 \cdot x - 1}.$$
+
+## Pöördfunktsioon: kontroll 3
+
+$$\mathrm{h}(\mathrm{h}^{-1}(x)) = \frac{\frac{5 \cdot x + 4}{2 \cdot x - 1}+4}{2 \cdot \frac{5 \cdot x + 4}{2 \cdot x - 1} - 5} = \frac{\frac{5 \cdot x + 4 + 8 \cdot x - 4}{2 \cdot x - 1}}{\frac{10 \cdot x + 8 - 10 \cdot x + 5}{2 \cdot x - 1}} = x.$$
+
+$$\mathrm{h}^{-1}(\mathrm{h}(x)) = \frac{5 \cdot \frac{x+4}{2 \cdot x - 5} + 4}{2 \cdot \frac{x+4}{2 \cdot x - 5} - 1} = \frac{\frac{5 \cdot x + 20 + 8 \cdot x -20}{2 \cdot x - 5}}{\frac{2 \cdot x + 8 -2 \cdot x + 5}{2 \cdot x - 5}} = x.$$
+
+## Pöördfunktsioon: graafik 3
+
+```{r label="inverse-function-graph-3", fig.cap="Funktsiooni $\\frac{x+4}{2 \\cdot x - 5}$ ja selle pöördfunktsiooni $\\frac{5 \\cdot x + 4}{2 \\cdot x - 1}$ graafik."}
+
+library(ggplot2)
+library(grid)
+
+f    <- function(x) (x + 4) / (2 * x - 5)
+finv <- function(x) (5 * x + 4) / (2 * x - 1)
+
+xs <- seq(-6, 6, by = 0.01)
+df     <- data.frame(x = xs, y = f(xs))
+df_inv <- data.frame(x = xs, y = finv(xs))
+
+xticks <- seq(-6, 6, by = 1)
+yticks <- seq(-6, 6, by = 1)
+
+ggplot(df, aes(x, y)) +
+  # Ruudustik
+  geom_hline(yintercept = yticks, linewidth = 0.3, color = "gray85") +
+  geom_vline(xintercept = xticks, linewidth = 0.3, color = "gray85") +
+  # Asümptoodid
+  geom_vline(xintercept = 2.5, linetype = "dotted", color = "red") +
+  geom_hline(yintercept = 0.5, linetype = "dotted", color = "red") +
+  geom_vline(xintercept = 0.5, linetype = "dotted", color = "blue") +
+  geom_hline(yintercept = 2.5, linetype = "dotted", color = "blue") +
+  # Sümmeetria y=x
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray60") +
+  # f(x)
+  geom_line(linewidth = 1, color = "black") +
+  # f^{-1}(x)
+  geom_line(data = df_inv, linewidth = 1, linetype = "longdash", color = "black") +
+  # Teljed nooltega
+  geom_segment(aes(x = min(xs), xend = max(xs), y = 0, yend = 0),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+  geom_segment(aes(x = 0, xend = 0, y = min(yticks), yend = max(yticks)),
+               arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+               color = "black") +
+  # Teljetähised
+  annotate("text", x = max(xs) - 0.1, y = 0.3,
+           label = "italic(x)", parse = TRUE,
+           hjust = 2, vjust = 0.5, size = 4) +
+  annotate(
+    "text",
+    x = 0.25, y = max(yticks) - 0.1,
+    label = "plain('f')*'('*italic(x)*')'",
+    parse = TRUE,
+    hjust = 2, vjust = 1, size = 4
+  ) +
+  annotate(
+    "text",
+    x = 0.25, y = max(yticks) - 0.6,
+    label = "plain('f')^{-1}*'('*italic(x)*')'",
+    parse = TRUE,
+    hjust = 2, vjust = 1, size = 4
+  ) +
+  # Joonte sildid
+  annotate("text", x = -3.5, y = f(-3.5) + 0.4,
+           label = "plain('f')*'('*italic(x)*')'", parse = TRUE,
+           hjust = 0, vjust = 0, size = 4) +
+  annotate("text", x = 3.5, y = finv(3.5) - 0.4,
+           label = "plain('f')^{-1}*'('*italic(x)*')'", parse = TRUE,
+           hjust = 2.5, vjust = -2, size = 4) +
+  # Skaala: y ja x väärtused
+  geom_text(data = data.frame(y = yticks),
+            aes(x = 0, y = y, label = y),
+            inherit.aes = FALSE, hjust = 1.2, vjust = 0.35, size = 3.5) +
+  geom_text(data = data.frame(x = xticks),
+            aes(x = x, y = 0, label = x),
+            inherit.aes = FALSE, vjust = 1.5, size = 3.5) +
+  coord_fixed(ratio = 1, xlim = c(-6, 6), ylim = c(-6, 6), expand = FALSE, clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 24, 14, 24))
+
+```
+
+## Pöördfunktsioon: iseseisev harjutamine
+
+Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.7[@dawkins2022algebra(lk 34)]:
+
+Iga ülesande puhul on antud funktsioon ja vaja on arvutada selle pöördfunktsioon.
 
 ## Välised allikad
 
