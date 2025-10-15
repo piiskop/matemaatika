@@ -161,6 +161,207 @@ Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lub
 
 50\. Standardkuju[@welovemath2024standard].
 
+## Algarv
+
+algarv
+: ühest suurem täisarv, mille ainsad positiivsed täisarvulised tegurid on 1 ja algarv ise (@exm-prime-1 kuni @exm-prime-7)
+
+::: {#exm-prime-1}
+2
+:::
+
+::: {#exm-prime-2}
+3
+:::
+
+::: {#exm-prime-3}
+5
+:::
+
+::: {#exm-prime-4}
+37
+:::
+
+::: {#exm-prime-5}
+17
+:::
+
+::: {#exm-prime-6}
+13
+:::
+
+::: {#exm-prime-7}
+41
+:::
+
+## Mittealgarvud
+
+- 1, sest pole ühest suurem.
+
+- $1{,}5$, sest see pole täisarv.
+
+- 4, sest sellel on rohkem kui kaks positiivset täisarvulist tegurit.
+
+## Tegurdamine
+
+$$12 = 2 \cdot 6 = 3 \cdot 4 = 2 \cdot 2 \cdot 3 = \frac{1}{2} \cdot 24 = -2 \cdot (-6) = -2 \cdot 2 \cdot (-3).$$
+
+algtegur
+: algarvuline tegur
+
+Soovitus: tegurdada algteguriteks:
+
+$$12 = 2 \cdot 2 \cdot 3.$$
+
+## Liitristküliku pindala arvutamine
+
+```{r label="rectangle-area", fig.cap="Ristküliku pindala arvutamine."}
+library(ggplot2)
+
+a <- 3; b <- 4; c <- 2
+
+# ristkülikute andmed
+df_ab <- data.frame(xmin=0, xmax=b, ymin=0, ymax=a)
+df_ac <- data.frame(xmin=b, xmax=b+c, ymin=0, ymax=a)
+
+ggplot() +
+  # värvilised alad
+  geom_rect(data=df_ab, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
+            fill="#a8caff", color="black", linewidth=0.6) +
+  geom_rect(data=df_ac, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
+            fill="#b8ffb8", color="black", linewidth=0.6) +
+  # eraldusjoon
+  geom_segment(aes(x=b, y=0, xend=b, yend=a), linewidth=0.6) +
+  # sisemised sildid
+  annotate("text", x=b/2,     y=a/2, label=expression(italic(a)*italic(b)), size=6) +
+  annotate("text", x=b+c/2,   y=a/2, label=expression(italic(a)*italic(c)), size=6) +
+
+  # mõõdunooled ja sildid b, c, b+c
+  annotate("segment", x=0, xend=b, y=-0.4, yend=-0.4,
+           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
+  annotate("text", x=b/2, y=-0.7, label=expression(italic(b)), size=5) +
+
+  annotate("segment", x=b, xend=b+c, y=-0.4, yend=-0.4,
+           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
+  annotate("text", x=b+c/2, y=-0.7, label=expression(italic(c)), size=5) +
+
+  annotate("segment", x=0, xend=b+c, y=-1.1, yend=-1.1,
+           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
+  annotate("text", x=(b+c)/2, y=-1.4, label=expression(italic(b)+italic(c)), size=5) +
+
+  # kõrgus a
+  annotate("segment", x=-0.4, xend=-0.4, y=0, yend=a,
+           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
+  annotate("text", x=-0.7, y=a/2, label=expression(italic(a)), angle=90, size=5) +
+
+  # pealkiri
+  annotate("text", x=(b+c)/2, y=a+0.5,
+           label=expression(italic(S)*" = "*italic(a)*"("*italic(b)*" + "*italic(c)*") = "*italic(a)*italic(b)*" + "*italic(a)*italic(c)*"."), size=5) +
+
+  coord_fixed(xlim=c(-1, b+c+0.5), ylim=c(-1.8, a+1), clip="off") +
+  theme_void() +
+  theme(plot.margin = margin(15, 15, 25, 35))
+
+```
+
+## Hulkliige: suurim ühistegur
+
+::: {#exm-polynome-factoring-gcf-1}
+$$3 \cdot x^6 - 9 \cdot x^2 + 3 \cdot x = 3 \cdot x \cdot (x^5 - 3 \cdot x + 1).$$
+$$3 \cdot x \cdot (x^5 - 3 \cdot x) = 3 \cdot x^6 - 9 \cdot x^2 \neq 3 \cdot x^6 - 9 \cdot x^2 + 3 \cdot x.$$
+:::
+
+::: {#exm-polynome-factoring-gcf-2}
+$$9 \cdot x^2 \cdot (2 \cdot x + 7) - 12 \cdot x \cdot (2 \cdot x + 7) = (2 \cdot x + 7) \cdot (9 \cdot x^2 - 12 \cdot x)\\
+= (2 \cdot x + 7) \cdot 3 \cdot x \cdot (3 \cdot x - 4).$$
+:::
+
+## Grupeerimine
+
+::: {#exm-polynome-factoring-grouping-1}
+$$x^5 + x - 2 \cdot x^4 - 2 = x^4 \cdot (x - 2) + x - 2 = (x - 2) \cdot (x^4 + 1).$$
+:::
+
+::: {#exm-polynome-factoring-grouping-2}
+$$x^5 - 3 \cdot x^3 - 2 \cdot x^2 + 6 = x^2 \cdot (x^3 - 2) - 3 \cdot (x^3 - 2)\\
+= (x^3 - 2) \cdot (x^2 - 3).$$
+:::
+
+## Ruutliikme tegurdamine 1
+
+::: {#exm-polynome-factoring-quadratic-1}
+$$x^2 + 2 \cdot x - 15 = (x + a) \cdot (x + b).$$
+$$a \cdot b = -15.$$
+$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1); (1; -15); (3; -5);\\
+(5; -3); (15; -1)\}.$$
+$$a + b = 2.$$
+$$x^2 + 2 \cdot x - 15 = (x + 5) \cdot (x - 3).$$
+
+:::
+
+## Ruutliikme tegurdamine 2
+
+::: {#exm-polynome-factoring-quadratic-2}
+$$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x + a) \cdot (x + b).$$
+$$a \cdot b = -8.$$
+$$(a; b) \in \{(-1; 8); (-2; 4); (-4; 2); (-8; 1); (1; -8); (2; -4); (4; -2);\\
+(8; -1)\}.$$
+$$3 \cdot b + a = 2.$$
+$$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x - 4) \cdot (x + 2).$$
+
+:::
+
+## Ruutliikme tegurdamine 3
+
+::: {#exm-polynome-factoring-quadratic-3}
+$$4 \cdot x^2 + 10 \cdot x - 6 = (f \cdot x + a) \cdot (j \cdot x + b) \rightarrow a \cdot b = -6.$$
+$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3); (3; -2);\\
+(6; -1)\}.$$
+$$f \cdot j = 4 \rightarrow (f; j) \in \{(1; 4); (2; 2); (4; 1)\}.$$
+$$f \cdot b + a \cdot j = 10.$$
+$$4 \cdot x^2 + 10 \cdot x - 6 = (x + 3) \cdot (4 \cdot x - 2) = (x + 3) \cdot (2 \cdot x - 1) \cdot 2.$$
+:::
+
+## Erikujud
+
+$$a^2 + 2 \cdot a \cdot b + b^2 = (a + b)^2.$${#eq-factoring-square-of-sum}
+$$a^2 - 2 \cdot a \cdot b + b^2 = (a - b)^2.$${#eq-factoring-square-of-difference}
+$$a^2 - b^2 = (a + b) \cdot (a - b).$${#eq-factoring-difference-of-squares}
+$$a^3 + b^3 = (a + b) \cdot (a^2 - a \cdot b + b^2).$${#eq-factoring-sum-of-cubes}
+$$a^3 - b^3 = (a - b) \cdot (a^2 + a \cdot b + b^2).$${#eq-factoring-sum-of-cubes}
+$$a^2 + b^2 \neq (a + b)^2.$$
+
+## Erikujud: näited
+
+Leia näidetest @exm-factoring-square-of-difference, @exm-factoring-difference-of-squares ja @exm-factoring-sum-of-cubes kaks viga!
+
+:::{#exm-factoring-square-of-difference}
+$x^2 - 20 \cdot x + 100 = (x + 10)^2$ (@eq-factoring-square-of-difference).
+:::
+
+:::{#exm-factoring-difference-of-squares}
+$25 \cdot x^2 - 9$ (@eq-factoring-difference-of-squares).
+:::
+
+:::{#exm-factoring-sum-of-cubes}
+$8 \cdot x^3 + 1$ (@eq-factoring-sum-of-cubes).
+:::
+
+## Kahest suurema astme hulkliikmed
+
+:::{#exm-factoring-polynomials-degree-greater-than-two-1}
+$$3 \cdot x^4 - 3 \cdot x^3 - 36 \cdot x^2 = 3 \cdot x^2 \cdot (x^2 - x - 12)\\
+= 3 \cdot x^2 \cdot (x + 3) \cdot (x - 4).$$
+:::
+
+:::{#exm-factoring-polynomials-degree-greater-than-two-2}
+$$x^4 - 25 = (x^2 + 5) \cdot (x^2 - 5).$$
+:::
+
+:::{#exm-factoring-polynomials-degree-greater-than-two-3}
+$$x^4 + x^2 - 20 = (x^2 + 5) \cdot (x^2 - 4) = (x^2 + 5) \cdot (x + 4) \cdot (x - 4).$$
+:::
+
 ## Suhe
 
 Suhe
