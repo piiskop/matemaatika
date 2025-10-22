@@ -21,7 +21,8 @@ crossref:
   exm-title: Näide
   exr-prefix: ülesanne
   exr-title: Ülesanne
-
+  fig-prefix: joonis
+  
 ---
 
 ## Nimed
@@ -272,14 +273,14 @@ $$3 \cdot x \cdot (x^5 - 3 \cdot x) = 3 \cdot x^6 - 9 \cdot x^2 \neq 3 \cdot x^6
 :::
 
 ::: {#exm-polynome-factoring-gcf-2}
-$$9 \cdot x^2 \cdot (2 \cdot x + 7) - 12 \cdot x \cdot (2 \cdot x + 7) = (2 \cdot x + 7) \cdot (9 \cdot x^2 - 12 \cdot x)\\
+$$9 \cdot x^2 \cdot (2 \cdot x + 7) - 12 \cdot x \cdot (2 \cdot x + 7)\\ = (2 \cdot x + 7) \cdot (9 \cdot x^2 - 12 \cdot x)\\
 = (2 \cdot x + 7) \cdot 3 \cdot x \cdot (3 \cdot x - 4).$$
 :::
 
 ## Grupeerimine
 
 ::: {#exm-polynome-factoring-grouping-1}
-$$x^5 + x - 2 \cdot x^4 - 2 = x^4 \cdot (x - 2) + x - 2 = (x - 2) \cdot (x^4 + 1).$$
+$$x^5 + x - 2 \cdot x^4 - 2 = x^4 \cdot (x - 2) + x - 2\\ = (x - 2) \cdot (x^4 + 1).$$
 :::
 
 ::: {#exm-polynome-factoring-grouping-2}
@@ -292,7 +293,7 @@ $$x^5 - 3 \cdot x^3 - 2 \cdot x^2 + 6 = x^2 \cdot (x^3 - 2) - 3 \cdot (x^3 - 2)\
 ::: {#exm-polynome-factoring-quadratic-1}
 $$x^2 + 2 \cdot x - 15 = (x + a) \cdot (x + b).$$
 $$a \cdot b = -15.$$
-$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1); (1; -15); (3; -5);\\
+$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1); (1; -15);\\ (3; -5);\\
 (5; -3); (15; -1)\}.$$
 $$a + b = 2.$$
 $$x^2 + 2 \cdot x - 15 = (x + 5) \cdot (x - 3).$$
@@ -304,18 +305,18 @@ $$x^2 + 2 \cdot x - 15 = (x + 5) \cdot (x - 3).$$
 ::: {#exm-polynome-factoring-quadratic-2}
 $$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x + a) \cdot (x + b).$$
 $$a \cdot b = -8.$$
-$$(a; b) \in \{(-1; 8); (-2; 4); (-4; 2); (-8; 1); (1; -8); (2; -4); (4; -2);\\
+$$(a; b) \in \{(-1; 8); (-2; 4); (-4; 2); (-8; 1); (1; -8); (2; -4);\\ (4; -2);\\
 (8; -1)\}.$$
 $$3 \cdot b + a = 2.$$
 $$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x - 4) \cdot (x + 2).$$
 
 :::
 
-## Ruutliikme tegurdamine 3
+## Ruutliikme tegurdamine 3---
 
 ::: {#exm-polynome-factoring-quadratic-3}
 $$4 \cdot x^2 + 10 \cdot x - 6 = (f \cdot x + a) \cdot (j \cdot x + b) \rightarrow a \cdot b = -6.$$
-$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3); (3; -2);\\
+$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3);\\ (3; -2);\\
 (6; -1)\}.$$
 $$f \cdot j = 4 \rightarrow (f; j) \in \{(1; 4); (2; 2); (4; 1)\}.$$
 $$f \cdot b + a \cdot j = 10.$$
@@ -347,7 +348,7 @@ $25 \cdot x^2 - 9$ (@eq-factoring-difference-of-squares).
 $8 \cdot x^3 + 1$ (@eq-factoring-sum-of-cubes).
 :::
 
-## Kahest suurema astme hulkliikmed
+## Kahest suurema astme hulkliikmed---
 
 :::{#exm-factoring-polynomials-degree-greater-than-two-1}
 $$3 \cdot x^4 - 3 \cdot x^3 - 36 \cdot x^2 = 3 \cdot x^2 \cdot (x^2 - x - 12)\\
@@ -361,6 +362,495 @@ $$x^4 - 25 = (x^2 + 5) \cdot (x^2 - 5).$$
 :::{#exm-factoring-polynomials-degree-greater-than-two-3}
 $$x^4 + x^2 - 20 = (x^2 + 5) \cdot (x^2 - 4) = (x^2 + 5) \cdot (x + 4) \cdot (x - 4).$$
 :::
+
+## Lineaarvõrrandi standardkuju
+
+$$b \cdot x + f = 0.$$
+
+## Lineaarvõrrandi omadused
+
+$$a = b \rightarrow a + j = b + j.$$
+$$a = b \rightarrow a - j = b - j.$$
+$$a = b \rightarrow a \cdot j = b \cdot j.$$
+$$a = b \rightarrow \frac{a}{j} = \frac{b}{j}.$$
+
+## Lineaarvõrrandi lahendamine 1
+
+1.  Kui esineb osamäärasid, kasuta väikseimat ühisjaoturit, et osamääradest vabaneda (@exm-linear-equation-solving-1)! Kui jaoturis on muutuja, siis määratle muutuja keelatud väärtus!
+
+    ::: {#exm-linear-equation-solving-1}
+    
+    $$\frac{6 + x}{x} + 4 = 3 | \cdot x; x \neq 0.$$
+    
+    $$6 + x + 4 \cdot x = 3 \cdot x.$$
+    
+    :::
+
+## Lineaarvõrrandi lahendamine 2-3
+
+2.  Lihtsusta võrrandi pooled(@exm-linear-equation-solving-2)!
+
+    ::: {#exm-linear-equation-solving-2}
+    
+    $$6 + 5 \cdot x = 3 \cdot x.$$
+    
+    :::
+    
+3.  Kogu tähtavaldised ühele ja konstandid teisele poole võrdusmärki (@exm-linear-equation-solving-3)!
+
+    ::: {#exm-linear-equation-solving-3}
+    
+    $$2 \cdot x = -6.$$
+    
+    :::
+
+## Lineaarvõrrandi lahendamine 4
+    
+4.  Kui tähtavaldise kordaja pole üks, tee sellest üks (@exm-linear-equation-solving-4)!
+
+    ::: {#exm-linear-equation-solving-4}
+    
+    $$x = -3.$$
+    
+    :::
+
+## Lineaarvõrrandi lahendamine 5
+    
+5.  Kontrolli lahendit (@exm-linear-equation-solving-5)!
+
+    ::: {#exm-linear-equation-solving-5}
+    
+    $$\frac{6 + (-3)}{-3} + 4 \stackrel{?}{=} 3.$$
+    
+    $$\frac{3}{-3} + 4 \stackrel{?}{=} 3.$$
+    
+    $$3 = 3.$$
+    
+    :::
+
+## Lineaarvõrrandi ülesanded
+
+::: {#exr-linear-equation-exercise-1}
+
+$$3 \cdot (x + 5) = 2 \cdot (-6 - x) - 2 \cdot x.$$
+
+:::
+
+::: {#exr-linear-equation-exercise-2}
+
+$$\frac{m-2}{3} + 1 = \frac{2 \cdot m}{7}.$$
+
+:::
+
+::: {#exr-linear-equation-exercise-3}
+
+$$\frac{2 \cdot z}{z + 3} = \frac{3}{z - 10} + 2.$$
+
+:::
+
+## Lineaarvõrrandi 1 lahendamine
+
+$$3 \cdot (x + 5) = 2 \cdot (-6 - x) - 2 \cdot x.$$
+
+2. $3 \cdot x + 15 = -12 - 4 \cdot x.$
+
+3. $7 \cdot x = -27.$
+
+4. $x = -\frac{27}{7}.$
+
+5.  $3 \cdot (-\frac{27}{7} + 5) \stackrel{?}{=} 2 \cdot [-6 - (-\frac{27}{7})] - 2 \cdot (-\frac{27}{7}).$
+
+    $3 \cdot \frac{8}{7} \stackrel{?}{=} 2 \cdot (-\frac{15}{7}) + \frac{54}{7}.$
+    
+    $\frac{24}{7} = \frac{24}{7}.$
+
+## Lineaarvõrrandi 2 lahendamine
+
+$$\frac{m-2}{3} + 1 = \frac{2 \cdot m}{7}.$$
+
+1. $7 \cdot (m - 2) + 21 = 6 \cdot m.$  
+2. $7 \cdot m + 7 = 6 \cdot m.$  
+3. $m = -7.$  
+4. <!-- intentionally skipping 4 to get 5 -->
+5. $\displaystyle \frac{-7 - 2}{3} + 1 \stackrel{?}{=} \frac{2 \cdot (-7)}{7}.$  
+   $\displaystyle -2 = -2.$
+
+## Lineaarvõrrandi 3 lahendamine---
+
+$$\frac{2 \cdot z}{z + 3} = \frac{3}{z - 10} + 2.$$
+
+1.  $[2 \cdot z \cdot (z - 10) = 3 \cdot (z + 3) + 2 \cdot (z^2 - 7 \cdot z - 30)] \land$
+
+    $(z \neq -3) \land (z \neq 10).$
+
+2. $(2 \cdot z^2 - 20 \cdot z = 2 \cdot z^2 - 11 \cdot z - 51) \land (z \neq -3) \land (z \neq 10).$
+
+3. $(9 \cdot z = 51) \land (z \neq -3) \land z \neq 10.$
+
+4. $z = \frac{17}{3}.$
+
+5.  $\frac{2 \cdot \frac{17}{3}}{\frac{17}{3} + 3} \stackrel{?}{=} \frac{3}{\frac{17}{3} - 10} + 2.$ $\frac{17}{13} = \frac{17}{13}.$
+
+## Ruutvõrrandi standardkuju
+
+$$a \neq 0 \rightarrow a \cdot x^2 + b \cdot x + f = 0.$$
+
+## Ruutvõrrandi lahendamine tegurdades
+
+Nullkorrutise omadus on esitatud valemina @eq-zero-factor-property.
+
+$$a \cdot b = 0 \rightarrow a = 0 \lor b = 0.$${#eq-zero-factor-property}
+
+Kui korrutis ei ole null, ei saa kindlalt väita, et vähemalt üks tegur on võrdne korrutisega (@exm-not-zero-factor-property).
+
+::: {#exm-not-zero-factor-property}
+
+$$a \cdot b = 6 \rightarrow a = 1 \land b = 6 \lor a = 2 \land b = 3 \lor a = 3 \land b = 2 \lor \\
+a = 6 \land b = 1.$$
+
+:::
+
+## Tegurdades lahendamise ülesanded
+
+::: {#exr-solving-quadratic-equation-by-factoring-1}
+
+$$x^2 - x = 12.$$
+
+:::
+
+::: {#exr-solving-quadratic-equation-by-factoring-2}
+
+$$x^2 + 40 = -14 \cdot x.$$
+
+:::
+
+::: {#exr-solving-quadratic-equation-by-factoring-3}
+
+$$5 \cdot x ^2 = 2 \cdot x.$$
+
+:::
+
+## Tegurdades lahendamine 1---
+
+$$x^2 - x = 12.$$
+
+$$x^2 - x - 12 = 0.$$
+
+$$(x - 4) \cdot (x + 3) = 0.$$
+
+$$\{x \in \mathbb{C} : x = -4 \lor x = 3\}.$$
+
+## Tegurdades lahendamine 2
+
+$$x^2 + 40 = -14 \cdot x.$$
+
+$$x^2 + 14 \cdot x + 40 = 0.$$
+
+$$(x + 4) \cdot (x + 10) = 0.$$
+
+$$\{x \in \mathbb{C} : x = 4 \lor x = 10 \}.$$
+
+## Tegurdades lahendamine 3
+
+$$5 \cdot x ^2 = 2 \cdot x.$$
+
+$$5 \cdot x^2 - 2 \cdot x = 0.$$
+
+$$x \cdot (5 \cdot x - 2) = 0.$$
+
+$$\{x \in \mathbb{C} : x = 0 \lor x = 0{,}4\}.$$
+
+## Ruutjuur ruutvõrrandis
+
+$$a^2 = b \rightarrow a = \pm \sqrt{b}.$$
+
+## Ruutjuurega ülesanded
+
+::: {#exr-solving-quadratic-equation-with-square-root-1}
+
+$$x^2 - 100 = 0.$$
+
+:::
+
+::: {#exr-solving-quadratic-equation-with-square-root-2}
+
+$$4 \cdot z^2 + 49 = 0.$$
+
+:::
+
+::: {#exr-solving-quadratic-equation-with-square-root-3}
+
+$$(2 \cdot t - 9)^2 = 5.$$
+
+:::
+
+## Ruutjuurega lahendamine 1
+
+$$x^2 - 100 = 0.$$
+
+$$x^2 = 100.$$
+
+$$x = \pm 10.$$
+
+## Ruutjuurega lahendamine 2
+
+$$4 \cdot z^2 + 49 = 0.$$
+
+$$4 \cdot z^2 = -49.$$
+
+$$z^2 = -\frac{49}{4}.$$
+
+$$z = \sqrt{-\frac{49}{4}} = \sqrt{-1} \cdot (\pm \frac{7}{2}) = \pm 3{,}5 \cdot i.$$
+
+## Ruutjuurega lahendamine 3
+
+$$(2 \cdot t - 9)^2 = 5.$$
+
+$$2 \cdot t - 9 = \pm \sqrt{5}.$$
+
+$$2 \cdot t = 9 \pm \sqrt{5}.$$
+
+$$t = \frac{9}{2} \pm \frac{\sqrt{5}}{2}.$$
+
+## Ruudu tekitamine
+
+$$x^2 + b \cdot x.$$
+
+$$x^2 + b \cdot x + \left(\frac{b}{2}\right)^2 = \left(x + \frac{b}{2}\right)^2.$$
+
+## Ruudu tekitamise ülesanded
+
+::: {#exr-completing-square-1}
+
+$$x^2 - 16 \cdot x.$$
+
+:::
+
+::: {#exr-completing-square-2}
+
+$$y^2 + 7 \cdot y.$$
+
+:::
+
+## Ruudu tekitamise lahendused
+
+$$x^2 - 16 \cdot x + 64 = (x - 8)^2.$$
+
+$$y^2 + 7 \cdot y + \left(\frac{7}{2}\right)^2 = y^2 + 7 \cdot y + \frac{49}{4} = \left(y + \frac{7}{2}\right)^2.$$
+
+## Ruudu tekitamisega ruutvõrrandi lahendamine
+
+1. Vii ruutvõrrand normaalkujule!
+
+2. Jaga võrrandi kõik liikmed ruutliikme kordajaga!
+
+3. Vii konstant teisele poole võrdusmärki!
+
+4. Tekita ruut tähtavaldisega poolele ning täienda vastavalt teist poolt!
+
+5. Kasuta juurimist, et arvutada lahend!
+
+## Ruutvõrrandisse ruudu ülesanded
+
+::: {#exr-quadratic-equation-with-completing-square-1}
+$$x^2 - 6 \cdot x + 1 = 0.$$
+
+:::
+
+::: {#exr-quadratic-equation-with-completing-square-2}
+$$2 \cdot x^2 + 6 \cdot x + 7 = 0.$$
+
+:::
+
+::: {#exr-quadratic-equation-with-completing-square-3}
+$$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
+
+:::
+
+## Ruutvõrrandisse ruudu lahendus 1
+
+$$x^2 - 6 \cdot x + 1 = 0:$$
+
+3. $x^2 - 6 \cdot x = -1.$
+
+4.  $x^2 - 6 \cdot x + 9 = -1 + 9.$
+
+    $(x - 3)^2 = 8.$
+    
+5.  $x - 3 = \pm \sqrt{8}.$
+
+    $x = 3 \pm 2 \cdot \sqrt{2}.$
+
+## Ruutvõrrandisse ruudu lahendus 2
+
+$$2 \cdot x^2 + 6 \cdot x + 7 = 0:$$
+
+2. $x^2 + 3 \cdot x + \frac{7}{2} = 0.$
+
+3. $x^2 + 3 \cdot x = -\frac{7}{2}.$
+
+4.  $x^2 + 3 \cdot x + \frac{9}{4} = -\frac{7}{2} + \frac{9}{4}.$
+
+    $\left(x + \frac{3}{2}\right)^2 = -\frac{5}{4}.$
+
+5.  $x + \frac{3}{2} = \pm \sqrt{-\frac{5}{4}}.$
+
+    $x = -\frac{3}{2} \pm \frac{\sqrt{5}}{2} \cdot i.$
+
+## Ruutvõrrandisse ruudu lahendus 3---
+
+$$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
+
+2. $x^2 -\frac{2}{3} \cdot x - \frac{1}{3} = 0.$
+
+3. $x^2 -\frac{2}{3} \cdot x = \frac{1}{3}.$
+
+4.  $x^2 -\frac{2}{3} \cdot x + \frac{1}{9} = \frac{1}{3} + \frac{1}{9}.$
+
+    $\left(x - \frac{1}{3}\right) = \frac{4}{9}.$
+    
+5.  $x - \frac{1}{3} = \pm \sqrt{\frac{4}{9}}.$
+
+    $x = \frac{1}{3} \pm \frac{2}{3}.$
+
+## Ruutvõrrandi lahendamise üldvalem 1-4
+
+1. $a \cdot x^2 + b \cdot x + r = 0.$
+
+2. $x^2 + \frac{b}{a} \cdot x + \frac{r}{a} = 0.$
+
+3. $x^2 + \frac{b}{a} \cdot x = -\frac{r}{a}.$
+
+4.  $x^2 + \frac{b}{a} \cdot x + \left(\frac{b}{2 \cdot a}\right)^2 = -\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2.$
+
+    $\left(x + \frac{b}{2 \cdot a}\right)^2 = -\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2.$
+
+## Ruutvõrrandi lahendamise üldvalem 5---
+
+5.  $x + \frac{b}{2 \cdot a} = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2}.$
+
+    $$x = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2} - \frac{b}{2 \cdot a}\\ = \pm \sqrt{\frac{-4 \cdot a \cdot r + b^2}{4 \cdot a^2}} - \frac{b}{2 \cdot a}\\ = \frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a}.$${#eq-quadratic-equation-solution}
+
+## Ruutvõrrandi lahendamise üldvalemi ülesanded---
+
+:::{#exr-quadratic-equation-formula-1}
+$$x^2 + 2 \cdot x = 7.$$
+
+:::
+
+:::{#exr-quadratic-equation-formula-2}
+$$3 \cdot q^2 + 11 = 5 \cdot q.$$
+
+:::
+
+:::{#exr-quadratic-equation-formula-3}
+$$\frac{3}{y - 2} = \frac{1}{y} + 1.$$
+
+:::
+
+## Ruutvõrrandi lahendamine üldvalemiga 1---
+
+$$x^2 + 2 \cdot x = 7.$$
+
+$$x^2 + 2 \cdot x - 7 = 0.$$
+
+$$x = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 1 \cdot (-7)}}{2 \cdot 1} = \frac{-2 \pm \sqrt{4 + 28}}{2} = \frac{-2 \pm \sqrt{32}}{2}\\ = -1 \pm 2 \cdot \sqrt{2}.$$
+
+## Ruutvõrrandi lahendamine üldvalemiga 2
+$$3 \cdot q^2 + 11 = 5 \cdot q.$$
+$$q \neq \frac{-11 \pm \sqrt{11^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}.$$
+
+$$q = \frac{5 \pm \sqrt{25 - 132}}{6} = \frac{5 \pm \sqrt{107}}{6}= \frac{5}{6} \pm \frac{\sqrt{107}}{6} \cdot i.$$
+
+## Ruutvõrrandi lahendamine üldvalemiga 3
+$$\frac{3}{y - 2} = \frac{1}{y} + 1.$$
+$$3 \cdot y = y - 2 + y^2 - 2 \cdot y.$$
+$$y^2 - 4 \cdot y - 2 = 0.$$
+$$y = \frac{4 \pm \sqrt{24}}{2} = 2 \pm \sqrt{6}.$$
+
+## Graafiku punktid
+
+
+```{r label="function-graph-points", fig.cap="Funktsiooni graafiku punktid."}
+library(ggplot2)
+
+# Andmed: üks punkt igas veerandis
+punktid <- data.frame(
+  x = c(2, -2, -2, 2),
+  y = c(2, 2, -2, -2),
+  label = c("I veerand\n(2, 2)",
+            "II veerand\n(-2, 2)",
+            "III veerand\n(-2, -2)",
+            "IV veerand\n(2, -2)")
+)
+
+# Taustaandmed nelja veerandi värvimiseks
+veerandid <- data.frame(
+  xmin = c(0, -Inf, -Inf, 0),
+  xmax = c(Inf, 0, 0, Inf),
+  ymin = c(0, 0, -Inf, -Inf),
+  ymax = c(Inf, Inf, 0, 0),
+  qlabel = c("I", "II", "III", "IV")
+)
+
+ggplot() +
+  # Hele taust iga veerandi jaoks
+  geom_rect(data = veerandid,
+            aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
+            fill = c("#e6f3ff", "#f0e6ff", "#ffe6e6", "#e6ffe6"),
+            alpha = 0.3,
+            color = NA) +
+  # Telgede jooned
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.6) +
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.6) +
+  # Punktid ja sildid
+  geom_point(data = punktid, aes(x, y), size = 3, color = "blue") +
+  geom_text(data = punktid, aes(x, y, label = label),
+            vjust = -1, hjust = 0.5, size = 4) +
+  # Skaala
+  scale_x_continuous(breaks = seq(-4, 4, 1), limits = c(-4, 4)) +
+  scale_y_continuous(breaks = seq(-4, 4, 1), limits = c(-4, 4)) +
+  # Kujundus
+  coord_fixed() +
+  theme_minimal(base_size = 14) +
+  theme(panel.grid = element_line(color = "gray90"),
+        axis.title = element_text(size = 14)) +
+  labs(x = "x", y = "y",
+       title = "Koordinaatteljestik ja veerandid")
+
+
+```
+
+## Veerandid
+
+Kui $x$ ja $y$ on vastavalt kaks esimest mõõdet, siis veerandid on määratletud järgnevalt:
+
+1. $(x > 0) \land (y > 0).$
+
+2. $(x < 0) \land (y > 0).$
+
+3. $(x < 0) \land (y < 0).$
+
+4. $(x > 0) \land (y < 0).$
+
+## Punkti koordinaadid
+
+Koordinaatteljestikus on iga punkt järjestatud paar, mille liikmed on selle punkti koordinaadid (@exm-coordinates-letters kuni @exm-coordinates-numbers).
+
+::: {#exm-coordinates-letters}
+
+$$A = (x; y).$$
+
+:::
+
+::: {#exm-coordinates-numbers}
+
+$$B = (2; 5).$$
+
+:::
+
+Koordinaatteljestiku nullpunkt
+: punkt $(0; 0)$, milles teljed ristuvad.
 
 ## Suhe
 
@@ -379,6 +869,184 @@ $$\{(-2; 5); (-1; 0); (0; -3); (1; -4); (2; -3); (3; 0); (4; 5)\}.$$
 $$\{(-1; 0); (0; -3);(2; -3); (3; 0); (4; 5)\}.$$
 $$\{(3; 0); (4; 5)\}.$$
 :::
+
+## Lõikepunktid telgedega
+
+Lõikepunktis teljega on teistel telgedel punkti koordinaat 0.
+
+## Lõikepunktide telgedega ülesanded---
+
+Tee kindlaks võrrandi lõikepunktid telgedega ülesannetes (@exr-intercept-1) kuni (@exr-intercept-3).
+
+::: {#exr-intercept-1}
+$$y = x^2 + x - 6.$$
+
+:::
+
+::: {#exr-intercept-2}
+$$y = x^2 + 2.$$
+
+:::
+
+::: {#exr-intercept-3}
+$$y = (x + 1)^2.$$
+
+:::
+
+## Lõikepunktide lahendus 1
+
+Lõikepunktid $x$-teljega:
+
+$$0 = x^2 + x - 6 = (x - 2) \cdot (x + 3).$$
+
+$$\{x \in \mathbb{R} : (x = -3) \lor (x = 2)\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(-3; 0\right); \left(2; 0\right)\}.$$
+
+Lõikepunkt $y$-teljega:
+
+$$\{y \in \mathbb{R} : 0^2 + 0 - 6 = -6\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; -6\right)\}.$$
+
+## Lõikepunktide graafik 1---
+
+```{r label="intercept-graph-1", fig.cap="Võrrandi $y = x^2 + x - 6$ graafik ja lõikepunktid telgedega."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) x^2 + x - 6
+
+# Lõikepunktid
+# y-telg: x = 0 → y = -6
+y_int <- data.frame(x = 0, y = f(0))
+
+# x-telg: y = 0 → x^2 + x - 6 = 0 → x = 2 ja x = -3
+x_int <- data.frame(x = c(-3, 2), y = 0)
+
+# Joonise andmed
+xs <- seq(-4, 3, 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Joonis
+ggplot(df, aes(x, y)) +
+  geom_hline(yintercept = 0, color = "gray40") +
+  geom_vline(xintercept = 0, color = "gray40") +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(data = x_int, aes(x, y), color = "red", size = 3) +
+  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
+  geom_text(data = x_int, aes(label = paste0("(", x, ", ", y, ")")),
+            vjust = -1, color = "red") +
+  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
+            hjust = -0.2, vjust = 1.5, color = "red") +
+  labs(title = expression(y == x^2 + x - 6),
+       x = "x",
+       y = "y") +
+  theme_minimal(base_size = 14)
+
+```
+
+## Lõikepunktide lahendus 2
+
+Lõikepunktid $x$-teljega:
+
+$$0 = x^2 + 2.$$
+
+$$\{x \in \mathbb{R} : x \in \emptyset\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \emptyset\}.$$
+
+Lõikepunkt $y$-teljega:
+
+$$\{y \in \mathbb{C} : 0^2 + 2 = 2\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 2\right)\}.$$
+
+## Lõikepunktide graafik 2---
+
+```{r label="intercept-graph-2", fig.cap="Võrrandi $y = x^2 + 2$ graafik ja lõikepunktid telgedega."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) x^2 + 2
+
+# Lõikepunktid
+# y-telg: x = 0 → y = 2
+y_int <- data.frame(x = 0, y = f(0))
+
+# x-telge ei lõika, sest y = x^2 + 2 > 0 kõikjal
+
+# Andmed jooniseks
+xs <- seq(-3, 3, 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Joonis
+ggplot(df, aes(x, y)) +
+  geom_hline(yintercept = 0, color = "gray40") +
+  geom_vline(xintercept = 0, color = "gray40") +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
+  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
+            hjust = -0.2, vjust = 1.5, color = "red") +
+  labs(title = expression(y == x^2 + 2),
+       x = "x",
+       y = "y") +
+  theme_minimal(base_size = 14)
+
+```
+
+## Lõikepunktide lahendus 3
+
+Lõikepunktid $x$-teljega:
+
+$$0 = (x + 1)^2.$$
+
+$$\{x \in \mathbb{R} : (x = -1)\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(-1; 0\right)\}.$$
+
+Lõikepunkt $y$-teljega:
+
+$$\{y \in \mathbb{R} : (0 + 1)^2 = 1\}.$$
+
+$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 1\right)\}.$$
+
+## Lõikepunktide graafik 3---
+
+```{r label="intercept-graph-3", fig.cap="Võrrandi $y = (x + 1)^2$ graafik ja lõikepunktid telgedega."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) (x + 1)^2
+
+# Lõikepunktid
+# y-telg: x = 0 → y = (0 + 1)^2 = 1
+y_int <- data.frame(x = 0, y = f(0))
+
+# x-telg: y = 0 → (x + 1)^2 = 0 → x = -1
+x_int <- data.frame(x = -1, y = 0)
+
+# Andmed jooniseks
+xs <- seq(-3, 2, 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Joonis
+ggplot(df, aes(x, y)) +
+  geom_hline(yintercept = 0, color = "gray40") +
+  geom_vline(xintercept = 0, color = "gray40") +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(data = x_int, aes(x, y), color = "red", size = 3) +
+  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
+  geom_text(data = x_int, aes(label = paste0("(", x, ", ", y, ")")),
+            vjust = -1, color = "red") +
+  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
+            hjust = -0.2, vjust = 1.5, color = "red") +
+  labs(title = expression(y == (x + 1)^2),
+       x = "x",
+       y = "y") +
+  theme_minimal(base_size = 14)
+
+```
 
 ## Funktsioon
 
@@ -612,7 +1280,7 @@ $$\mathrm{f}(x) = x + 1.$$
     $$\mathrm{f}(\mathrm{f}^{-1}(x)) = (x - 1) + 1 = x.$$
     :::
 
-## Pöördfunktsioon: ülesanded (@exr-inverting-function-1 kuni @exr-inverting-function-3)
+## Pöördfunktsioon: ülesanded (@exr-inverting-function-1 kuni @exr-inverting-function-3)---
 
 ::: {#exr-inverting-function-1}
 $$\mathrm{f}(x) = 3 \cdot x - 2 \rightarrow \mathrm{f}^{-1}(x) = \ldots.$$
@@ -898,6 +1566,538 @@ ggplot(df, aes(x, y)) +
 Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.7[@dawkins2022algebra(lk 34)]:
 
 Iga ülesande puhul on antud funktsioon ja vaja on arvutada selle pöördfunktsioon.
+
+## Parabool
+
+Parabool on ruutfunktsiooni (@eq-quadratic-function) graafik (@fig-parabolas).
+
+Haripunkt on parabooli kõrgeim või madalaim punkt.
+
+$$(a \neq 0) \land \left(\mathrm{f}(x) = a \cdot x^2 + b \cdot x + o\right).$${#eq-quadratic-function}
+
+```{r label="fig-parabolas", fig.cap="Paraboolid haripunktidega ja sümmeetriatelgedega."}
+library(ggplot2)
+
+# Funktsioonid
+f_up   <- function(x) (x - 2)^2 - 5        # üles avanev
+f_down <- function(x) -0.5 * (x + 3)^2 + 4 # alla avanev
+
+# x-vahemik ja väärtused
+xs <- seq(-7, 7, by = 0.05)
+df <- data.frame(
+  x = xs,
+  y_up = f_up(xs),
+  y_down = f_down(xs)
+)
+
+# Haripunktid ja sümmeetriateljed
+vertex_up   <- data.frame(x = 2,  y = -5)
+vertex_down <- data.frame(x = -3, y = 4)
+
+ggplot(df, aes(x = x)) +
+  # Paraboolid
+  geom_line(aes(y = y_up, color = "y = (x − 2)² − 5"), linewidth = 1.2) +
+  geom_line(aes(y = y_down, color = "y = −0.5·(x + 3)² + 4"), linewidth = 1.2) +
+  
+  # Teljed
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.6) +
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.6) +
+  
+  # Sümmeetriateljed
+  geom_vline(xintercept = vertex_up$x,   linetype = "dashed", color = "#1B9E77") +
+  geom_vline(xintercept = vertex_down$x, linetype = "dashed", color = "#D95F02") +
+  
+  # Haripunktid
+  geom_point(data = vertex_up, aes(x = x, y = y), color = "#1B9E77", size = 3) +
+  geom_point(data = vertex_down, aes(x = x, y = y), color = "#D95F02", size = 3) +
+  
+  # Nooled ja sildid
+  geom_curve(
+    aes(x = 3.2, y = -3.5, xend = vertex_up$x + 0.1, yend = vertex_up$y + 0.1),
+    curvature = 0.3, arrow = arrow(length = unit(0.25, "cm")), color = "#1B9E77"
+  ) +
+  geom_text(aes(x = 3.5, y = -3.3, label = "haripunkt"), color = "#1B9E77", size = 4, hjust = 0) +
+
+  geom_curve(
+    aes(x = -4.5, y = 2.2, xend = vertex_down$x - 0.1, yend = vertex_down$y - 0.1),
+    curvature = -0.3, arrow = arrow(length = unit(0.25, "cm")), color = "#D95F02"
+  ) +
+  geom_text(aes(x = -6, y = 2.3, label = "haripunkt"), color = "#D95F02", size = 4, hjust = 0) +
+  
+  # Kujundus
+  scale_color_manual(values = c("#1B9E77", "#D95F02")) +
+  coord_fixed(ratio = 1, xlim = c(-7, 7), ylim = c(-7, 6)) +
+  labs(x = "x", y = "y", color = "Funktsioon") +
+  theme_minimal(base_size = 14)
+
+
+```
+
+## Parabooli visandamine
+
+1. Arvuta haripunkt!
+
+2. Arvuta lõikepunkt ordinaatteljega!
+
+3. Arvuta lõikepunkt(id) abstsissteljega!
+
+4. Arvuta kummalegi poole haripunkti vähemalt üks punkt!
+
+5. Visanda parabool läbi nende vähemalt kolme punkti!
+
+## Haripunkti arvutamine 1
+
+$$\mathrm{f}(x) = a \cdot (x - s)^2 + u \rightarrow$${#eq-quadratic-function-with-parentheses}
+$a$
+: ruutliikme kordaja: kui positiivne, avaneb parabool üles, kui negatiivne, alla
+
+$s$
+: nihe piki abstsisstelge
+
+$u$
+: nihe piki ordinaattelge
+
+$(s; u)$
+: haripunkt
+
+## Parabooli ülesanded 1
+
+Visanda ülesannetes @exr-parabola-1 kuni @exr-parabola-3 esitatud funktsioonide graafikud!
+
+::: {#exr-parabola-1}
+$$\mathrm{f}(x) = 2 \cdot (x + 3)^2 -8.$$
+:::
+
+::: {#exr-parabola-2}
+$$\mathrm{f}(x) = - (x - 2)^2 - 1.$$
+:::
+
+::: {#exr-parabola-3}
+$$\mathrm{f}(x) = x^2 + 4.$$
+:::
+
+## Parabooli 1 lahendamine 1
+
+1. $(3; -8).$
+
+2. $(0; 10).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (-5; 0); (-1; 0)\}.$
+
+4. Juba tehtud.
+
+## Parabooli 1 graafik 1
+
+```{r label="fig-parabola-1-1", fig.cap="Funktsiooni $\\mathrm{f}(x) = 2 \\cdot (x + 3)^2 -8$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) 2 * (x + 3)^2 - 8
+
+# Joonistamisandmed
+xs <- seq(-8, 3, by = 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Olulised punktid
+h <- -3; k <- -8            # haripunkt
+y0 <- f(0)                  # ordinaattelje lõige (0; 10)
+x1 <- -5; x2 <- -1          # abstsisstelje lõiked
+
+# Punktide koordinaadid ja sildid (tavaline tekst, mitte expression)
+points_df <- data.frame(
+  x = c(h,   0,  x1,  x2),
+  y = c(k,  y0,   0,   0),
+  label = c("(-3; -8)", "(0; 10)", "(-5; 0)", "(-1; 0)"),
+  stringsAsFactors = FALSE
+)
+
+# Siltide joondus: nihutame (0; 10) vasakule
+points_df$hjust <- c(-0.2, 1.1, -0.2, -0.2)  # teine element (0;10) vasakule
+points_df$vjust <- c(-0.6, -0.4, -0.6, -0.6)
+
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = 0, color = "black") +
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = points_df,
+    aes(label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(f(italic(x)) == 2 * (italic(x) + 3)^2 - 8),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-8, 3), ylim = c(-10, 12)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Parabooli 1 lahendamine 2
+
+1. $(2; -1).$
+
+2. $(0; -5).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : \emptyset\}.$
+
+4. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (4; -5)\}.$
+
+## Parabooli 1 graafik 2
+
+```{r label="fig-parabola-1-2", fig.cap="Funktsiooni $\\mathrm{g}(x) = - (x - 2)^2 - 1$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+g <- function(x) - (x - 2)^2 - 1
+
+# Joonistamiseks x väärtused
+xs <- seq(-3, 7, by = 0.1)
+df <- data.frame(x = xs, y = g(xs))
+
+# Olulised punktid
+h <- 2; k <- -1        # haripunkt
+y0 <- g(0)             # ordinaattelje lõige (0; -5)
+x_sym <- 4; y_sym <- g(x_sym)  # sümmeetriline punkt (4; -5)
+
+# Punktide andmed ja sildid
+points_df <- data.frame(
+  x = c(h, 0, x_sym),
+  y = c(k, y0, y_sym),
+  label = c("(2; -1)", "(0; -5)", "(4; -5)"),
+  stringsAsFactors = FALSE
+)
+
+# Nihked siltide jaoks
+points_df$hjust <- c(-0.2, 1.1, -0.2)  # (0; -5) vasakule
+points_df$vjust <- c(-0.6, -0.4, -0.6)
+
+# Graafik
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = 0, color = "black") +
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = points_df,
+    aes(label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(g(italic(x)) == - (italic(x) - 2)^2 - 1),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-3, 7), ylim = c(-6, 2)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Parabooli 1 lahendamine 3
+
+1. $(0; 4).$
+
+2. $(0; 4).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : \emptyset\}.$
+
+4. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (-1; 5); (1; 5)\}.$
+
+## Parabooli 1 graafik 3
+
+```{r label="fig-parabola-1-3", fig.cap="Funktsiooni $\\mathrm{f}(x) = x^2 + 4$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) x^2 + 4
+
+# Joonistamiseks x väärtused
+xs <- seq(-3, 3, by = 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Olulised punktid
+h <- 0; k <- 4            # haripunkt
+y0 <- f(0)                # ordinaattelje lõige (0; 4)
+x_left <- -1; x_right <- 1  # lisapunktid
+y_left <- f(x_left); y_right <- f(x_right)
+
+# Punktide andmed ja sildid
+points_df <- data.frame(
+  x = c(h, 0, x_left, x_right),
+  y = c(k, y0, y_left, y_right),
+  label = c("(0; 4)", "(0; 4)", "(-1; 5)", "(1; 5)"),
+  stringsAsFactors = FALSE
+)
+
+# Nihked siltide jaoks
+points_df$hjust <- c(-0.2, 1.1, -0.2, -0.2)  # (0;4) vasakule
+points_df$vjust <- c(-0.6, -0.4, -0.6, -0.6)
+
+# Graafik
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = 0, color = "black") +
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = points_df,
+    aes(label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(f(italic(x)) == italic(x)^2 + 4),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-3, 3), ylim = c(3.5, 6)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Haripunkti arvutamine 2
+
+Parabooli haripunkti abstsiss on vastava võrrandi lahendite (@eq-quadratic-equation-solution) aritmeetiline keskmine (@eq-vertex-abscissa).
+
+$$\overline{x} = \frac{\frac{-b - \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a} + \frac{-b + \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a}}{2} = -\frac{b}{2 \cdot a}.$${#eq-vertex-abscissa}
+
+Kui funktsioon on $\mathrm{f}(x)$, siis haripunkt on $\left((-\frac{b}{2 \cdot a}; \mathrm{f}(-\frac{b}{2 \cdot a})\right)$.
+
+Lõikepunkt ordinaatteljega on $\left(0; a \cdot 0^2 + b \cdot 0 + r\right) = (0; r)$.
+
+## Parabooli ülesanded 2
+
+Visanda ülesannetes @exr-parabola-4 kuni @exr-parabola-6 esitatud funktsioonide graafikud!
+
+::: {#exr-parabola-4}
+
+$$\mathrm{g}(x) = 3 \cdot x^2 - 6 \cdot x + 5.$$
+
+:::
+
+::: {#exr-parabola-5}
+$$\mathrm{f}(x) = -x^2 + 8 \cdot x.$$
+:::
+
+::: {#exr-parabola-6}
+$$\mathrm{f}(x) = x^2 + 4 \cdot x + 4.$$
+:::
+
+## Parabooli 2 lahendamine 1
+
+1. $(1; 2).$
+
+2. $(0; 5).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : \emptyset\}.$
+
+4. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (2; 5)\}.$
+
+## Parabooli 2 graafik 1
+
+```{r label="fig-parabola-2-1", fig.cap="Funktsiooni $\\mathrm{g}(x) = 3 \\cdot x^2 - 6 \\cdot x + 5$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+g <- function(x) 3 * x^2 - 6 * x + 5
+
+# Joonistamiseks x väärtused
+xs <- seq(-1, 4, by = 0.1)
+df <- data.frame(x = xs, y = g(xs))
+
+# Haripunkt: x = -b / (2a) = 6 / (2*3) = 1, y = g(1)
+h <- 1
+k <- g(h)
+
+# Ordinaattelje lõige (x = 0)
+y0 <- g(0)
+
+# Lisapunktid sümmeetria mõlemal pool (valime x = 0 ja x = 2)
+x_left <- 0; x_right <- 2
+y_left <- g(x_left); y_right <- g(x_right)
+
+# Punktide andmed ja sildid
+points_df <- data.frame(
+  x = c(h, 0, 2),
+  y = c(k, y_left, y_right),
+  label = c("(1; 2)", "(0; 5)", "(2; 5)"),
+  stringsAsFactors = FALSE
+)
+
+# Nihked tekstide jaoks
+points_df$hjust <- c(-0.2, 1.1, -0.2)  # (0;5) vasakule
+points_df$vjust <- c(-0.6, -0.4, -0.6)
+
+# Graafik
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_hline(yintercept = 0, color = "black") +
+  geom_vline(xintercept = 0, color = "black") +
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = points_df,
+    aes(label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(g(italic(x)) == 3 * italic(x)^2 - 6 * italic(x) + 5),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-1, 4), ylim = c(1.5, 6)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Parabooli 2 lahendamine 2
+
+1. $(4; 16).$
+
+2. $(0; 0).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (0; 0); (8; 0)\}.$
+
+4. Juba tehtud.
+
+## Parabooli 2 graafik 2
+
+```{r label="fig-parabola-2-2", fig.cap="Funktsiooni $\\mathrm{f}(x) = -x^2 + 8 \\cdot x$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) -x^2 + 8*x
+
+# Andmestik
+xs <- seq(-2, 10, by = 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Olulised punktid
+h <- 4; k <- f(h)     # (4; 16)
+x1 <- 0; x2 <- 8      # (0; 0), (8; 0)
+
+points_df <- data.frame(
+  x = c(h, x1, x2),
+  y = c(k, 0, 0),
+  label = c("(4; 16)", "(0; 0)", "(8; 0)")
+)
+
+# Siltide positsioon eraldi (et need EI oleks teljel)
+label_df <- data.frame(
+  x = c(h, x1, x2),
+  y = c(k + 0.6, 1.0, 1.0),     # nihutatud üles: teljest selgelt üleval
+  label = c("(4; 16)", "(0; 0)", "(8; 0)"),
+  hjust = c(-0.2, 0.5, 0.5),
+  vjust = c(-0.6, -0.6, -0.6)
+)
+
+ggplot(df, aes(x, y)) +
+  geom_line(linewidth = 1) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = label_df,
+    aes(x = x, y = y, label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(f(italic(x)) == -italic(x)^2 + 8*italic(x)),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-2, 10), ylim = c(-2, 18)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Parabooli 2 lahendamine 3
+
+1. $(-2; 0).$
+
+2. $(0; 4).$
+
+3. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (-2; 0)\}.$
+
+4. $\{(x \in \mathbb{R}; y \in \mathbb{R}) : (-4; 4)\}.$
+
+## Parabooli 2 graafik 3
+
+```{r label="fig-parabola-2-3", fig.cap="Funktsiooni $\\mathrm{f}(x) = x^2 + 4 \\cdot x + 4$ graafik."}
+library(ggplot2)
+
+# Funktsioon
+f <- function(x) x^2 + 4*x + 4
+
+# Andmestik
+xs <- seq(-6, 2, by = 0.1)
+df <- data.frame(x = xs, y = f(xs))
+
+# Olulised punktid
+h <- -2; k <- f(h)      # haripunkt (-2; 0)
+y0 <- f(0)              # ordinaattelje lõige (0; 4)
+x_sym <- -4; y_sym <- f(x_sym)  # sümmeetriline punkt (-4; 4)
+
+# Punktide andmed
+points_df <- data.frame(
+  x = c(h, 0, x_sym),
+  y = c(k, y0, y_sym),
+  label = c("(-2; 0)", "(0; 4)", "(-4; 4)"),
+  stringsAsFactors = FALSE
+)
+
+# Siltide joondus: (0;4) veidi vasakule
+points_df$hjust <- c(-0.2, 1.1, -0.2)
+points_df$vjust <- c(-0.6, -0.4, -0.6)
+
+# Graafik
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_hline(yintercept = 0, color = "black") +  # x-telg
+  geom_vline(xintercept = 0, color = "black") +  # y-telg (parandus!)
+  geom_point(data = points_df, aes(x, y), color = "red", size = 3) +
+  geom_text(
+    data = points_df,
+    aes(label = label, hjust = hjust, vjust = vjust),
+    size = 4
+  ) +
+  labs(
+    title = expression(f(italic(x)) == italic(x)^2 + 4*italic(x) + 4),
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  coord_fixed(ratio = 1, xlim = c(-6, 2), ylim = c(-1, 5)) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Ruutfunktsiooni vormi ülesanded
+
+Konverteeri ülesannetes (@exr-quadratic-equation-form-1) kuni (@exr-quadratic-equation-form-2) ruutfunktsioon sulgudega kujule (@eq-quadratic-function-with-parentheses).
+
+::: {#exr-quadratic-equation-form-1}
+$$\mathrm{f}(x) = 2 \cdot x^2 - 12 \cdot x + 3.$$
+
+:::
+
+::: {#exr-quadratic-equation-form-2}
+$$\mathrm{f}(x) = -x^2 + 10 \cdot x - 1.$$
+
+:::
+
+## Ruutfunktsiooni vormi lahendused
+
+$$\mathrm{f}(x) = 2 \cdot x^2 - 12 \cdot x + 3\\ = 2 \cdot (x^2 - 6 \cdot x + 9 - 9) + 3 = 2 \cdot (x - 3)^2 - 15.$$
+
+$$\mathrm{f}(x) = -x^2 + 10 \cdot x - 1\\ = -(x^2 - 10 \cdot x + 25 - 25) - 1 = -(x - 5)^2 + 24.$$
+
+## Parabool: iseseisev harjutamine
+
+Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 4.2[@dawkins2022algebra(lk 37)]:
+
+Esimeses seitsmes ülesandes on vaja visandada graafik, nii et tähistatud oleksid haripunkt, lõikepunkt ordinaatteljega, olemasolu korral lõikepunkt(id) abstsissteljega ning kummalgi pool haripunkti vähemalt üks punkt.
+
+Ülesannetes 8-10 tuleb iga ruutfunktsioon teisendada sulgudega etteantud kujule, millest saaks otse välja lugeda haripunkti koordinaadid.
 
 ## Välised allikad
 
