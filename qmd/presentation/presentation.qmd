@@ -205,7 +205,7 @@ algarv
 
 ## Tegurdamine
 
-$$12 = 2 \cdot 6 = 3 \cdot 4 = 2 \cdot 2 \cdot 3 = \frac{1}{2} \cdot 24 = -2 \cdot (-6) = -2 \cdot 2 \cdot (-3).$$
+$$12 = 2 \cdot 6 = 3 \cdot 4 = 2 \cdot 2 \cdot 3 = \frac{1}{2} \cdot 24 = -2 \cdot (-6)\\ = -2 \cdot 2 \cdot (-3).$$
 
 algtegur
 : algarvuline tegur
@@ -293,8 +293,7 @@ $$x^5 - 3 \cdot x^3 - 2 \cdot x^2 + 6 = x^2 \cdot (x^3 - 2) - 3 \cdot (x^3 - 2)\
 ::: {#exm-polynome-factoring-quadratic-1}
 $$x^2 + 2 \cdot x - 15 = (x + a) \cdot (x + b).$$
 $$a \cdot b = -15.$$
-$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1); (1; -15);\\ (3; -5);\\
-(5; -3); (15; -1)\}.$$
+$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1);\\ (1; -15); (3; -5); (5; -3); (15; -1)\}.$$
 $$a + b = 2.$$
 $$x^2 + 2 \cdot x - 15 = (x + 5) \cdot (x - 3).$$
 
@@ -312,15 +311,14 @@ $$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x - 4) \cdot (x + 2).$$
 
 :::
 
-## Ruutliikme tegurdamine 3---
+## Ruutliikme tegurdamine 3
 
 ::: {#exm-polynome-factoring-quadratic-3}
 $$4 \cdot x^2 + 10 \cdot x - 6 = (f \cdot x + a) \cdot (j \cdot x + b) \rightarrow a \cdot b = -6.$$
-$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3);\\ (3; -2);\\
-(6; -1)\}.$$
+$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3);\\ (3; -2); (6; -1)\}.$$
 $$f \cdot j = 4 \rightarrow (f; j) \in \{(1; 4); (2; 2); (4; 1)\}.$$
 $$f \cdot b + a \cdot j = 10.$$
-$$4 \cdot x^2 + 10 \cdot x - 6 = (x + 3) \cdot (4 \cdot x - 2) = (x + 3) \cdot (2 \cdot x - 1) \cdot 2.$$
+$$4 \cdot x^2 + 10 \cdot x - 6 = (x + 3) \cdot (4 \cdot x - 2)\\ = (x + 3) \cdot (2 \cdot x - 1) \cdot 2.$$
 :::
 
 ## Erikujud
@@ -348,7 +346,7 @@ $25 \cdot x^2 - 9$ (@eq-factoring-difference-of-squares).
 $8 \cdot x^3 + 1$ (@eq-factoring-sum-of-cubes).
 :::
 
-## Kahest suurema astme hulkliikmed---
+## Kahest suurema astme hulkliikmed
 
 :::{#exm-factoring-polynomials-degree-greater-than-two-1}
 $$3 \cdot x^4 - 3 \cdot x^3 - 36 \cdot x^2 = 3 \cdot x^2 \cdot (x^2 - x - 12)\\
@@ -360,7 +358,7 @@ $$x^4 - 25 = (x^2 + 5) \cdot (x^2 - 5).$$
 :::
 
 :::{#exm-factoring-polynomials-degree-greater-than-two-3}
-$$x^4 + x^2 - 20 = (x^2 + 5) \cdot (x^2 - 4) = (x^2 + 5) \cdot (x + 4) \cdot (x - 4).$$
+$$x^4 + x^2 - 20 = (x^2 + 5) \cdot (x^2 - 4)\\ = (x^2 + 5) \cdot (x + 4) \cdot (x - 4).$$
 :::
 
 ## Lineaarvõrrandi standardkuju
@@ -475,15 +473,13 @@ $$\frac{m-2}{3} + 1 = \frac{2 \cdot m}{7}.$$
 5. $\displaystyle \frac{-7 - 2}{3} + 1 \stackrel{?}{=} \frac{2 \cdot (-7)}{7}.$  
    $\displaystyle -2 = -2.$
 
-## Lineaarvõrrandi 3 lahendamine---
+## Lineaarvõrrandi 3 lahendamine
 
 $$\frac{2 \cdot z}{z + 3} = \frac{3}{z - 10} + 2.$$
 
-1.  $[2 \cdot z \cdot (z - 10) = 3 \cdot (z + 3) + 2 \cdot (z^2 - 7 \cdot z - 30)] \land$
+1.  $[2 \cdot z \cdot (z - 10) = 3 \cdot (z + 3) + 2 \cdot (z^2 - 7 \cdot z - 30)]\\ \land (z \neq -3) \land (z \neq 10).$
 
-    $(z \neq -3) \land (z \neq 10).$
-
-2. $(2 \cdot z^2 - 20 \cdot z = 2 \cdot z^2 - 11 \cdot z - 51) \land (z \neq -3) \land (z \neq 10).$
+2. $(2 \cdot z^2 - 20 \cdot z = 2 \cdot z^2 - 11 \cdot z - 51)\\ \land (z \neq -3) \land (z \neq 10).$
 
 3. $(9 \cdot z = 51) \land (z \neq -3) \land z \neq 10.$
 
@@ -505,8 +501,8 @@ Kui korrutis ei ole null, ei saa kindlalt väita, et vähemalt üks tegur on võ
 
 ::: {#exm-not-zero-factor-property}
 
-$$a \cdot b = 6 \rightarrow a = 1 \land b = 6 \lor a = 2 \land b = 3 \lor a = 3 \land b = 2 \lor \\
-a = 6 \land b = 1.$$
+$$a \cdot b = 6 \rightarrow (a = 1) \land (b = 6) \lor (a = 2) \land (b = 3)\\ \lor (a = 3) \land (b = 2)\\ \lor
+(a = 6) \land (b = 1).$$
 
 :::
 
@@ -530,8 +526,9 @@ $$5 \cdot x ^2 = 2 \cdot x.$$
 
 :::
 
-## Tegurdades lahendamine 1---
+## Tegurdades lahendamine 1
 
+Leia kaks viga:
 $$x^2 - x = 12.$$
 
 $$x^2 - x - 12 = 0.$$
@@ -697,9 +694,11 @@ $$2 \cdot x^2 + 6 \cdot x + 7 = 0:$$
 
     $x = -\frac{3}{2} \pm \frac{\sqrt{5}}{2} \cdot i.$
 
-## Ruutvõrrandisse ruudu lahendus 3---
+## Ruutvõrrandisse ruudu lahendus 3
 
 $$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
+
+Leia viga:
 
 2. $x^2 -\frac{2}{3} \cdot x - \frac{1}{3} = 0.$
 
@@ -725,13 +724,13 @@ $$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
 
     $\left(x + \frac{b}{2 \cdot a}\right)^2 = -\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2.$
 
-## Ruutvõrrandi lahendamise üldvalem 5---
+## Ruutvõrrandi lahendamise üldvalem 5
 
 5.  $x + \frac{b}{2 \cdot a} = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2}.$
 
     $$x = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2} - \frac{b}{2 \cdot a}\\ = \pm \sqrt{\frac{-4 \cdot a \cdot r + b^2}{4 \cdot a^2}} - \frac{b}{2 \cdot a}\\ = \frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a}.$${#eq-quadratic-equation-solution}
 
-## Ruutvõrrandi lahendamise üldvalemi ülesanded---
+## Ruutvõrrandi lahendamise üldvalemi ülesanded
 
 :::{#exr-quadratic-equation-formula-1}
 $$x^2 + 2 \cdot x = 7.$$
@@ -748,13 +747,13 @@ $$\frac{3}{y - 2} = \frac{1}{y} + 1.$$
 
 :::
 
-## Ruutvõrrandi lahendamine üldvalemiga 1---
+## Ruutvõrrandi lahendamine üldvalemiga 1
 
 $$x^2 + 2 \cdot x = 7.$$
 
 $$x^2 + 2 \cdot x - 7 = 0.$$
 
-$$x = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 1 \cdot (-7)}}{2 \cdot 1} = \frac{-2 \pm \sqrt{4 + 28}}{2} = \frac{-2 \pm \sqrt{32}}{2}\\ = -1 \pm 2 \cdot \sqrt{2}.$$
+$$x = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 1 \cdot (-7)}}{2 \cdot 1} = \frac{-2 \pm \sqrt{4 + 28}}{2}\\ = \frac{-2 \pm \sqrt{32}}{2}\\ = -1 \pm 2 \cdot \sqrt{2}.$$
 
 ## Ruutvõrrandi lahendamine üldvalemiga 2
 $$3 \cdot q^2 + 11 = 5 \cdot q.$$
@@ -815,7 +814,7 @@ ggplot() +
   theme_minimal(base_size = 14) +
   theme(panel.grid = element_line(color = "gray90"),
         axis.title = element_text(size = 14)) +
-  labs(x = "x", y = "y",
+  labs(x = expression(italic(x)), y = expression(italic(y)),
        title = "Koordinaatteljestik ja veerandid")
 
 
@@ -865,7 +864,7 @@ $$\{(-2; 5); (-1; 0); (2; -3)\}.$$
 
 ::: {#exm-graph}
 $$y=(x-1)^2-4.$$
-$$\{(-2; 5); (-1; 0); (0; -3); (1; -4); (2; -3); (3; 0); (4; 5)\}.$$
+$$\{(-2; 5); (-1; 0); (0; -3); (1; -4); (2; -3); (3; 0);\\ (4; 5)\}.$$
 $$\{(-1; 0); (0; -3);(2; -3); (3; 0); (4; 5)\}.$$
 $$\{(3; 0); (4; 5)\}.$$
 :::
@@ -874,7 +873,7 @@ $$\{(3; 0); (4; 5)\}.$$
 
 Lõikepunktis teljega on teistel telgedel punkti koordinaat 0.
 
-## Lõikepunktide telgedega ülesanded---
+## Lõikepunktide telgedega ülesanded
 
 Tee kindlaks võrrandi lõikepunktid telgedega ülesannetes (@exr-intercept-1) kuni (@exr-intercept-3).
 
@@ -909,7 +908,7 @@ $$\{y \in \mathbb{R} : 0^2 + 0 - 6 = -6\}.$$
 
 $$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; -6\right)\}.$$
 
-## Lõikepunktide graafik 1---
+## Lõikepunktide graafik 1
 
 ```{r label="intercept-graph-1", fig.cap="Võrrandi $y = x^2 + x - 6$ graafik ja lõikepunktid telgedega."}
 library(ggplot2)
@@ -939,9 +938,9 @@ ggplot(df, aes(x, y)) +
             vjust = -1, color = "red") +
   geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
             hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(y == x^2 + x - 6),
-       x = "x",
-       y = "y") +
+  labs(title = expression(italic(y == x^2 + x - 6)),
+       x = expression(x),
+       y = expression(y)) +
   theme_minimal(base_size = 14)
 
 ```
@@ -962,7 +961,7 @@ $$\{y \in \mathbb{C} : 0^2 + 2 = 2\}.$$
 
 $$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 2\right)\}.$$
 
-## Lõikepunktide graafik 2---
+## Lõikepunktide graafik 2
 
 ```{r label="intercept-graph-2", fig.cap="Võrrandi $y = x^2 + 2$ graafik ja lõikepunktid telgedega."}
 library(ggplot2)
@@ -988,9 +987,9 @@ ggplot(df, aes(x, y)) +
   geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
   geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
             hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(y == x^2 + 2),
-       x = "x",
-       y = "y") +
+  labs(title = expression(italic(y == x^2 + 2)),
+       x = expression(italic(x)),
+       y = expression(italic(y))) +
   theme_minimal(base_size = 14)
 
 ```
@@ -1011,7 +1010,7 @@ $$\{y \in \mathbb{R} : (0 + 1)^2 = 1\}.$$
 
 $$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 1\right)\}.$$
 
-## Lõikepunktide graafik 3---
+## Lõikepunktide graafik 3
 
 ```{r label="intercept-graph-3", fig.cap="Võrrandi $y = (x + 1)^2$ graafik ja lõikepunktid telgedega."}
 library(ggplot2)
@@ -1041,9 +1040,9 @@ ggplot(df, aes(x, y)) +
             vjust = -1, color = "red") +
   geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
             hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(y == (x + 1)^2),
-       x = "x",
-       y = "y") +
+  labs(title = expression(italic(y == (x + 1)^2)),
+       x = expression(italic(x)),
+       y = expression(italic(y))) +
   theme_minimal(base_size = 14)
 
 ```
@@ -1243,7 +1242,7 @@ Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.4[@dawkin
 
 Reegel on esitatud valemiga @eq-inverse-function.
 
-$$\mathrm{f}(\mathrm{g}(x)) = x \land \mathrm{g}(\mathrm{f}(x)) = x \rightarrow \mathrm{f}(x) = \mathrm{g}^{-1}(x) \land \mathrm{g}(x) = \mathrm{f}^{-1}(x).$${#eq-inverse-function}
+$$\mathrm{f}(\mathrm{g}(x)) = x \land \mathrm{g}(\mathrm{f}(x)) = x\\ \rightarrow \mathrm{f}(x) = \mathrm{g}^{-1}(x) \land \mathrm{g}(x) = \mathrm{f}^{-1}(x).$${#eq-inverse-function}
 
 Pöördfunktsioon ei ole pöördväärtus (@eq-inverse-function-not-reciprocal)!
 
@@ -1280,7 +1279,7 @@ $$\mathrm{f}(x) = x + 1.$$
     $$\mathrm{f}(\mathrm{f}^{-1}(x)) = (x - 1) + 1 = x.$$
     :::
 
-## Pöördfunktsioon: ülesanded (@exr-inverting-function-1 kuni @exr-inverting-function-3)---
+## Pöördfunktsioon: ülesanded (@exr-inverting-function-1 kuni @exr-inverting-function-3)
 
 ::: {#exr-inverting-function-1}
 $$\mathrm{f}(x) = 3 \cdot x - 2 \rightarrow \mathrm{f}^{-1}(x) = \ldots.$$
