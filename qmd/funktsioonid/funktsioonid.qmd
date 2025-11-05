@@ -1,12 +1,13 @@
 ---
 author:
   - name: 'peacecop kalmer:'
-bibliography: presentation.bib
+bibliography: funktsioonid.bib
 csl: ../../apa-numeric-superscript-brackets.csl
 title: |
     | Matemaatiline
-    | analüüs
-output-file: presentation.html
+    | analüüs:
+    | funktsioonid
+output-file: funktsioonid.html
 format:
   revealjs:
     hash: true
@@ -15,7 +16,7 @@ format:
       url: 'http://manual-for-rstudio.ons.ee:1948/'
       secret: "16759825730498538629"
       socketId: "f3edf0ff0d09982e"
-language: et.yml
+language: ../et.yml
 crossref: 
   exm-prefix: näide
   exm-title: Näide
@@ -25,26 +26,7 @@ crossref:
   
 ---
 
-## Nimed
-
-nimede mäng
-
-## Õpetaja
-
-e-portfoolio[@_2025_sissejuhatus]
-
-## Õpiväljundid
-
-skeem[@a2025_matemaatikakitsas3drawio]
-
-## Korraldus
-
-1. Teooria,
-2. väikese variatsiooniga harjutusülesanded,
-3. suure variatsiooniga harjutusülesanded,
-4. test.
-
-## Reeglite ettepanekud
+## Funktsioon
 
 ```{r label="preamble"}
 #' This function displays external graphics by making the appropriate conversion aforehead.
@@ -70,985 +52,9 @@ include_external_graphics = function(path) {
 
 ```
 
-1. Ole üksi või kahekesi või kolmekesi rühmas!
-2. Mõtle ja kui oled rühmas, arutage omavahel, millised kokkulepped võiksid meil olla, et oleks tõhus õppida.
-3. Kirjuta(ge) oma ettepanekud üles!
+## Ringjoon: äärmuslikud punktid
 
-## Hindamine: lähtetest
-
-1. Lähtetest, et me teaksime, mida sa oskad, tead, mäletad.
-
-2. Lähtetesti tulemuste põhjal individuaalne õpijärg.
-
-## Õppeprotsess
-
-Sama järjega õpilased õpivad koos sammhaaval iga õpiväljundi suunas täites kõik oma lüngad teadmistes-oskustes:
-
-1. Selgitan teooriat.
-
-2. Väikese variatsiooniga harjutusülesanded.
-
-3. Suure variatsiooniga harjutusülesanded.
-
-4. Võimalusel testime teooriat praktiliselt.
-
-5. Sulandsortimine.
-
-Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lubatud.
-
-## Hindamine: sulandsortimine
-
-1. Kaks õpilast, kel harjutusülesanded sooritatud, lahendavad üheaegselt sama ülesannet.
-
-2. Õpilane, kes esitab mulle õige lahendi esimesena, saab maksimaalse hinde selle õpiväljundi saavutatuse kohta. Moodustub kahene edetabel.
-
-3. Võrreldakse kõiki moodustunud edetabeleid omavahel samamoodi paarikaupa võisteldes, kuni meil on selle õpiväljundi kohta lõplik edetabel.
-
-4. Edetabeli viimane õpilane saab eritoetust, edetabeli esimestelt on mõistlik nõu küsida.
-
-## Hindamine: kokkuvõttev hindamine
-
-- Kursuse lõpus on kokkuvõttev hindamine testiga, milles on ülesanded läbisegi või komplekssena ainult nende õpiväljundite kohta, mille kohta õpilasel juba on hinne.
-- Iga teema kohta on ülesanded vastavalt Bloomi taksonoomiale[@blooms], mille põhjal kaalutakse hinne, mis on määratud vastavalt SOLO taksonoomiale[@a2025_the].
-
-## Lisaõppevara
-
-- ELMAR REIMERS "MATEMAATILISE ANALÜÜSI PRAKTIKUM I"[@a2025_reimers_matemaatilise_1_ocrpdf],
-- ELMAR REIMERS "MATEMAATILISE ANALÜÜSI PRAKTIKUM II"[@a2025_reimers_matemaatilise_2_ocrpdf],
-- Krista King[@krista],
-- Pauls Online Math Notes[@dawkins_pauls].
-
-## Eelsihtide saavutamine: 1-8 {data-state="eelopiväljundite-saavutamine-1"}
-
-1. Kirjalik korrutamine ja jagamine.
-
-2. Tehete järjekord: liitmine, korrutamine, sulud[@taskutark2025order; @kutasoftware_order].
-
-3. Liitfunktsioon[@kolk2013, lk 41], *Algebra*: 3.6 (en), *Algebra ülesanded*: 3.6.
-
-4. Liitmine[@taskutark2025; @corbett2018].
-
-6\. Eksponent- ja logaritmvõrrand[@welovemath2024; @moodle2024], *Algebra*: 6.3-6.5 (en), *Algebra ülesanded*: 6.3-6.5.
-
-7\. Tehted harilike osamääradega[@lepikult2010; @corbett2018fractions; @corbett2018dividingfractions].
-
-8\. Juurvõrrand[@lepikult2010murdjuur], *Algebra*: 2.10 (en), *Algebra ülesanded*: 2.10.
-
-## Eelsihtide saavutamine: 9-37
-
-9\. Osamäära arvutamine[@taskutark2025partofnumber; @maurus2022mat7].
-
-17\. Astendamise reeglid.
-
-18\. Tehete järjekord astendamisega[@real2025; @k5learning_pemdas].
-
-20\. Üks- ja hulkliikmed[@a2023_hulkliikmed], *Algebra*: 1.4: *Example 2*, *Example 3*, 1.5: kõik näited, *Algebra ülesanded*: 1.4, 1.5.
-
-24\. Algebralised osamäärad[@a2021_algebralised], *Algebra*: 1.6: kõik näited, *Algebra ülesanded*: 1.6.
-
-34\. Võrrandi põhiomadused[@taskutark2025eqprops].
-
-37\. Lineaarvõrrand.
-
-## Eelsihtide saavutamine: 38-50
-
-38\. *Ruutvõrrand*, *Algebra*: 2.5-2.7, 2.9 kõik näited, inglise keele oskuse korral ka 2.8.
-
-39\. Tekstülesanded[@welovemath2022eqineq; @moodle2024eqsystems].
-
-41\. Funktsiooni graafiku tegemine[@afanasjeva2013], *Algebra*: 3.5 (en), *Algebra ülesanded*: 3.5.
-
-42\. Paralleelsed graafikud.
-
-50\. Standardkuju[@welovemath2024standard].
-
-## Algarv
-
-algarv
-: ühest suurem täisarv, mille ainsad positiivsed täisarvulised tegurid on 1 ja algarv ise (@exm-prime-1 kuni @exm-prime-7)
-
-::: {#exm-prime-1}
-2
-:::
-
-::: {#exm-prime-2}
-3
-:::
-
-::: {#exm-prime-3}
-5
-:::
-
-::: {#exm-prime-4}
-37
-:::
-
-::: {#exm-prime-5}
-17
-:::
-
-::: {#exm-prime-6}
-13
-:::
-
-::: {#exm-prime-7}
-41
-:::
-
-## Mittealgarvud
-
-- 1, sest pole ühest suurem.
-
-- $1{,}5$, sest see pole täisarv.
-
-- 4, sest sellel on rohkem kui kaks positiivset täisarvulist tegurit.
-
-## Tegurdamine
-
-$$12 = 2 \cdot 6 = 3 \cdot 4 = 2 \cdot 2 \cdot 3 = \frac{1}{2} \cdot 24 = -2 \cdot (-6)\\ = -2 \cdot 2 \cdot (-3).$$
-
-algtegur
-: algarvuline tegur
-
-Soovitus: tegurdada algteguriteks:
-
-$$12 = 2 \cdot 2 \cdot 3.$$
-
-## Liitristküliku pindala arvutamine
-
-```{r label="rectangle-area", fig.cap="Ristküliku pindala arvutamine."}
-library(ggplot2)
-
-a <- 3; b <- 4; c <- 2
-
-# ristkülikute andmed
-df_ab <- data.frame(xmin=0, xmax=b, ymin=0, ymax=a)
-df_ac <- data.frame(xmin=b, xmax=b+c, ymin=0, ymax=a)
-
-ggplot() +
-  # värvilised alad
-  geom_rect(data=df_ab, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
-            fill="#a8caff", color="black", linewidth=0.6) +
-  geom_rect(data=df_ac, aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax),
-            fill="#b8ffb8", color="black", linewidth=0.6) +
-  # eraldusjoon
-  geom_segment(aes(x=b, y=0, xend=b, yend=a), linewidth=0.6) +
-  # sisemised sildid
-  annotate("text", x=b/2,     y=a/2, label=expression(italic(a)*italic(b)), size=6) +
-  annotate("text", x=b+c/2,   y=a/2, label=expression(italic(a)*italic(c)), size=6) +
-
-  # mõõdunooled ja sildid b, c, b+c
-  annotate("segment", x=0, xend=b, y=-0.4, yend=-0.4,
-           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
-  annotate("text", x=b/2, y=-0.7, label=expression(italic(b)), size=5) +
-
-  annotate("segment", x=b, xend=b+c, y=-0.4, yend=-0.4,
-           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
-  annotate("text", x=b+c/2, y=-0.7, label=expression(italic(c)), size=5) +
-
-  annotate("segment", x=0, xend=b+c, y=-1.1, yend=-1.1,
-           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
-  annotate("text", x=(b+c)/2, y=-1.4, label=expression(italic(b)+italic(c)), size=5) +
-
-  # kõrgus a
-  annotate("segment", x=-0.4, xend=-0.4, y=0, yend=a,
-           arrow=arrow(ends="both", type="closed", length=unit(6,"pt"))) +
-  annotate("text", x=-0.7, y=a/2, label=expression(italic(a)), angle=90, size=5) +
-
-  # pealkiri
-  annotate("text", x=(b+c)/2, y=a+0.5,
-           label=expression(italic(S)*" = "*italic(a)*"("*italic(b)*" + "*italic(c)*") = "*italic(a)*italic(b)*" + "*italic(a)*italic(c)*"."), size=5) +
-
-  coord_fixed(xlim=c(-1, b+c+0.5), ylim=c(-1.8, a+1), clip="off") +
-  theme_void() +
-  theme(plot.margin = margin(15, 15, 25, 35))
-
-```
-
-## Hulkliige: suurim ühistegur
-
-::: {#exm-polynome-factoring-gcf-1}
-$$3 \cdot x^6 - 9 \cdot x^2 + 3 \cdot x = 3 \cdot x \cdot (x^5 - 3 \cdot x + 1).$$
-$$3 \cdot x \cdot (x^5 - 3 \cdot x) = 3 \cdot x^6 - 9 \cdot x^2 \neq 3 \cdot x^6 - 9 \cdot x^2 + 3 \cdot x.$$
-:::
-
-::: {#exm-polynome-factoring-gcf-2}
-$$9 \cdot x^2 \cdot (2 \cdot x + 7) - 12 \cdot x \cdot (2 \cdot x + 7)\\ = (2 \cdot x + 7) \cdot (9 \cdot x^2 - 12 \cdot x)\\
-= (2 \cdot x + 7) \cdot 3 \cdot x \cdot (3 \cdot x - 4).$$
-:::
-
-## Grupeerimine
-
-::: {#exm-polynome-factoring-grouping-1}
-$$x^5 + x - 2 \cdot x^4 - 2 = x^4 \cdot (x - 2) + x - 2\\ = (x - 2) \cdot (x^4 + 1).$$
-:::
-
-::: {#exm-polynome-factoring-grouping-2}
-$$x^5 - 3 \cdot x^3 - 2 \cdot x^2 + 6 = x^2 \cdot (x^3 - 2) - 3 \cdot (x^3 - 2)\\
-= (x^3 - 2) \cdot (x^2 - 3).$$
-:::
-
-## Ruutliikme tegurdamine 1
-
-::: {#exm-polynome-factoring-quadratic-1}
-$$x^2 + 2 \cdot x - 15 = (x + a) \cdot (x + b).$$
-$$a \cdot b = -15.$$
-$$(a; b) \in \{(-1; 15); (-3; 5); (-5; 3); (-15; 1);\\ (1; -15); (3; -5); (5; -3); (15; -1)\}.$$
-$$a + b = 2.$$
-$$x^2 + 2 \cdot x - 15 = (x + 5) \cdot (x - 3).$$
-
-:::
-
-## Ruutliikme tegurdamine 2
-
-::: {#exm-polynome-factoring-quadratic-2}
-$$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x + a) \cdot (x + b).$$
-$$a \cdot b = -8.$$
-$$(a; b) \in \{(-1; 8); (-2; 4); (-4; 2); (-8; 1); (1; -8); (2; -4);\\ (4; -2);\\
-(8; -1)\}.$$
-$$3 \cdot b + a = 2.$$
-$$3 \cdot x^2 + 2 \cdot x - 8 = (3 \cdot x - 4) \cdot (x + 2).$$
-
-:::
-
-## Ruutliikme tegurdamine 3
-
-::: {#exm-polynome-factoring-quadratic-3}
-$$4 \cdot x^2 + 10 \cdot x - 6 = (f \cdot x + a) \cdot (j \cdot x + b) \rightarrow a \cdot b = -6.$$
-$$(a; b) \in \{(-1; 6); (-2; 3); (-3; 2); (-6; 1); (1; -6); (2; -3);\\ (3; -2); (6; -1)\}.$$
-$$f \cdot j = 4 \rightarrow (f; j) \in \{(1; 4); (2; 2); (4; 1)\}.$$
-$$f \cdot b + a \cdot j = 10.$$
-$$4 \cdot x^2 + 10 \cdot x - 6 = (x + 3) \cdot (4 \cdot x - 2)\\ = (x + 3) \cdot (2 \cdot x - 1) \cdot 2.$$
-:::
-
-## Erikujud
-
-$$a^2 + 2 \cdot a \cdot b + b^2 = (a + b)^2.$${#eq-factoring-square-of-sum}
-$$a^2 - 2 \cdot a \cdot b + b^2 = (a - b)^2.$${#eq-factoring-square-of-difference}
-$$a^2 - b^2 = (a + b) \cdot (a - b).$${#eq-factoring-difference-of-squares}
-$$a^3 + b^3 = (a + b) \cdot (a^2 - a \cdot b + b^2).$${#eq-factoring-sum-of-cubes}
-$$a^3 - b^3 = (a - b) \cdot (a^2 + a \cdot b + b^2).$${#eq-factoring-sum-of-cubes}
-$$a^2 + b^2 \neq (a + b)^2.$$
-
-## Erikujud: näited
-
-Leia näidetest @exm-factoring-square-of-difference, @exm-factoring-difference-of-squares ja @exm-factoring-sum-of-cubes kaks viga!
-
-:::{#exm-factoring-square-of-difference}
-$x^2 - 20 \cdot x + 100 = (x + 10)^2$ (@eq-factoring-square-of-difference).
-:::
-
-:::{#exm-factoring-difference-of-squares}
-$25 \cdot x^2 - 9$ (@eq-factoring-difference-of-squares).
-:::
-
-:::{#exm-factoring-sum-of-cubes}
-$8 \cdot x^3 + 1$ (@eq-factoring-sum-of-cubes).
-:::
-
-## Kahest suurema astme hulkliikmed
-
-:::{#exm-factoring-polynomials-degree-greater-than-two-1}
-$$3 \cdot x^4 - 3 \cdot x^3 - 36 \cdot x^2 = 3 \cdot x^2 \cdot (x^2 - x - 12)\\
-= 3 \cdot x^2 \cdot (x + 3) \cdot (x - 4).$$
-:::
-
-:::{#exm-factoring-polynomials-degree-greater-than-two-2}
-$$x^4 - 25 = (x^2 + 5) \cdot (x^2 - 5).$$
-:::
-
-:::{#exm-factoring-polynomials-degree-greater-than-two-3}
-$$x^4 + x^2 - 20 = (x^2 + 5) \cdot (x^2 - 4)\\ = (x^2 + 5) \cdot (x + 4) \cdot (x - 4).$$
-:::
-
-## Lineaarvõrrandi standardkuju
-
-$$b \cdot x + f = 0.$$
-
-## Lineaarvõrrandi omadused
-
-$$a = b \rightarrow a + j = b + j.$$
-$$a = b \rightarrow a - j = b - j.$$
-$$a = b \rightarrow a \cdot j = b \cdot j.$$
-$$a = b \rightarrow \frac{a}{j} = \frac{b}{j}.$$
-
-## Lineaarvõrrandi lahendamine 1
-
-1.  Kui esineb osamäärasid, kasuta väikseimat ühisjaoturit, et osamääradest vabaneda (@exm-linear-equation-solving-1)! Kui jaoturis on muutuja, siis määratle muutuja keelatud väärtus!
-
-    ::: {#exm-linear-equation-solving-1}
-    
-    $$\frac{6 + x}{x} + 4 = 3 | \cdot x; x \neq 0.$$
-    
-    $$6 + x + 4 \cdot x = 3 \cdot x.$$
-    
-    :::
-
-## Lineaarvõrrandi lahendamine 2-3
-
-2.  Lihtsusta võrrandi pooled(@exm-linear-equation-solving-2)!
-
-    ::: {#exm-linear-equation-solving-2}
-    
-    $$6 + 5 \cdot x = 3 \cdot x.$$
-    
-    :::
-    
-3.  Kogu tähtavaldised ühele ja konstandid teisele poole võrdusmärki (@exm-linear-equation-solving-3)!
-
-    ::: {#exm-linear-equation-solving-3}
-    
-    $$2 \cdot x = -6.$$
-    
-    :::
-
-## Lineaarvõrrandi lahendamine 4
-    
-4.  Kui tähtavaldise kordaja pole üks, tee sellest üks (@exm-linear-equation-solving-4)!
-
-    ::: {#exm-linear-equation-solving-4}
-    
-    $$x = -3.$$
-    
-    :::
-
-## Lineaarvõrrandi lahendamine 5
-    
-5.  Kontrolli lahendit (@exm-linear-equation-solving-5)!
-
-    ::: {#exm-linear-equation-solving-5}
-    
-    $$\frac{6 + (-3)}{-3} + 4 \stackrel{?}{=} 3.$$
-    
-    $$\frac{3}{-3} + 4 \stackrel{?}{=} 3.$$
-    
-    $$3 = 3.$$
-    
-    :::
-
-## Lineaarvõrrandi ülesanded
-
-::: {#exr-linear-equation-exercise-1}
-
-$$3 \cdot (x + 5) = 2 \cdot (-6 - x) - 2 \cdot x.$$
-
-:::
-
-::: {#exr-linear-equation-exercise-2}
-
-$$\frac{m-2}{3} + 1 = \frac{2 \cdot m}{7}.$$
-
-:::
-
-::: {#exr-linear-equation-exercise-3}
-
-$$\frac{2 \cdot z}{z + 3} = \frac{3}{z - 10} + 2.$$
-
-:::
-
-## Lineaarvõrrandi 1 lahendamine
-
-$$3 \cdot (x + 5) = 2 \cdot (-6 - x) - 2 \cdot x.$$
-
-2. $3 \cdot x + 15 = -12 - 4 \cdot x.$
-
-3. $7 \cdot x = -27.$
-
-4. $x = -\frac{27}{7}.$
-
-5.  $3 \cdot (-\frac{27}{7} + 5) \stackrel{?}{=} 2 \cdot [-6 - (-\frac{27}{7})] - 2 \cdot (-\frac{27}{7}).$
-
-    $3 \cdot \frac{8}{7} \stackrel{?}{=} 2 \cdot (-\frac{15}{7}) + \frac{54}{7}.$
-    
-    $\frac{24}{7} = \frac{24}{7}.$
-
-## Lineaarvõrrandi 2 lahendamine
-
-$$\frac{m-2}{3} + 1 = \frac{2 \cdot m}{7}.$$
-
-1. $7 \cdot (m - 2) + 21 = 6 \cdot m.$  
-2. $7 \cdot m + 7 = 6 \cdot m.$  
-3. $m = -7.$  
-4. <!-- intentionally skipping 4 to get 5 -->
-5. $\displaystyle \frac{-7 - 2}{3} + 1 \stackrel{?}{=} \frac{2 \cdot (-7)}{7}.$  
-   $\displaystyle -2 = -2.$
-
-## Lineaarvõrrandi 3 lahendamine
-
-$$\frac{2 \cdot z}{z + 3} = \frac{3}{z - 10} + 2.$$
-
-1.  $[2 \cdot z \cdot (z - 10) = 3 \cdot (z + 3) + 2 \cdot (z^2 - 7 \cdot z - 30)]\\ \land (z \neq -3) \land (z \neq 10).$
-
-2. $(2 \cdot z^2 - 20 \cdot z = 2 \cdot z^2 - 11 \cdot z - 51)\\ \land (z \neq -3) \land (z \neq 10).$
-
-3. $(9 \cdot z = 51) \land (z \neq -3) \land z \neq 10.$
-
-4. $z = \frac{17}{3}.$
-
-5.  $\frac{2 \cdot \frac{17}{3}}{\frac{17}{3} + 3} \stackrel{?}{=} \frac{3}{\frac{17}{3} - 10} + 2.$ $\frac{17}{13} = \frac{17}{13}.$
-
-## Ruutvõrrandi standardkuju
-
-$$a \neq 0 \rightarrow a \cdot x^2 + b \cdot x + f = 0.$$
-
-## Ruutvõrrandi lahendamine tegurdades
-
-Nullkorrutise omadus on esitatud valemina @eq-zero-factor-property.
-
-$$a \cdot b = 0 \rightarrow a = 0 \lor b = 0.$${#eq-zero-factor-property}
-
-Kui korrutis ei ole null, ei saa kindlalt väita, et vähemalt üks tegur on võrdne korrutisega (@exm-not-zero-factor-property).
-
-::: {#exm-not-zero-factor-property}
-
-$$a \cdot b = 6 \rightarrow (a = 1) \land (b = 6) \lor (a = 2) \land (b = 3)\\ \lor (a = 3) \land (b = 2)\\ \lor
-(a = 6) \land (b = 1).$$
-
-:::
-
-## Tegurdades lahendamise ülesanded
-
-::: {#exr-solving-quadratic-equation-by-factoring-1}
-
-$$x^2 - x = 12.$$
-
-:::
-
-::: {#exr-solving-quadratic-equation-by-factoring-2}
-
-$$x^2 + 40 = -14 \cdot x.$$
-
-:::
-
-::: {#exr-solving-quadratic-equation-by-factoring-3}
-
-$$5 \cdot x ^2 = 2 \cdot x.$$
-
-:::
-
-## Tegurdades lahendamine 1
-
-Leia kaks viga:
-$$x^2 - x = 12.$$
-
-$$x^2 - x - 12 = 0.$$
-
-$$(x - 4) \cdot (x + 3) = 0.$$
-
-$$\{x \in \mathbb{C} : x = -4 \lor x = 3\}.$$
-
-## Tegurdades lahendamine 2
-
-$$x^2 + 40 = -14 \cdot x.$$
-
-$$x^2 + 14 \cdot x + 40 = 0.$$
-
-$$(x + 4) \cdot (x + 10) = 0.$$
-
-$$\{x \in \mathbb{C} : x = 4 \lor x = 10 \}.$$
-
-## Tegurdades lahendamine 3
-
-$$5 \cdot x ^2 = 2 \cdot x.$$
-
-$$5 \cdot x^2 - 2 \cdot x = 0.$$
-
-$$x \cdot (5 \cdot x - 2) = 0.$$
-
-$$\{x \in \mathbb{C} : x = 0 \lor x = 0{,}4\}.$$
-
-## Ruutjuur ruutvõrrandis
-
-$$a^2 = b \rightarrow a = \pm \sqrt{b}.$$
-
-## Ruutjuurega ülesanded
-
-::: {#exr-solving-quadratic-equation-with-square-root-1}
-
-$$x^2 - 100 = 0.$$
-
-:::
-
-::: {#exr-solving-quadratic-equation-with-square-root-2}
-
-$$4 \cdot z^2 + 49 = 0.$$
-
-:::
-
-::: {#exr-solving-quadratic-equation-with-square-root-3}
-
-$$(2 \cdot t - 9)^2 = 5.$$
-
-:::
-
-## Ruutjuurega lahendamine 1
-
-$$x^2 - 100 = 0.$$
-
-$$x^2 = 100.$$
-
-$$x = \pm 10.$$
-
-## Ruutjuurega lahendamine 2
-
-$$4 \cdot z^2 + 49 = 0.$$
-
-$$4 \cdot z^2 = -49.$$
-
-$$z^2 = -\frac{49}{4}.$$
-
-$$z = \sqrt{-\frac{49}{4}} = \sqrt{-1} \cdot (\pm \frac{7}{2}) = \pm 3{,}5 \cdot i.$$
-
-## Ruutjuurega lahendamine 3
-
-$$(2 \cdot t - 9)^2 = 5.$$
-
-$$2 \cdot t - 9 = \pm \sqrt{5}.$$
-
-$$2 \cdot t = 9 \pm \sqrt{5}.$$
-
-$$t = \frac{9}{2} \pm \frac{\sqrt{5}}{2}.$$
-
-## Ruudu tekitamine
-
-$$x^2 + b \cdot x.$$
-
-$$x^2 + b \cdot x + \left(\frac{b}{2}\right)^2 = \left(x + \frac{b}{2}\right)^2.$$
-
-## Ruudu tekitamise ülesanded
-
-::: {#exr-completing-square-1}
-
-$$x^2 - 16 \cdot x.$$
-
-:::
-
-::: {#exr-completing-square-2}
-
-$$y^2 + 7 \cdot y.$$
-
-:::
-
-## Ruudu tekitamise lahendused
-
-$$x^2 - 16 \cdot x + 64 = (x - 8)^2.$$
-
-$$y^2 + 7 \cdot y + \left(\frac{7}{2}\right)^2 = y^2 + 7 \cdot y + \frac{49}{4} = \left(y + \frac{7}{2}\right)^2.$$
-
-## Ruudu tekitamisega ruutvõrrandi lahendamine
-
-1. Vii ruutvõrrand normaalkujule!
-
-2. Jaga võrrandi kõik liikmed ruutliikme kordajaga!
-
-3. Vii konstant teisele poole võrdusmärki!
-
-4. Tekita ruut tähtavaldisega poolele ning täienda vastavalt teist poolt!
-
-5. Kasuta juurimist, et arvutada lahend!
-
-## Ruutvõrrandisse ruudu ülesanded
-
-::: {#exr-quadratic-equation-with-completing-square-1}
-$$x^2 - 6 \cdot x + 1 = 0.$$
-
-:::
-
-::: {#exr-quadratic-equation-with-completing-square-2}
-$$2 \cdot x^2 + 6 \cdot x + 7 = 0.$$
-
-:::
-
-::: {#exr-quadratic-equation-with-completing-square-3}
-$$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
-
-:::
-
-## Ruutvõrrandisse ruudu lahendus 1
-
-$$x^2 - 6 \cdot x + 1 = 0:$$
-
-3. $x^2 - 6 \cdot x = -1.$
-
-4.  $x^2 - 6 \cdot x + 9 = -1 + 9.$
-
-    $(x - 3)^2 = 8.$
-    
-5.  $x - 3 = \pm \sqrt{8}.$
-
-    $x = 3 \pm 2 \cdot \sqrt{2}.$
-
-## Ruutvõrrandisse ruudu lahendus 2
-
-$$2 \cdot x^2 + 6 \cdot x + 7 = 0:$$
-
-2. $x^2 + 3 \cdot x + \frac{7}{2} = 0.$
-
-3. $x^2 + 3 \cdot x = -\frac{7}{2}.$
-
-4.  $x^2 + 3 \cdot x + \frac{9}{4} = -\frac{7}{2} + \frac{9}{4}.$
-
-    $\left(x + \frac{3}{2}\right)^2 = -\frac{5}{4}.$
-
-5.  $x + \frac{3}{2} = \pm \sqrt{-\frac{5}{4}}.$
-
-    $x = -\frac{3}{2} \pm \frac{\sqrt{5}}{2} \cdot i.$
-
-## Ruutvõrrandisse ruudu lahendus 3
-
-$$3 \cdot x^2 - 2 \cdot x - 1 = 0.$$
-
-Leia viga:
-
-2. $x^2 -\frac{2}{3} \cdot x - \frac{1}{3} = 0.$
-
-3. $x^2 -\frac{2}{3} \cdot x = \frac{1}{3}.$
-
-4.  $x^2 -\frac{2}{3} \cdot x + \frac{1}{9} = \frac{1}{3} + \frac{1}{9}.$
-
-    $\left(x - \frac{1}{3}\right) = \frac{4}{9}.$
-    
-5.  $x - \frac{1}{3} = \pm \sqrt{\frac{4}{9}}.$
-
-    $x = \frac{1}{3} \pm \frac{2}{3}.$
-
-## Ruutvõrrandi lahendamise üldvalem 1-4
-
-1. $a \cdot x^2 + b \cdot x + r = 0.$
-
-2. $x^2 + \frac{b}{a} \cdot x + \frac{r}{a} = 0.$
-
-3. $x^2 + \frac{b}{a} \cdot x = -\frac{r}{a}.$
-
-4.  $x^2 + \frac{b}{a} \cdot x + \left(\frac{b}{2 \cdot a}\right)^2 = -\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2.$
-
-    $\left(x + \frac{b}{2 \cdot a}\right)^2 = -\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2.$
-
-## Ruutvõrrandi lahendamise üldvalem 5
-
-5.  $x + \frac{b}{2 \cdot a} = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2}.$
-
-    $$x = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2} - \frac{b}{2 \cdot a}\\ = \pm \sqrt{\frac{-4 \cdot a \cdot r + b^2}{4 \cdot a^2}} - \frac{b}{2 \cdot a}\\ = \frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a}.$${#eq-quadratic-equation-solution}
-
-## Ruutvõrrandi lahendamise üldvalemi ülesanded
-
-:::{#exr-quadratic-equation-formula-1}
-$$x^2 + 2 \cdot x = 7.$$
-
-:::
-
-:::{#exr-quadratic-equation-formula-2}
-$$3 \cdot q^2 + 11 = 5 \cdot q.$$
-
-:::
-
-:::{#exr-quadratic-equation-formula-3}
-$$\frac{3}{y - 2} = \frac{1}{y} + 1.$$
-
-:::
-
-## Ruutvõrrandi lahendamine üldvalemiga 1
-
-$$x^2 + 2 \cdot x = 7.$$
-
-$$x^2 + 2 \cdot x - 7 = 0.$$
-
-$$x = \frac{-2 \pm \sqrt{2^2 - 4 \cdot 1 \cdot (-7)}}{2 \cdot 1} = \frac{-2 \pm \sqrt{4 + 28}}{2}\\ = \frac{-2 \pm \sqrt{32}}{2}\\ = -1 \pm 2 \cdot \sqrt{2}.$$
-
-## Ruutvõrrandi lahendamine üldvalemiga 2
-$$3 \cdot q^2 + 11 = 5 \cdot q.$$
-$$q \neq \frac{-11 \pm \sqrt{11^2 - 4 \cdot 3 \cdot 5}}{2 \cdot 3}.$$
-
-$$q = \frac{5 \pm \sqrt{25 - 132}}{6} = \frac{5 \pm \sqrt{107}}{6}= \frac{5}{6} \pm \frac{\sqrt{107}}{6} \cdot i.$$
-
-## Ruutvõrrandi lahendamine üldvalemiga 3
-$$\frac{3}{y - 2} = \frac{1}{y} + 1.$$
-$$3 \cdot y = y - 2 + y^2 - 2 \cdot y.$$
-$$y^2 - 4 \cdot y - 2 = 0.$$
-$$y = \frac{4 \pm \sqrt{24}}{2} = 2 \pm \sqrt{6}.$$
-
-## Graafiku punktid
-
-
-```{r label="function-graph-points", fig.cap="Funktsiooni graafiku punktid."}
-library(ggplot2)
-
-# Andmed: üks punkt igas veerandis
-punktid <- data.frame(
-  x = c(2, -2, -2, 2),
-  y = c(2, 2, -2, -2),
-  label = c("I veerand\n(2, 2)",
-            "II veerand\n(-2, 2)",
-            "III veerand\n(-2, -2)",
-            "IV veerand\n(2, -2)")
-)
-
-# Taustaandmed nelja veerandi värvimiseks
-veerandid <- data.frame(
-  xmin = c(0, -Inf, -Inf, 0),
-  xmax = c(Inf, 0, 0, Inf),
-  ymin = c(0, 0, -Inf, -Inf),
-  ymax = c(Inf, Inf, 0, 0),
-  qlabel = c("I", "II", "III", "IV")
-)
-
-ggplot() +
-  # Hele taust iga veerandi jaoks
-  geom_rect(data = veerandid,
-            aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax),
-            fill = c("#e6f3ff", "#f0e6ff", "#ffe6e6", "#e6ffe6"),
-            alpha = 0.3,
-            color = NA) +
-  # Telgede jooned
-  geom_hline(yintercept = 0, color = "black", linewidth = 0.6) +
-  geom_vline(xintercept = 0, color = "black", linewidth = 0.6) +
-  # Punktid ja sildid
-  geom_point(data = punktid, aes(x, y), size = 3, color = "blue") +
-  geom_text(data = punktid, aes(x, y, label = label),
-            vjust = -1, hjust = 0.5, size = 4) +
-  # Skaala
-  scale_x_continuous(breaks = seq(-4, 4, 1), limits = c(-4, 4)) +
-  scale_y_continuous(breaks = seq(-4, 4, 1), limits = c(-4, 4)) +
-  # Kujundus
-  coord_fixed() +
-  theme_minimal(base_size = 14) +
-  theme(panel.grid = element_line(color = "gray90"),
-        axis.title = element_text(size = 14)) +
-  labs(x = expression(italic(x)), y = expression(italic(y)),
-       title = "Koordinaatteljestik ja veerandid")
-
-
-```
-
-## Veerandid
-
-Kui $x$ ja $y$ on vastavalt kaks esimest mõõdet, siis veerandid on määratletud järgnevalt:
-
-1. $(x > 0) \land (y > 0).$
-
-2. $(x < 0) \land (y > 0).$
-
-3. $(x < 0) \land (y < 0).$
-
-4. $(x > 0) \land (y < 0).$
-
-## Punkti koordinaadid
-
-Koordinaatteljestikus on iga punkt järjestatud paar, mille liikmed on selle punkti koordinaadid (@exm-coordinates-letters kuni @exm-coordinates-numbers).
-
-::: {#exm-coordinates-letters}
-
-$$A = (x; y).$$
-
-:::
-
-::: {#exm-coordinates-numbers}
-
-$$B = (2; 5).$$
-
-:::
-
-Koordinaatteljestiku nullpunkt
-: punkt $(0; 0)$, milles teljed ristuvad.
-
-## Suhe
-
-Suhe
-: järjestatud paaride hulk (@exm-relation).
-
-::: {#exm-relation}
-$$\{(-2; 5); (-1; 0); (2; -3)\}.$$
-:::
-
-## Graafiku näide
-
-::: {#exm-graph}
-$$y=(x-1)^2-4.$$
-$$\{(-2; 5); (-1; 0); (0; -3); (1; -4); (2; -3); (3; 0);\\ (4; 5)\}.$$
-$$\{(-1; 0); (0; -3);(2; -3); (3; 0); (4; 5)\}.$$
-$$\{(3; 0); (4; 5)\}.$$
-:::
-
-## Lõikepunktid telgedega
-
-Lõikepunktis teljega on teistel telgedel punkti koordinaat 0.
-
-## Lõikepunktide telgedega ülesanded
-
-Tee kindlaks võrrandi lõikepunktid telgedega ülesannetes (@exr-intercept-1) kuni (@exr-intercept-3).
-
-::: {#exr-intercept-1}
-$$y = x^2 + x - 6.$$
-
-:::
-
-::: {#exr-intercept-2}
-$$y = x^2 + 2.$$
-
-:::
-
-::: {#exr-intercept-3}
-$$y = (x + 1)^2.$$
-
-:::
-
-## Lõikepunktide lahendus 1
-
-Lõikepunktid $x$-teljega:
-
-$$0 = x^2 + x - 6 = (x - 2) \cdot (x + 3).$$
-
-$$\{x \in \mathbb{R} : (x = -3) \lor (x = 2)\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(-3; 0\right); \left(2; 0\right)\}.$$
-
-Lõikepunkt $y$-teljega:
-
-$$\{y \in \mathbb{R} : 0^2 + 0 - 6 = -6\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; -6\right)\}.$$
-
-## Lõikepunktide graafik 1
-
-```{r label="intercept-graph-1", fig.cap="Võrrandi $y = x^2 + x - 6$ graafik ja lõikepunktid telgedega."}
-library(ggplot2)
-
-# Funktsioon
-f <- function(x) x^2 + x - 6
-
-# Lõikepunktid
-# y-telg: x = 0 → y = -6
-y_int <- data.frame(x = 0, y = f(0))
-
-# x-telg: y = 0 → x^2 + x - 6 = 0 → x = 2 ja x = -3
-x_int <- data.frame(x = c(-3, 2), y = 0)
-
-# Joonise andmed
-xs <- seq(-4, 3, 0.1)
-df <- data.frame(x = xs, y = f(xs))
-
-# Joonis
-ggplot(df, aes(x, y)) +
-  geom_hline(yintercept = 0, color = "gray40") +
-  geom_vline(xintercept = 0, color = "gray40") +
-  geom_line(color = "blue", linewidth = 1) +
-  geom_point(data = x_int, aes(x, y), color = "red", size = 3) +
-  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
-  geom_text(data = x_int, aes(label = paste0("(", x, ", ", y, ")")),
-            vjust = -1, color = "red") +
-  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
-            hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(italic(y == x^2 + x - 6)),
-       x = expression(x),
-       y = expression(y)) +
-  theme_minimal(base_size = 14)
-
-```
-
-## Lõikepunktide lahendus 2
-
-Lõikepunktid $x$-teljega:
-
-$$0 = x^2 + 2.$$
-
-$$\{x \in \mathbb{R} : x \in \emptyset\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \emptyset\}.$$
-
-Lõikepunkt $y$-teljega:
-
-$$\{y \in \mathbb{C} : 0^2 + 2 = 2\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 2\right)\}.$$
-
-## Lõikepunktide graafik 2
-
-```{r label="intercept-graph-2", fig.cap="Võrrandi $y = x^2 + 2$ graafik ja lõikepunktid telgedega."}
-library(ggplot2)
-
-# Funktsioon
-f <- function(x) x^2 + 2
-
-# Lõikepunktid
-# y-telg: x = 0 → y = 2
-y_int <- data.frame(x = 0, y = f(0))
-
-# x-telge ei lõika, sest y = x^2 + 2 > 0 kõikjal
-
-# Andmed jooniseks
-xs <- seq(-3, 3, 0.1)
-df <- data.frame(x = xs, y = f(xs))
-
-# Joonis
-ggplot(df, aes(x, y)) +
-  geom_hline(yintercept = 0, color = "gray40") +
-  geom_vline(xintercept = 0, color = "gray40") +
-  geom_line(color = "blue", linewidth = 1) +
-  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
-  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
-            hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(italic(y == x^2 + 2)),
-       x = expression(italic(x)),
-       y = expression(italic(y))) +
-  theme_minimal(base_size = 14)
-
-```
-
-## Lõikepunktide lahendus 3
-
-Lõikepunktid $x$-teljega:
-
-$$0 = (x + 1)^2.$$
-
-$$\{x \in \mathbb{R} : (x = -1)\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(-1; 0\right)\}.$$
-
-Lõikepunkt $y$-teljega:
-
-$$\{y \in \mathbb{R} : (0 + 1)^2 = 1\}.$$
-
-$$\{\left(x \in \mathbb{R}; y \in \mathbb{R}\right) : \left(0; 1\right)\}.$$
-
-## Lõikepunktide graafik 3
-
-```{r label="intercept-graph-3", fig.cap="Võrrandi $y = (x + 1)^2$ graafik ja lõikepunktid telgedega."}
-library(ggplot2)
-
-# Funktsioon
-f <- function(x) (x + 1)^2
-
-# Lõikepunktid
-# y-telg: x = 0 → y = (0 + 1)^2 = 1
-y_int <- data.frame(x = 0, y = f(0))
-
-# x-telg: y = 0 → (x + 1)^2 = 0 → x = -1
-x_int <- data.frame(x = -1, y = 0)
-
-# Andmed jooniseks
-xs <- seq(-3, 2, 0.1)
-df <- data.frame(x = xs, y = f(xs))
-
-# Joonis
-ggplot(df, aes(x, y)) +
-  geom_hline(yintercept = 0, color = "gray40") +
-  geom_vline(xintercept = 0, color = "gray40") +
-  geom_line(color = "blue", linewidth = 1) +
-  geom_point(data = x_int, aes(x, y), color = "red", size = 3) +
-  geom_point(data = y_int, aes(x, y), color = "red", size = 3) +
-  geom_text(data = x_int, aes(label = paste0("(", x, ", ", y, ")")),
-            vjust = -1, color = "red") +
-  geom_text(data = y_int, aes(label = paste0("(", x, ", ", y, ")")),
-            hjust = -0.2, vjust = 1.5, color = "red") +
-  labs(title = expression(italic(y == (x + 1)^2)),
-       x = expression(italic(x)),
-       y = expression(italic(y))) +
-  theme_minimal(base_size = 14)
-
-```
-
-## Funktsioon
-
+- 
 Funktsioon
 : seos, mille korral järjestatud paaride esimeste komponentide hulga iga väärtus on seotud väärtusega järjestatud paaride teiste komponentide hulgas (@exm-function).
 
@@ -2097,6 +1103,794 @@ Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 4.2[@dawkin
 Esimeses seitsmes ülesandes on vaja visandada graafik, nii et tähistatud oleksid haripunkt, lõikepunkt ordinaatteljega, olemasolu korral lõikepunkt(id) abstsissteljega ning kummalgi pool haripunkti vähemalt üks punkt.
 
 Ülesannetes 8-10 tuleb iga ruutfunktsioon teisendada sulgudega etteantud kujule, millest saaks otse välja lugeda haripunkti koordinaadid.
+
+## Kahe punkti vaheline kaugus
+
+```{r label="fig-distance-between-points", echo=FALSE}
+library(ggplot2)
+
+# Punktid
+p1 <- c(x = 1, y = 2)
+p2 <- c(x = 5, y = 6)
+
+# Kaugus
+r_val <- sqrt((p2["x"] - p1["x"])^2 + (p2["y"] - p1["y"])^2)
+
+# Andmed
+df <- data.frame(
+  x = c(p1["x"], p2["x"]),
+  y = c(p1["y"], p2["y"])
+)
+
+ggplot(df, aes(x, y)) +
+  # Punktid
+  geom_point(size = 4, color = "black") +
+
+  # Ühendus (r)
+  geom_segment(aes(x = p1["x"], y = p1["y"], xend = p2["x"], yend = p2["y"]),
+               color = "red", linewidth = 1.2) +
+  
+  # Katkendjooned Δx ja Δy
+  geom_segment(aes(x = p1["x"], y = p1["y"], xend = p2["x"], yend = p1["y"]),
+               color = "blue", linetype = "dashed") +
+  geom_segment(aes(x = p2["x"], y = p1["y"], xend = p2["x"], yend = p2["y"]),
+               color = "blue", linetype = "dashed") +
+
+  # Punktide sildid
+  annotate("text", x = p1["x"], y = p1["y"] + 0.5,
+           label = expression(italic(A) * "(" * italic(x)[1] * ";" ~ italic(y)[1] * ")"),
+           parse = TRUE, size = 5) +
+  annotate("text", x = p2["x"], y = p2["y"] + 0.5,
+           label = expression(italic(B) * "(" * italic(x)[2] * ";" ~ italic(y)[2] * ")"),
+           parse = TRUE, size = 5) +
+
+  # Δx ja Δy selgitused
+  annotate("text", x = (p1["x"] + p2["x"]) / 2, y = p1["y"] - 0.3,
+           label = expression(italic(Delta * x) == italic(x)[2] - italic(x)[1]),
+           parse = TRUE, size = 5) +
+  annotate("text", x = p2["x"] + 0.3, y = (p1["y"] + p2["y"]) / 2,
+           label = expression(italic(Delta * y) == italic(y)[2] - italic(y)[1]),
+           parse = TRUE, size = 5) +
+
+  # Valem r = √(...)
+  annotate("text", x = (p1["x"] + p2["x"]) / 2, y = (p1["y"] + p2["y"]) / 2 + 0.5,
+           label = expression(
+             italic(r) ==
+               sqrt(
+                 (italic(x)[2] - italic(x)[1])^2 +
+                 (italic(y)[2] - italic(y)[1])^2
+               )
+           ),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Teljestik
+  coord_equal(xlim = c(0, 7), ylim = c(0, 8)) +
+  labs(
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+$$r = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}.$${#eq-distance-between-points}
+
+## Ringjoon
+
+```{r label="fig-circle", echo=FALSE}
+library(ggplot2)
+
+# Fikseeritud keskpunkt P₀(x₀; y₀)
+p0 <- c(x = 2, y = 2)
+
+# Fikseeritud raadius r (teadaolev)
+r_val <- 4
+
+# Võtame ühe konkreetse punkti P(x; y) ringilt
+theta <- pi * 35 / 180
+p <- c(
+  x = p0["x"] + r_val * cos(theta),
+  y = p0["y"] + r_val * sin(theta)
+)
+
+# Ring ise
+angle <- seq(0, 2*pi, length.out = 400)
+ring_df <- data.frame(
+  xr = p0["x"] + r_val * cos(angle),
+  yr = p0["y"] + r_val * sin(angle)
+)
+
+# Joonistamispiirid nii, et kõik mahuks koos tekstiga
+x_min <- p0["x"] - r_val - 0.5
+x_max <- p0["x"] + r_val + 0.5
+y_min <- p0["y"] - r_val - 0.5
+y_max <- p0["y"] + r_val + 0.5
+
+ggplot() +
+  # Ringi kontuur
+  geom_path(
+    data = ring_df,
+    aes(x = xr, y = yr),
+    linewidth = 1, color = "grey40"
+  ) +
+
+  # Keskpunkt P₀
+  geom_point(aes(x = p0["x"], y = p0["y"]), size = 4, color = "black") +
+
+  # Punkt P ringil
+  geom_point(aes(x = p["x"], y = p["y"]), size = 4, color = "black") +
+
+  # Raadius r
+  geom_segment(
+    aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+    color = "red", linewidth = 1.2
+  ) +
+
+  # Projektsioonid Δx ja Δy
+  geom_segment(
+    aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p0["y"]),
+    color = "blue", linetype = "dashed"
+  ) +
+  geom_segment(
+    aes(x = p["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+    color = "blue", linetype = "dashed"
+  ) +
+
+  # Silt keskpunktile P₀(x₀; y₀)
+  annotate(
+    "text",
+    x = p0["x"], y = p0["y"] - 0.5,
+    label = expression(italic(P)[0] * "(" * italic(x)[0] * ";" ~ italic(y)[0] * ")"),
+    parse = TRUE, size = 5
+  ) +
+
+  # Silt punktile P(x; y)
+  annotate(
+    "text",
+    x = p["x"], y = p["y"] + 0.5,
+    label = expression(italic(P) * "(" * italic(x) * ";" ~ italic(y) * ")"),
+    parse = TRUE, size = 5
+  ) +
+
+  # Δx selgitus horisontaalse lõigu juures
+  annotate(
+    "text",
+    x = (p0["x"] + p["x"]) / 2,
+    y = p0["y"] - 0.3,
+    label = expression(italic(Delta * x) == italic(x) - italic(x)[0]),
+    parse = TRUE, size = 4.5
+  ) +
+
+  # Δy selgitus vertikaalse lõigu juures
+  annotate(
+    "text",
+    x = p["x"] + 0.4,
+    y = (p0["y"] + p["y"]) / 2,
+    label = expression(italic(Delta * y) == italic(y) - italic(y)[0]),
+    parse = TRUE, size = 4.5
+  ) +
+
+  # r märge punasel lõigul
+  annotate(
+    "text",
+    x = (p0["x"] + p["x"]) / 2 + 0.2,
+    y = (p0["y"] + p["y"]) / 2 + 0.2,
+    label = expression(italic(r)),
+    parse = TRUE,
+    color = "red",
+    size = 5
+  ) +
+
+  # Ringivõrrand (x - x0)^2 + (y - y0)^2 = r^2
+  # Paneme selle tühjemasse nurka ringi sees
+  annotate(
+    "text",
+    x = p0["x"] - r_val * 0.6,
+    y = p0["y"] + r_val * 0.6,
+    label = expression(
+      (italic(x) - italic(x)[0])^2 +
+      (italic(y) - italic(y)[0])^2 ==
+      italic(r)^2
+    ),
+    parse = TRUE,
+    color = "red",
+    size = 5
+  ) +
+
+  # Telgede märgistus kaldkirjas
+  coord_equal(
+    xlim = c(x_min, x_max),
+    ylim = c(y_min, y_max)
+  ) +
+  labs(
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_blank()
+  )
+
+```
+
+$$r = \sqrt{(x - x_0)^2 + (y - y_0)^2}.$${#eq-radius}
+
+## Ringjoon: näide
+
+::: {#exm-circle}
+$$\left(P_0 = (-4; 7)\right) \land (r = 8) \rightarrow 64 = (x + 4)^2 + (y - 7)^2.$$
+:::
+
+```{r label="fig-circle-example", echo=FALSE}
+# Antud andmed
+p0 <- c(x = -4, y = 7)  # P0 = (-4; 7)
+r_val <- 8              # r = 8
+
+# Valime ühe P(x; y) ringilt (näidis)
+theta <- pi * 35 / 180
+p <- c(
+  x = p0["x"] + r_val * cos(theta),
+  y = p0["y"] + r_val * sin(theta)
+)
+
+# Ringi kontuur
+angle <- seq(0, 2*pi, length.out = 400)
+ring_df <- data.frame(
+  xr = p0["x"] + r_val * cos(angle),
+  yr = p0["y"] + r_val * sin(angle)
+)
+
+# Piirid nii, et tekst jääks sisse
+marg <- 0.7
+x_min <- p0["x"] - r_val - marg
+x_max <- p0["x"] + r_val + marg
+y_min <- p0["y"] - r_val - marg
+y_max <- p0["y"] + r_val + marg
+
+ggplot() +
+  # Ringi kontuur
+  geom_path(data = ring_df, aes(x = xr, y = yr),
+            linewidth = 1, color = "grey40") +
+
+  # P0 ja P
+  geom_point(aes(x = p0["x"], y = p0["y"]), size = 4, color = "black") +
+  geom_point(aes(x = p["x"],  y = p["y"]),  size = 4, color = "black") +
+
+  # Raadius r
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "red", linewidth = 1.2) +
+
+  # Projektsioonid Δx ja Δy
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p0["y"]),
+               color = "blue", linetype = "dashed") +
+  geom_segment(aes(x = p["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "blue", linetype = "dashed") +
+
+  # Sildid punktidele
+  annotate("text", x = p0["x"], y = p0["y"] - 0.5,
+           label = expression(italic(P)[0] * "(" * -4 * ";" ~ 7 * ")"),
+           parse = TRUE, size = 5) +
+  annotate("text", x = p["x"], y = p["y"] + 0.5,
+           label = expression(italic(P) * "(" * italic(x) * ";" ~ italic(y) * ")"),
+           parse = TRUE, size = 5) +
+
+  # Δx ja Δy (numbrilise P0-ga)
+  annotate("text",
+           x = (p0["x"] + p["x"]) / 2, y = p0["y"] - 0.3,
+           label = expression(italic(Delta * x) == italic(x) - (-4)),
+           parse = TRUE, size = 4.5) +
+  annotate("text",
+           x = p["x"] + 0.4, y = (p0["y"] + p["y"]) / 2,
+           label = expression(italic(Delta * y) == italic(y) - 7),
+           parse = TRUE, size = 4.5) +
+
+  # r-märge
+  annotate("text",
+           x = (p0["x"] + p["x"]) / 2 + 0.2,
+           y = (p0["y"] + p["y"]) / 2 + 0.2,
+           label = expression(italic(r)),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Ringi võrrand: 64 = (x + 4)^2 + (y - 7)^2  (joonise sees)
+  annotate("text",
+           x = p0["x"] - r_val * 0.6,
+           y = p0["y"] + r_val * 0.6,
+           label = expression(64 == (italic(x) + 4)^2 + (italic(y) - 7)^2),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Teljestik
+  coord_equal(xlim = c(x_min, x_max), ylim = c(y_min, y_max)) +
+  labs(x = expression(italic(x)), y = expression(italic(y))) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_blank())
+
+```
+
+## Ringjoon: äärmuslikud punktid
+
+Kui abstsisstelg on horisontaalne ja väärtused kasvavad paremale ning ordinaattelg on vertikaalne ja väärtused kasvavad üles, siis vastavalt valemile @eq-radius:
+
+- parempoolseim punkt: $(x_0 + r; y_0)$,
+
+- kõrgeim punkt: $(x_0; y_0 + r)$,
+
+- vasakpoolseim punkt: $(x_0 - r; y_0)$,
+
+- madalaim punkt: $(x_0; y_0 - r)$.
+
+## Ringjoone komponentide ülesanded
+
+Arvuta ülesannetes @exr-circle-components-1 kuni @exr-circle-components-3 ringjoone keskpunkt ja raadius!
+
+::: {#exr-circle-components-1}
+$$x^2 + y^2 = 1.$$
+:::
+
+::: {#exr-circle-components-2}
+$$x^2 + (y-3)^2 = 4.$$
+:::
+
+::: {#exr-circle-components-3}
+$$x^2 + y^2 - 3 \cdot x + 10 \cdot y - 1 = 0.$$
+:::
+
+## Ringjoone komponentide lahendused: 1
+
+$x^2 + y^2 = 1 \rightarrow$ keskpunkt on $(0; 0)$ ja raadius on 1.
+
+```{r label="circle-1"}
+
+# Ühikring
+r_val <- 1
+p0 <- c(x = 0, y = 0)
+
+# Näidispunkt P(x; y)
+theta <- pi / 4
+p <- c(x = cos(theta), y = sin(theta))
+
+# Ring
+angle <- seq(0, 2*pi, length.out = 400)
+ring_df <- data.frame(xr = cos(angle), yr = sin(angle))
+
+ggplot() +
+  # Ringi kontuur
+  geom_path(data = ring_df, aes(x = xr, y = yr),
+            linewidth = 1, color = "grey40") +
+
+  # Keskpunkt O(0;0) ja punkt P
+  geom_point(aes(x = p0["x"], y = p0["y"]), size = 4, color = "black") +
+  geom_point(aes(x = p["x"], y = p["y"]), size = 4, color = "black") +
+
+  # Raadius
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "red", linewidth = 1.2) +
+
+  # Horisontaalne ja vertikaalne projektsioon
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p0["y"]),
+               color = "blue", linetype = "dashed") +
+  geom_segment(aes(x = p["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "blue", linetype = "dashed") +
+
+  # Sildid
+  annotate("text", x = p0["x"], y = p0["y"] - 0.1,
+           label = expression(italic(O) * "(0;~0)"),
+           parse = TRUE, size = 5) +
+  annotate("text", x = p["x"], y = p["y"] + 0.1,
+           label = expression(italic(P) * "(" * italic(x) * "; " * italic(y) * ")"),
+           parse = TRUE, size = 5) +
+
+  # Δx ja Δy
+  annotate("text",
+           x = p["x"] / 2, y = -0.15,
+           label = expression(italic(Delta * x) == italic(x)),
+           parse = TRUE, size = 4.5) +
+  annotate("text",
+           x = p["x"] + 0.15, y = p["y"] / 2,
+           label = expression(italic(Delta * y) == italic(y)),
+           parse = TRUE, size = 4.5) +
+
+  # r tähis
+  annotate("text",
+           x = p["x"] / 2 + 0.05, y = p["y"] / 2 + 0.05,
+           label = expression(italic(r) == 1),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Valem ringi sees
+  annotate("text",
+           x = -0.6, y = 0.6,
+           label = expression(italic(x)^2 + italic(y)^2 == 1),
+           parse = TRUE, color = "red", size = 5) +
+
+  coord_equal(xlim = c(-1.3, 1.3), ylim = c(-1.3, 1.3)) +
+  labs(
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Ringjoone komponentide lahendused: 2
+
+$x^2 + (y-3)^2 = 4 \rightarrow$ keskpunkt on $(0; 3)$ ja raadius on 2.
+
+```{r label="circle-2"}
+library(ggplot2)
+
+# Ringi parameetrid
+p0 <- c(x = 0, y = 3)  # Keskpunkt P₀(0; 3)
+r_val <- 2             # Raadius
+
+# Üks punkt P(x; y) ringil
+theta <- pi / 4
+p <- c(
+  x = p0["x"] + r_val * cos(theta),
+  y = p0["y"] + r_val * sin(theta)
+)
+
+# Ring (kontuur)
+angle <- seq(0, 2*pi, length.out = 400)
+ring_df <- data.frame(
+  xr = p0["x"] + r_val * cos(angle),
+  yr = p0["y"] + r_val * sin(angle)
+)
+
+# Joonis
+ggplot() +
+  # Ring
+  geom_path(data = ring_df, aes(x = xr, y = yr),
+            linewidth = 1, color = "grey40") +
+
+  # Punktid P₀ ja P
+  geom_point(aes(x = p0["x"], y = p0["y"]), size = 4, color = "black") +
+  geom_point(aes(x = p["x"],  y = p["y"]),  size = 4, color = "black") +
+
+  # Raadius (punane)
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "red", linewidth = 1.2) +
+
+  # Projektsioonid Δx ja Δy (sinised katkendjooned)
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p0["y"]),
+               color = "blue", linetype = "dashed") +
+  geom_segment(aes(x = p["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "blue", linetype = "dashed") +
+
+  # Keskpunkti silt
+  annotate("text", x = p0["x"], y = p0["y"] - 0.3,
+           label = expression(italic(P)[0] * "(0;~3)"),
+           parse = TRUE, size = 5) +
+
+  # Punkt P(x; y)
+  annotate("text", x = p["x"], y = p["y"] + 0.3,
+           label = expression(italic(P) * "(" * italic(x) * "; " * italic(y) * ")"),
+           parse = TRUE, size = 5) +
+
+  # Δx ja Δy
+  annotate("text", x = (p0["x"] + p["x"]) / 2, y = p0["y"] - 0.2,
+           label = expression(italic(Delta * x) == italic(x)),
+           parse = TRUE, size = 4.5) +
+  annotate("text", x = p["x"] + 0.3, y = (p0["y"] + p["y"]) / 2,
+           label = expression(italic(Delta * y) == italic(y) - 3),
+           parse = TRUE, size = 4.5) +
+
+  # r tähis
+  annotate("text", x = (p0["x"] + p["x"]) / 2 + 0.1, y = (p0["y"] + p["y"]) / 2 + 0.1,
+           label = expression(italic(r) == 2),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Valem joonise sees
+  annotate("text", x = -1.6, y = 4.6,
+           label = expression(italic(x)^2 + (italic(y) - 3)^2 == 4),
+           parse = TRUE, color = "red", size = 5) +
+
+  # Teljestik
+  coord_equal(xlim = c(-2.5, 2.5), ylim = c(0, 6)) +
+  labs(
+    x = expression(italic(x)),
+    y = expression(italic(y))
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Komponentide lahendused: 3
+
+$$x^2 + y^2 - 3 \cdot x + 10 \cdot y - 1 = 0.$$
+
+$$(x - 1{,}5)^2 + (y + 5)^2 = 2{,}25 + 25 + 1 = 28{,}25 = \frac{113}{4}.$$
+Keskpunkt on $(1,5; -5)$ ja raadius on $\frac{\sqrt{113}}{2}$.
+
+```{r label="circle-3"}
+library(ggplot2)
+
+# Antud võrrand: x^2 + y^2 - 3x + 10y - 1 = 0
+# Standardkuju: (x - 3/2)^2 + (y + 5)^2 = 113/4
+p0 <- c(x = 1.5, y = -5)
+r_val <- sqrt(113) / 2  # ≈ 5.315
+
+# Näidispunkt ringil
+theta <- pi * 35 / 180
+p <- c(x = p0["x"] + r_val * cos(theta),
+       y = p0["y"] + r_val * sin(theta))
+
+# Ringi kontuur
+angle <- seq(0, 2*pi, length.out = 400)
+ring_df <- data.frame(
+  xr = p0["x"] + r_val * cos(angle),
+  yr = p0["y"] + r_val * sin(angle)
+)
+
+# Vorminda keskpunkt koma-komana (eesti keel)
+x_text <- sub("\\.", ",", format(p0["x"], nsmall = 1))  # "1,5"
+y_text <- "-5"                                          # juba täisarv
+
+ggplot() +
+  # Ring
+  geom_path(data = ring_df, aes(x = xr, y = yr),
+            linewidth = 1, color = "grey40") +
+
+  # Punktid
+  geom_point(aes(x = p0["x"], y = p0["y"]), size = 4, color = "black") +
+  geom_point(aes(x = p["x"],  y = p["y"]),  size = 4, color = "black") +
+
+  # Raadius (punane)
+  geom_segment(aes(x = p0["x"], y = p0["y"], xend = p["x"], yend = p["y"]),
+               color = "red", linewidth = 1.2) +
+
+  # Keskpunkti silt: P₀(1,5; −5) — KOMAGA, ilma nähtava tildeta
+  annotate("text", x = p0["x"], y = p0["y"] - 0.45,
+           label = as.expression(bquote(italic(P)[0] ~ "(" ~ .(x_text) ~ "; " ~ .(y_text) ~ ")")),
+           size = 5) +
+
+  # Punkt P(x; y)
+  annotate("text", x = p["x"], y = p["y"] + 0.45,
+           label = expression(italic(P) * "(" * italic(x) * "; " * italic(y) * ")"),
+           size = 5) +
+
+  # r tähis (jätan täpses sümbolkujus)
+  annotate("text",
+           x = (p0["x"] + p["x"])/2 + 0.15,
+           y = (p0["y"] + p["y"])/2 + 0.15,
+           label = expression(italic(r) == sqrt(113)/2),
+           color = "red", size = 4.6) +
+
+  # Standardkuju punaselt RINGI SEES (murrud – ei teki koma-parsimise muret)
+  annotate("text",
+           x = p0["x"], y = p0["y"] + r_val*0.25,
+           label = expression((italic(x) - frac(3, 2))^2 + (italic(y) + 5)^2 == frac(113, 4)),
+           color = "red", size = 4.6, hjust = 0.5) +
+
+  coord_equal(xlim = c(p0["x"] - r_val - 1, p0["x"] + r_val + 1),
+              ylim = c(p0["y"] - r_val - 1, p0["y"] + r_val + 1)) +
+  labs(x = expression(italic(x)), y = expression(italic(y))) +
+  theme_minimal(base_size = 14)
+
+```
+
+## Ringjoon: iseseisev harjutamine
+
+Lahenda kõik ülesanded kogumiku *Algebra: Practice Problems* osast 3.3[@dawkins2022algebra(lk 29)]:
+
+Esimeses kahes ülesandes on antud raadius ja keskpunkt, mille järgi tuleb kirjutada ringjoone võrrand.
+
+Ülejäänud ülesannetes tuleb kindlaks teha keskpunkt ja raadius ning visandada graafik, kui tegemist on ringjoonega. Kui tegemist pole ringjoonega, tuleb põhjendada, miks ei ole.
+
+## Ellips
+
+ellips
+: tasandi kõikide punktide hulk, mille kauguste summa kahest fikseeritud punktist on jääv[@jurimae1993, lk 298]
+
+```{r label="ellipsis"}
+library(ggplot2)
+
+# Ellipsi parameetrid
+a <- 5
+c <- 3
+b <- sqrt(a^2 - c^2)
+
+# Ellipsi punktid
+theta <- seq(0, 2*pi, length.out = 400)
+ellipse <- data.frame(x = a*cos(theta), y = b*sin(theta))
+
+# Punktid
+O  <- data.frame(x = 0,  y = 0,  lab = "italic(O)")
+Ff <- data.frame(x = -c, y = 0,  lab = "italic(F)")
+Hh <- data.frame(x =  c, y = 0,  lab = "italic(H)")
+Uu <- data.frame(x =  a, y = 0,  lab = "italic(U)")
+Vv <- data.frame(x = -a, y = 0,  lab = "italic(V)")
+Ww <- data.frame(x =  0, y =  b,  lab = "italic(W)")
+
+# Punkt ellipsil ja ühendus fookustega
+t0 <- 50*pi/180
+Pp <- data.frame(x = a*cos(t0), y = b*sin(t0), lab = "italic(P)")
+segPF <- rbind(
+  data.frame(x = Pp$x, y = Pp$y, xend = Ff$x, yend = Ff$y),
+  data.frame(x = Pp$x, y = Pp$y, xend = Hh$x, yend = Hh$y)
+)
+
+# Joonis
+ggplot() +
+  # Teljed
+  geom_hline(yintercept = 0, linewidth = 0.4) +
+  geom_vline(xintercept = 0, linewidth = 0.4) +
+
+  # Ellips
+  geom_path(data = ellipse, aes(x, y), linewidth = 1) +
+
+  # Lõigud P-st fookustesse
+  geom_segment(data = segPF, aes(x = x, y = y, xend = xend, yend = yend),
+               linetype = 2) +
+
+  # Punktid
+  geom_point(data = rbind(O, Ff, Hh, Uu, Vv, Ww, Pp), aes(x, y), size = 3) +
+
+  # Märgendid nihkega, et ei kattuks telgjoonte ega punktidega
+  geom_text(data = O,  aes(x, y, label = lab), parse = TRUE, nudge_x =  0.3, nudge_y = -0.3) +
+  geom_text(data = Ff, aes(x, y, label = lab), parse = TRUE, nudge_x = -0.4, nudge_y =  0.6) +
+  geom_text(data = Hh, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.4, nudge_y =  0.6) +
+  geom_text(data = Uu, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.4, nudge_y = -0.4) +
+  geom_text(data = Vv, aes(x, y, label = lab), parse = TRUE, nudge_x = -0.4, nudge_y = -0.4) +
+  geom_text(data = Ww, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.4, nudge_y =  0.2) +
+  geom_text(data = Pp, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.4, nudge_y =  0.4) +
+
+  coord_equal(xlim = c(-6.5, 6.5), ylim = c(-5.5, 5.5)) +
+  labs(x = expression(italic(x)), y = expression(italic(y))) +
+  theme_classic(base_size = 14)
+
+```
+
+## Ellips: tuletamine 1
+
+$$HW = FW = \frac{HP + FP}{2}.$$
+
+$$HP + FP = HU + FU = UV.$$
+
+$$OU = \frac{UV}{2} = \frac{HP + FP}{2} = HW.$$
+
+$$2 \cdot OU = FP + HP.$$
+
+$$2 \cdot U_x = \sqrt{(P_x - F_x)^2 + (P_y - F_y)^2} + \sqrt{(P_x - H_x)^2 + (P_y - H_y)^2}.$$
+
+## Ellips: tuletamine 2
+
+$$2 \cdot U_x = \sqrt{(P_x - F_x)^2 + (P_y - F_y)^2} + \sqrt{(P_x - H_x)^2 + (P_y - H_y)^2}.$$
+$$2 \cdot U_x - \sqrt{(P_x - F_x)^2 + (P_y)^2} = \sqrt{(P_x - H_x)^2 + (P_y)^2}.$$
+$$4 \cdot U_x^2 - 4 \cdot U_x \cdot \sqrt{(P_x - F_x)^2 + (P_y)^2} + P_x^2 - 2 \cdot F_x \cdot P_x + F_x^2 + P_y^2\\ = P_x^2 - 2 \cdot H_x \cdot P_x + H_x^2 + P_y^2.$$
+$$4 \cdot U_x^2 - 2 \cdot F_x \cdot P_x + F_x^2 + 2 \cdot H_x \cdot P_x - H_x^2\\ = 4 \cdot U_x \cdot \sqrt{(P_x - F_x)^2 + (P_y)^2}.$$
+
+## Ellips: tuletamine 3
+
+$$4 \cdot U_x^2 - 2 \cdot F_x \cdot P_x + F_x^2 + 2 \cdot H_x \cdot P_x - H_x^2\\ = 4 \cdot U_x \cdot \sqrt{(P_x - F_x)^2 + (P_y)^2}.$$
+
+$$H_x = -F_x.$$
+
+$$4 \cdot U_x^2 + 2 \cdot H_x \cdot P_x + H_x^2 + 2 \cdot H_x \cdot P_x - H_x^2\\ = 4 \cdot U_x \cdot \sqrt{(P_x + H_x)^2 + (P_y)^2}.$$
+$$4 \cdot U_x^2 + 4 \cdot H_x \cdot P_x= 4 \cdot U_x \cdot \sqrt{(P_x + H_x)^2 + (P_y)^2}.$$
+
+## Ellips: tuletamine 4
+
+$$4 \cdot U_x^2 + 4 \cdot H_x \cdot P_x= 4 \cdot U_x \cdot \sqrt{(P_x + H_x)^2 + (P_y)^2}.$$
+
+$$U_x^2 + H_x \cdot P_x= U_x \cdot \sqrt{(P_x + H_x)^2 + (P_y)^2}.$$
+
+$$U_x^4 + 2 \cdot U_x^2 \cdot H_x \cdot P_x + H_x^2 \cdot P_x^2 = U_x^2 \cdot (P_x^2 + 2 \cdot H_x \cdot P_x + H_x^2 + P_y^2).$$
+$$U_x^4 + 2 \cdot U_x^2 \cdot H_x \cdot P_x + H_x^2 \cdot P_x^2\\ = P_x^2 \cdot U_x^2 + 2 \cdot U_x^2 \cdot H_x \cdot P_x + H_x^2 \cdot U_x^2 + P_y^2 \cdot U_x^2.$$
+$$U_x^4+ H_x^2 \cdot P_x^2 = P_x^2 \cdot U_x^2 + H_x^2 \cdot U_x^2 + P_y^2 \cdot U_x^2.$$
+
+## Ellips: tuletamine 5
+
+$$U_x^4+ H_x^2 \cdot P_x^2 = P_x^2 \cdot U_x^2 + H_x^2 \cdot U_x^2 + P_y^2 \cdot U_x^2.$$
+$$OU = HW \rightarrow U_x^2 = H_x^2 + W_y^2.$$
+$$H_x^2 = U_x^2 - W_y^2.$$
+$$U_x^4 + (U_x^2 - W_y^2) \cdot P_x^2 = P_x^2 \cdot U_x^2 + (U_x^2 - W_y^2) \cdot U_x^2 + P_y^2 \cdot U_x^2.$$
+$$U_x^4 + P_x^2 \cdot U_x^2 - P_x^2 \cdot W_y^2 = P_x^2 \cdot U_x^2 + U_x^4 - U_x^2 \cdot W_y^2 + P_y^2 \cdot U_x^2.$$
+$$U_x^2 \cdot W_y^2 - P_y^2 \cdot U_x^2 = P_x^2 \cdot W_y^2.$$
+
+## Ellips: tuletamine 6
+
+$$U_x^2 \cdot W_y^2 - P_y^2 \cdot U_x^2 = P_x^2 \cdot W_y^2.$$
+$$W_y^2 - P_y^2 = \frac{P_x^2 \cdot W_y^2}{U_x^2}.$$
+$$1 - \frac{P_y^2}{W_y^2} = \frac{P_x^2}{U_x^2}.$$
+$$1 = \frac{P_x^2}{U_x^2} +  \frac{P_y^2}{W_y^2} = \frac{(x - x_0)^2}{u^2} +  \frac{(y - y_0)^2}{w^2}.$$
+
+## Ellips: ringjoon funktsioonina
+
+Ringjoon on ellipsi erikuju:
+
+$$1 = \frac{P_x^2}{U_x^2} +  \frac{P_y^2}{W_y^2}.$$
+
+$$U_x^2 = W_y^2 = r^2.$$
+
+$$1 = \frac{P_x^2}{r^2} +  \frac{P_y^2}{r^2} = \frac{P_x^2 + P_y^2}{r^2}.$$
+$${r^2} = P_x^2 + P_y^2.$$
+
+## Ellips: ringjoon graafikuna
+
+```{r label="circle-as-ellipsis"}
+library(ggplot2)
+
+# Parameetrid: U_x = W_y = r  => a = b = r, c = 0 (ring kui erijuht ellipsist)
+r <- 4
+a <- r
+b <- r
+c <- 0
+
+# Ellips (siin ring) param. esitus
+theta <- seq(0, 2*pi, length.out = 600)
+ellipse <- data.frame(
+  x = a*cos(theta),
+  y = b*sin(theta)
+)
+
+# Punktid
+O  <- data.frame(x = 0,  y = 0,  lab = "italic(O)")
+Ff <- data.frame(x = -c, y = 0,  lab = "italic(F)")  # = (0,0)
+Hh <- data.frame(x =  c, y = 0,  lab = "italic(H)")  # = (0,0)
+Uu <- data.frame(x =  r, y = 0,  lab = "italic(U)")
+Vv <- data.frame(x = -r, y = 0,  lab = "italic(V)")
+Ww <- data.frame(x =  0, y =  r,  lab = "italic(W)")
+
+# Näidispunkt ellipsil ja ühendused fookustesse
+t0 <- 50*pi/180
+Pp <- data.frame(x = a*cos(t0), y = b*sin(t0), lab = "italic(P)")
+segPF <- rbind(
+  data.frame(x = Pp$x, y = Pp$y, xend = Ff$x, yend = Ff$y),
+  data.frame(x = Pp$x, y = Pp$y, xend = Hh$x, yend = Hh$y)
+)
+
+# Väikesed r-annotatsioonid U_x ja W_y juurde
+ann_r <- rbind(
+  data.frame(x = Uu$x, y = Uu$y, lab = "italic(r)", dx =  0.35, dy =  0.35),
+  data.frame(x = Ww$x, y = Ww$y, lab = "italic(r)", dx =  0.35, dy =  0.35)
+)
+
+ggplot() +
+  # Telgjooned
+  geom_hline(yintercept = 0, linewidth = 0.4) +
+  geom_vline(xintercept = 0, linewidth = 0.4) +
+
+  # Ellips (ring)
+  geom_path(data = ellipse, aes(x, y), linewidth = 1) +
+
+  # Lõigud P-st fookustesse (siin kattuvad, sest c = 0)
+  geom_segment(data = segPF, aes(x = x, y = y, xend = xend, yend = yend),
+               linetype = 2) +
+
+  # Punktid
+  geom_point(data = rbind(O, Ff, Hh, Uu, Vv, Ww, Pp), aes(x, y), size = 3) +
+
+  # Sildid (nihkega, et mitte kattuda telgjoonte ega punktidega)
+  geom_text(data = O,  aes(x, y, label = lab), parse = TRUE, nudge_x =  0.30, nudge_y = -0.30) +
+  geom_text(data = Ff, aes(x, y, label = lab), parse = TRUE, nudge_x = -0.55, nudge_y = -0.55) +
+  geom_text(data = Hh, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.55, nudge_y = -0.55) +
+  geom_text(data = Uu, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.40, nudge_y = -0.40) +
+  geom_text(data = Vv, aes(x, y, label = lab), parse = TRUE, nudge_x = -0.40, nudge_y = -0.40) +
+  geom_text(data = Ww, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.40, nudge_y =  0.20) +
+  geom_text(data = Pp, aes(x, y, label = lab), parse = TRUE, nudge_x =  0.40, nudge_y =  0.40) +
+
+  # r-annotatsioonid U_x ja W_y juures
+  geom_text(data = ann_r, aes(x = x, y = y, label = lab),
+            parse = TRUE, nudge_x = ann_r$dx, nudge_y = ann_r$dy) +
+
+  coord_equal(xlim = c(-r-2, r+2), ylim = c(-r-2, r+2)) +
+  labs(x = expression(italic(x)), y = expression(italic(y))) +
+  theme_classic(base_size = 14)
+
+```
+
+## Ellipsi omadused
+
+$$1 = \frac{(x - x_0)^2}{u^2} +  \frac{(y - y_0)^2}{w^2}.$${#eq-ellipsis}
+
+Keskpunkt: $(x_0; y_0)$.
+
+Suurima abstsissiga punkt: $(x_0 + u; y_0)$.
+
+Suurima ordinaadiga punkt: $(x_0; y_0 + w)$.
+
+Vähima abstsissiga punkt: $(x_0 - u; y_0)$.
+
+Vähima ordinaadiga punkt: $(x_0; y_0 - w)$.
 
 ## Välised allikad
 

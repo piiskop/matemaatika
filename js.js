@@ -39,9 +39,13 @@ function setTargets() {
   
   let div = document.getElementById("main-nav").getElementsByTagName("nav")[0].getElementsByClassName("book-extra")[0];
   createLink(div, "book-print", "matemaatika.pdf", "trükiteisend");
-  let nameOfPresentation = "presentation";
-  createLink(div, "presentation-" + nameOfPresentation, "qmd/" + nameOfPresentation + "/" + nameOfPresentation + ".html", "esitlus");
-  createLink(div, "presentation-speaker-" + nameOfPresentation, "qmd/" + nameOfPresentation + "/" + nameOfPresentation + "-speaker.html", "kaugjuhtimine");
+
+  let namesOfPresentation = ["eeldused", "funktsioonid"];
+  for (let i = 0; i < namesOfPresentation.length; i++) {
+    let nameOfPresentation = namesOfPresentation[i];
+    createLink(div, "presentation-" + nameOfPresentation, "qmd/" + nameOfPresentation + "/" + nameOfPresentation + ".html", "esitlus: " + nameOfPresentation);
+    createLink(div, "presentation-speaker-" + nameOfPresentation, "qmd/" + nameOfPresentation + "/" + nameOfPresentation + "-speaker.html", "kaugjuhtimine: " + nameOfPresentation);
+  }
 }
 
 /**

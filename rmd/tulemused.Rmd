@@ -177,7 +177,7 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # MikhSergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	1, # Nikita Norman
   	NA, # Angelina Pajuni
@@ -261,7 +261,7 @@ grades <- data.frame(
   	1, # Andrii Shnayder
   	1, # Vladislav Smirnov
   	1, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
+  	1, # Semjon Suhhotin
   	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
@@ -352,7 +352,7 @@ grades <- data.frame(
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -364,15 +364,15 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
   	NA, # Vladislav Smirnov
-  	NA, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
+  	1, # Mihhail Startsev
+  	1, # Semjon Suhhotin
   	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
@@ -401,16 +401,16 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
   	1, # Vladislav Smirnov
-  	NA, # Mihhail Startsev
+  	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -438,7 +438,7 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
@@ -447,7 +447,7 @@ grades <- data.frame(
   	1, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -458,8 +458,8 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Daniil Doronin
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
@@ -475,7 +475,7 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
@@ -484,7 +484,7 @@ grades <- data.frame(
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -754,7 +754,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -769,7 +769,7 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	1, # Nikita Norman
   	NA, # Angelina Pajuni
@@ -779,10 +779,10 @@ grades <- data.frame(
   	1, # Andrii Shnayder
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Semjon Suhhotin
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
-  	NA, # Ivanna Zimina
+  	1, # Ivanna Zimina
   	1, # Marie Tombu
   	1 # Max Välja
   ),
@@ -791,7 +791,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -817,7 +817,7 @@ grades <- data.frame(
   	1, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -865,7 +865,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -880,7 +880,7 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	1, # Nikita Norman
   	NA, # Angelina Pajuni
@@ -891,11 +891,11 @@ grades <- data.frame(
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
-  	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Arina Šiškova
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 21
   	NA, # Daniil Bondar
@@ -1013,12 +1013,12 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1028,9 +1028,9 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # MikhSergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
@@ -1038,12 +1038,12 @@ grades <- data.frame(
   	1, # Andrii Shnayder
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
+  	1, # Semjon Suhhotin
   	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 25
   	NA, # Daniil Bondar
@@ -1383,12 +1383,12 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Daniil Doronin
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1413,7 +1413,7 @@ grades <- data.frame(
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 35
   	NA, # Daniil Bondar
@@ -1495,11 +1495,11 @@ grades <- data.frame(
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1511,9 +1511,9 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	NA, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
@@ -1521,10 +1521,10 @@ grades <- data.frame(
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 38
   	1, # Daniil Bondar
@@ -1532,11 +1532,11 @@ grades <- data.frame(
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1546,11 +1546,11 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
@@ -1561,19 +1561,19 @@ grades <- data.frame(
   	NA, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 39
-  	NA, # Daniil Bondar
+  	1, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1583,11 +1583,11 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
@@ -1638,16 +1638,16 @@ grades <- data.frame(
   	NA # Max Välja
   ),
   c( # 41
-  	NA, # Daniil Bondar
+  	1, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
   	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1657,11 +1657,11 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
@@ -1675,7 +1675,7 @@ grades <- data.frame(
   	NA # Max Välja
   ),
   c( # 42
-  	NA, # Daniil Bondar
+  	1, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
@@ -1694,11 +1694,11 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
@@ -1971,7 +1971,7 @@ grades <- data.frame(
   	NA # Max Välja
   ),
   c( # 50
-  	NA, # Daniil Bondar
+  	1, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
@@ -1980,7 +1980,7 @@ grades <- data.frame(
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
+  	1, # Oxana Klein
   	1, # Hlib Klyha
   	1, # Maksym Kotkov
   	NA, # Ene Kruzman
@@ -1990,7 +1990,7 @@ grades <- data.frame(
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	1, # Sergey Mikheev
-  	NA, # Ruslana Nekrakha
+  	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
   	NA, # Nikita Norman
   	NA, # Angelina Pajuni
@@ -2005,7 +2005,7 @@ grades <- data.frame(
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   )
 
 )
