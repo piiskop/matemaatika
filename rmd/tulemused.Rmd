@@ -370,7 +370,7 @@ grades <- data.frame(
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	1, # Andrii Shnayder
-  	NA, # Vladislav Smirnov
+  	1, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
   	1, # Arina Šiškova
@@ -1494,7 +1494,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -1531,7 +1531,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -1548,7 +1548,7 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
@@ -1568,7 +1568,7 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -1585,7 +1585,7 @@ grades <- data.frame(
   	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
   	1, # Ivan Puzanov
   	NA, # Uuno Puus
@@ -1595,7 +1595,7 @@ grades <- data.frame(
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
   	NA # Max Välja
@@ -1642,7 +1642,44 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
+  	1, # Daniil Doronin
+  	1, # Ksenija Frolova
+  	1, # Sofja Gubatšjova
+  	1, # Jelena Ivleva
+  	NA, # Arno Kaseniit
+  	1, # Oxana Klein
+  	1, # Hlib Klyha
+  	1, # Maksym Kotkov
+  	NA, # Ene Kruzman
+  	NA, # Maria Laanemäe
+  	1, # Jan-Eerik Laende
+  	1, # Anna Levchenko
+  	1, # Olesja Makarova
+  	1, # Egor Mikhaylov
+  	1, # Sergey Mikheev
+  	1, # Ruslana Nekrakha
+  	1, # Irina Nitsenko
+  	1, # Nikita Norman
+  	NA, # Angelina Pajuni
+  	1, # Ivan Puzanov
+  	NA, # Uuno Puus
+  	1, # Azhar Ryskhan
+  	1, # Andrii Shnayder
+  	NA, # Vladislav Smirnov
+  	1, # Mihhail Startsev
+  	NA, # Semjon Suhhotin
+  	NA, # Arina Šiškova
+  	1, # Anton Zakharchenko
+  	1, # Ivanna Zimina
+  	1, # Marie Tombu
+  	NA # Max Välja
+  ),
+  c( # 42
+  	1, # Daniil Bondar
+  	1, # Oleksandr Bosiuk
+  	1, # Alger Bronzov
+  	1, # Tikhon Cherkay
+  	1, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
@@ -1669,44 +1706,7 @@ grades <- data.frame(
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
-  	1, # Ivanna Zimina
-  	1, # Marie Tombu
-  	NA # Max Välja
-  ),
-  c( # 42
-  	1, # Daniil Bondar
-  	1, # Oleksandr Bosiuk
-  	1, # Alger Bronzov
-  	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
-  	1, # Sofja Gubatšjova
-  	1, # Jelena Ivleva
-  	NA, # Arno Kaseniit
-  	NA, # Oxana Klein
-  	1, # Hlib Klyha
-  	1, # Maksym Kotkov
-  	NA, # Ene Kruzman
-  	NA, # Maria Laanemäe
-  	1, # Jan-Eerik Laende
-  	1, # Anna Levchenko
-  	1, # Olesja Makarova
-  	1, # Egor Mikhaylov
-  	1, # Sergey Mikheev
-  	1, # Ruslana Nekrakha
-  	1, # Irina Nitsenko
-  	NA, # Nikita Norman
-  	NA, # Angelina Pajuni
-  	1, # Ivan Puzanov
-  	NA, # Uuno Puus
-  	1, # Azhar Ryskhan
-  	1, # Andrii Shnayder
-  	NA, # Vladislav Smirnov
-  	1, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
   	NA # Max Välja
@@ -1975,8 +1975,8 @@ grades <- data.frame(
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
   	1, # Tikhon Cherkay
-  	NA, # Daniil Doronin
-  	NA, # Ksenija Frolova
+  	1, # Daniil Doronin
+  	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
   	1, # Jelena Ivleva
   	NA, # Arno Kaseniit

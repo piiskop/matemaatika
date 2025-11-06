@@ -229,4 +229,4 @@ render_color <- function(color, text) {
 
 # Sissejuhatus {-}
 
-Palun vaata tabelist \@ref(tab:achievements), millises teemas on sinule märgitud *NA*, misjärel suundu [eelõpiväljundite slaidile](http://matemaatika.ons.ee/qmd/presentation/presentation.html#/eelsihtide-saavutamine-1), leia selle teema õppeallikad ja asu õppima! Kui õpiväljundi kohta on märgitud ülaindeks, siis liigu hiirekursoriga sellele, misjärel ilmub modaalaken, kus sees on linke, kuhu vajutada. Kui õpiväljundi kohta pole märgitud ülaindeksit, siis leiad vastava teema faili [Moodle'st](https://moodle.ut.ee/course/section.php?id=247629).
+Palun vaata tabelist \@ref(tab:achievements), millises teemas on sinule märgitud *NA*, misjärel suundu [eelõpiväljundite slaidile](http://matemaatika.ons.ee/qmd/eeldused/eeldused.html#/eelsihtide-saavutamine-1), leia selle teema õppeallikad ja asu õppima! Kui õpiväljundi kohta on märgitud ülaindeks, siis liigu hiirekursoriga sellele, misjärel ilmub modaalaken, kus sees on linke, kuhu vajutada. Kui õpiväljundi kohta pole märgitud ülaindeksit, siis leiad vastava teema faili [Moodle'st](https://moodle.ut.ee/course/section.php?id=247629).
