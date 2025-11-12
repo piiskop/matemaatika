@@ -40,7 +40,7 @@ function setTargets() {
   let div = document.getElementById("main-nav").getElementsByTagName("nav")[0].getElementsByClassName("book-extra")[0];
   createLink(div, "book-print", "matemaatika.pdf", "trükiteisend");
 
-  let namesOfPresentation = ["eeldused", "funktsioonid"];
+  let namesOfPresentation = ["eeldused", "funktsioonid", "liigid"];
   for (let i = 0; i < namesOfPresentation.length; i++) {
     let nameOfPresentation = namesOfPresentation[i];
     createLink(div, "presentation-" + nameOfPresentation, "qmd/" + nameOfPresentation + "/" + nameOfPresentation + ".html", "esitlus: " + nameOfPresentation);

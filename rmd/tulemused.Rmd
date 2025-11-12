@@ -1039,7 +1039,7 @@ grades <- data.frame(
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -1520,7 +1520,7 @@ grades <- data.frame(
   	NA, # Vladislav Smirnov
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
-  	NA, # Arina Šiškova
+  	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
@@ -1558,7 +1558,7 @@ grades <- data.frame(
   	1, # Mihhail Startsev
   	NA, # Semjon Suhhotin
   	NA, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
   	1 # Max Välja
