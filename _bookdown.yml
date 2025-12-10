@@ -6,5 +6,6 @@ rmd_files: [
   "rmd/hindamine.Rmd",
   "rmd/lähtetest.Rmd",
   "rmd/tulemused.Rmd",
+  "rmd/suubetest.Rmd",
   "references.Rmd"
 ]

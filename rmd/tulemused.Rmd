@@ -2068,7 +2068,7 @@ grades <- data.frame(
   	1, # Daniil Bondar
   	1, # Oleksandr Bosiuk
   	1, # Alger Bronzov
-  	NA, # Tikhon Cherkay
+  	1, # Tikhon Cherkay
   	NA, # Daniil Doronin
   	1, # Ksenija Frolova
   	1, # Sofja Gubatšjova
@@ -2081,7 +2081,7 @@ grades <- data.frame(
   	NA, # Maria Laanemäe
   	1, # Jan-Eerik Laende
   	1, # Anna Levchenko
-  	NA, # Olesja Makarova
+  	1, # Olesja Makarova
   	1, # Egor Mikhaylov
   	NA, # Sergey Mikheev
   	1, # Ruslana Nekrakha
@@ -2094,9 +2094,9 @@ grades <- data.frame(
   	NA, # Andrii Shnayder
   	1, # Vladislav Smirnov
   	NA, # Mihhail Startsev
-  	NA, # Semjon Suhhotin
+  	1, # Semjon Suhhotin
   	1, # Arina Šiškova
-  	NA, # Anton Zakharchenko
+  	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
   	NA # Max Välja
@@ -2113,7 +2113,7 @@ grades <- data.frame(
   	NA, # Arno Kaseniit
   	1, # Oxana Klein
   	NA, # Hlib Klyha
-  	NA, # Maksym Kotkov
+  	1, # Maksym Kotkov
   	NA, # Ene Kruzman
   	NA, # Maria Laanemäe
   	1, # Jan-Eerik Laende

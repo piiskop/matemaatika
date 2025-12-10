@@ -1,0 +1,1729 @@
+# Suudmetest
+
+```{r label="tasks-for-finish", echo=FALSE, results='asis'}
+goals <- list(
+  list( # 1
+    goal="teab, funktsiooni liike, piirväärtust ja funktsiooni pidevus",
+    level=1
+  ),
+  list( # 2
+    goal="leiab lihtsamaid piirväärtusi, uurib funktsiooni pidevust ja kasutab pideva funktsiooni omadusi ülesannete lahendamisel",
+    level=4
+  ),
+  list( # 3
+    goal="tunneb teoreeme, mille alusel funktsioone uuritakse",
+    level=1
+  )
+)
+
+tasks <- list(
+  list(
+    goal=1,
+    level=1,
+    task="Mis on funktsioon?"
+  ),
+  list(
+    goal=1,
+    level=1,
+    task="Mis on piirväärtus?"
+  ),
+  list(
+    goal=1,
+    level=1,
+    task="Mis on pidevus?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta kõik, mida sa tead sellise nähtuse kohta nagu funktsiooni pidevus."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta kõik, mida sa tead sellise nähtuse kohta nagu funktsiooni piirväärtus."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta kõikvõimalikud funktsiooni liigid, mida sa tead."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(0; 1); (2; 6); (9; 4); (7; 2); (12; 3)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(-4; 1); (-2; 1); (0; 1); (3; 1)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(0; 4); (0; 6); (0; 8)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(1; 6); (-3; 4); (7; 6); (2; -10)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(0; 1); (2; 3); (4; 5); (6; 7); (8; 9); (10; 11); (12; 13)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon {(-7; 0); (4; 2); (4; 1); (-2; 3); (6; 0)} on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y = \\frac{2}{5} \\cdot x + \\frac{7}{5}$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y = 3 \\cdot x^2 + 4 \\cdot x + 1$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y = 2 - x^4$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y^2 = 10 - 3 \\cdot x$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y^2 = x^2 + 1$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y^4 + x^3 = 1$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kas funktsioon $y^3 + x^4 = 1$ on ühene?"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = 7 \\cdot t + 2 \\rightarrow \\mathrm{A}(-9) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = 7 \\cdot t + 2 \\rightarrow \\mathrm{A}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = 7 \\cdot t + 2 \\rightarrow \\mathrm{A}(2) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = 7 \\cdot t + 2 \\rightarrow \\mathrm{A}(6 \\cdot x) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = 7 \\cdot t + 2 \\rightarrow \\mathrm{A}(t^2 + 1) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3}{x} \\rightarrow \\mathrm{f}(-4) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3}{x} \\rightarrow \\mathrm{f}(\\frac{1}{3}) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3}{x} \\rightarrow \\mathrm{f}(\\frac{6}{7}) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3}{x} \\rightarrow \\mathrm{f}(4 \\cdot t + 2) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3}{x} \\rightarrow \\mathrm{f}(\\frac{6}{x}) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(w) = \\sqrt{2 \\cdot w + 10} \\rightarrow \\mathrm{h}(-1) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(w) = \\sqrt{2 \\cdot w + 10} \\rightarrow \\mathrm{h}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(w) = \\sqrt{2 \\cdot w + 10} \\rightarrow \\mathrm{h}(3) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(w) = \\sqrt{2 \\cdot w + 10} \\rightarrow \\mathrm{h}(-2 \\cdot t) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(w) = \\sqrt{2 \\cdot w + 10} \\rightarrow \\mathrm{h}(w + 4) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 3 - 2 \\cdot x - x^2 \\rightarrow \\mathrm{P}(-6) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 3 - 2 \\cdot x - x^2 \\rightarrow \\mathrm{P}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 3 - 2 \\cdot x - x^2 \\rightarrow \\mathrm{P}(3) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 3 - 2 \\cdot x - x^2 \\rightarrow \\mathrm{P}(z^2) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 3 - 2 \\cdot x - x^2 \\rightarrow \\mathrm{P}(4-x) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(z) = 2 \\cdot z^3 - z^2 \\rightarrow \\mathrm{f}(-1) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(z) = 2 \\cdot z^3 - z^2 \\rightarrow \\mathrm{f}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(z) = 2 \\cdot z^3 - z^2 \\rightarrow \\mathrm{f}(4) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(z) = 2 \\cdot z^3 - z^2 \\rightarrow \\mathrm{f}(\\frac{1}{2} \\cdot t) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(z) = 2 \\cdot z^3 - z^2 \\rightarrow \\mathrm{f}(z - 1) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(t) = \\begin{cases}t \\leq 10 \\rightarrow 2 + t\\\\
+    t < 10 \\rightarrow t - 7\\end{cases}\\rightarrow \\mathrm{g}(14) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(t) = \\begin{cases}t \\leq 10 \\rightarrow 2 + t\\\\
+    t < 10 \\rightarrow t - 7\\end{cases}\\rightarrow \\mathrm{g}(10) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(t) = \\begin{cases}t \\leq 10 \\rightarrow 2 + t\\\\
+    t < 10 \\rightarrow t - 7\\end{cases}\\rightarrow \\mathrm{g}(-1) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < -4 \\rightarrow 4 \\cdot x^2\\\\
+    x \\geq -4 \\rightarrow 6 \\cdot x\\end{cases}\\rightarrow \\mathrm{f}(-6) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < -4 \\rightarrow 4 \\cdot x^2\\\\
+    x \\geq -4 \\rightarrow 6 \\cdot x\\end{cases}\\rightarrow \\mathrm{f}(-4) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < -4 \\rightarrow 4 \\cdot x^2\\\\
+    x \\geq -4 \\rightarrow 6 \\cdot x\\end{cases}\\rightarrow \\mathrm{f}(3) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\begin{cases}x \\leq 7 \\rightarrow \\frac{1}{2} \\cdot x\\\\
+    7 < x < 11 \\rightarrow x^2 + 1\\\\
+    x \\geq 11 \\rightarrow 3 - x\\end{cases}\\rightarrow \\mathrm{g}(2) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\begin{cases}x \\leq 7 \\rightarrow \\frac{1}{2} \\cdot x\\\\
+    7 < x < 11 \\rightarrow x^2 + 1\\\\
+    x \\geq 11 \\rightarrow 3 - x\\end{cases}\\rightarrow \\mathrm{g}(7) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\begin{cases}x \\leq 7 \\rightarrow \\frac{1}{2} \\cdot x\\\\
+    7 < x < 11 \\rightarrow x^2 + 1\\\\
+    x \\geq 11 \\rightarrow 3 - x\\end{cases}\\rightarrow \\mathrm{g}(8) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\begin{cases}x \\leq 7 \\rightarrow \\frac{1}{2} \\cdot x\\\\
+    7 < x < 11 \\rightarrow x^2 + 1\\\\
+    x \\geq 11 \\rightarrow 3 - x\\end{cases}\\rightarrow \\mathrm{g}(11) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\begin{cases}x \\leq 7 \\rightarrow \\frac{1}{2} \\cdot x\\\\
+    7 < x < 11 \\rightarrow x^2 + 1\\\\
+    x \\geq 11 \\rightarrow 3 - x\\end{cases}\\rightarrow \\mathrm{g}(14) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(w) = \\begin{cases}w > -8 \\rightarrow 12\\\\
+    -10 \\leq w \\leq -8 \\rightarrow 2 + 3 \\cdot w\\\\
+    2 < -10 \\rightarrow -1\\end{cases}\\rightarrow \\mathrm{A}(-12) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(w) = \\begin{cases}w > -8 \\rightarrow 12\\\\
+    -10 \\leq w \\leq -8 \\rightarrow 2 + 3 \\cdot w\\\\
+    2 < -10 \\rightarrow -1\\end{cases}\\rightarrow \\mathrm{A}(-10) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(w) = \\begin{cases}w > -8 \\rightarrow 12\\\\
+    -10 \\leq w \\leq -8 \\rightarrow 2 + 3 \\cdot w\\\\
+    2 < -10 \\rightarrow -1\\end{cases}\\rightarrow \\mathrm{A}(-9) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(w) = \\begin{cases}w > -8 \\rightarrow 12\\\\
+    -10 \\leq w \\leq -8 \\rightarrow 2 + 3 \\cdot w\\\\
+    2 < -10 \\rightarrow -1\\end{cases}\\rightarrow \\mathrm{A}(-8) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(w) = \\begin{cases}w > -8 \\rightarrow 12\\\\
+    -10 \\leq w \\leq -8 \\rightarrow 2 + 3 \\cdot w\\\\
+    2 < -10 \\rightarrow -1\\end{cases}\\rightarrow \\mathrm{A}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 6 \\rightarrow 2 \\cdot x\\\\
+    x = 6 \\rightarrow 4 + x\\\\
+    x > 6 \\rightarrow x^2\\end{cases}\\rightarrow \\mathrm{f}(0) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 6 \\rightarrow 2 \\cdot x\\\\
+    x = 6 \\rightarrow 4 + x\\\\
+    x > 6 \\rightarrow x^2\\end{cases}\\rightarrow \\mathrm{f}(2) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 6 \\rightarrow 2 \\cdot x\\\\
+    x = 6 \\rightarrow 4 + x\\\\
+    x > 6 \\rightarrow x^2\\end{cases}\\rightarrow \\mathrm{f}(6) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 6 \\rightarrow 2 \\cdot x\\\\
+    x = 6 \\rightarrow 4 + x\\\\
+    x > 6 \\rightarrow x^2\\end{cases}\\rightarrow \\mathrm{f}(8) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 6 \\rightarrow 2 \\cdot x\\\\
+    x = 6 \\rightarrow 4 + x\\\\
+    x > 6 \\rightarrow x^2\\end{cases}\\rightarrow \\mathrm{f}(10) = \\blank{-99}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 8 \\cdot x - 1 \\rightarrow \\frac{\\mathrm{f}(x + h) - \\mathrm{f}(x)}{h} = \\blank{8}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 3 \\cdot x^2 \\rightarrow \\frac{\\mathrm{f}(x + h) - \\mathrm{f}(x)}{h} = \\blank{8}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 7 - x^2 \\rightarrow \\frac{\\mathrm{f}(x + h) - \\mathrm{f}(x)}{h} = \\blank{8}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 3 \\cdot x^2 + 7 \\cdot x - 4 \\rightarrow \\frac{\\mathrm{f}(x + h) - \\mathrm{f}(x)}{h} = \\blank{8}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{2}{x} \\rightarrow \\frac{\\mathrm{f}(x + h) - \\mathrm{f}(x)}{h} = \\blank{8}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 9 - x \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(z) = z^2 - 4 \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(x) = \\frac{2 + x}{8 \\cdot x -1} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(t) = \\frac{t^2 - 4}{t^2 + 6 \\cdot t - 7} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(2) = \\frac{w^2 + 3 \\cdot w + 2}{w^2 + 12 \\cdot w + 36} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{10 \\cdot x - 15} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{10 \\cdot t}{\\sqrt{6 - 4 \\cdot t}} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{\\sqrt{w + 7}}{\\sqrt{2 - w}} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{z^2 - 9 \\cdot z} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{z^2 - z - 20} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{\\frac{6 + t}{5 \\cdot t - 10}} \\rightarrow X = \\blank{\\mathbb{C}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 6 \\cdot x -1$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 3 - 5 \\cdot x$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 2 \\cdot x^2$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 + 7$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{x + 3}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(x > 0) \\wedge (\\mathrm{f}(x) = \\frac{1}{x})$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(x < 0) \\wedge (\\mathrm{f}(x) = \\frac{1}{x})$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x \\geq 0 \\rightarrow 3\\\\
+    x < 0 \\rightarrow 4 - x\\end{cases}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x \\leq -2 \\rightarrow 4 \\cdot x\\\\
+    x > -2 \\rightarrow 3 - 2 \\cdot x\\end{cases}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x < 1 \\rightarrow 2 - x^2\\\\
+    x \\geq 1 \\rightarrow (x - 2)^2\\end{cases}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x > 3 \\rightarrow x^2\\\\
+    -2 \\leq x \\leq 3 \\rightarrow 4\\\\
+    x < -2 \\rightarrow 1 - x\\end{cases}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\begin{cases}x \\geq 1 \\rightarrow 1 - x\\\\
+    -1 < x < 1 \\rightarrow x^2 - 1\\\\
+    x \\leq -1 \\rightarrow -1 - x\\end{cases}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\sqrt{6 - x}$ kohta tee tabel selle funktsiooni graafiku punktide vähemalt nelja järjestatud paariga ja kasuta neid järjestatud paare tabelist visandamaks selle funktsiooni graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = x + 12) \\wedge (\\mathrm{g}(x) = 9 + 4 \\cdot x) \\rightarrow \\mathrm{f} + \\mathrm{g} = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = x + 12) \\wedge (\\mathrm{g}(x) = 9 + 4 \\cdot x) \\rightarrow (\\mathrm{f} - \\mathrm{g})(1) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = x + 12) \\wedge (\\mathrm{g}(x) = 9 + 4 \\cdot x) \\rightarrow (\\mathrm{f} \\cdot \\mathrm{g})(x) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = x + 12) \\wedge (\\mathrm{g}(x) = 9 + 4 \\cdot x) \\rightarrow \\frac{\\mathrm{f}}{\\mathrm{g}} = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = w^2 - 4 \\cdot w) \\wedge (\\mathrm{f}(w) = 2 + w^2) \\rightarrow (\\mathrm{h} - \\mathrm{f})(w) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = w^2 - 4 \\cdot w) \\wedge (\\mathrm{f}(w) = 2 + w^2) \\rightarrow (\\mathrm{f} - \\mathrm{h})(-4) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = w^2 - 4 \\cdot w) \\wedge (\\mathrm{f}(w) = 2 + w^2) \\rightarrow \\mathrm{f} \\cdot \\mathrm{h} = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = w^2 - 4 \\cdot w) \\wedge (\\mathrm{f}(w) = 2 + w^2) \\rightarrow (\\frac{\\mathrm{h}}{\\mathrm{f}})(w) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(x) = 6 \\cdot x - 1) \\wedge (\\mathrm{P}(x) = \\frac{1}{4 - x}) \\rightarrow (\\frac{\\mathrm{A}}{\\mathrm{P}})(x) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(x) = 6 \\cdot x - 1) \\wedge (\\mathrm{P}(x) = \\frac{1}{4 - x}) \\rightarrow (\\mathrm{A} + \\mathrm{P})(0) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(x) = 6 \\cdot x - 1) \\wedge (\\mathrm{P}(x) = \\frac{1}{4 - x}) \\rightarrow (\\mathrm{P} - \\mathrm{A})(-2) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(x) = 6 \\cdot x - 1) \\wedge (\\mathrm{P}(x) = \\frac{1}{4 - x}) \\rightarrow \\mathrm{A} \\cdot \\mathrm{P} = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(t) = 2 \\cdot t + 9) \\wedge (\\mathrm{g}(t) = 2 \\cdot t - 1) \\rightarrow (\\mathrm{f} \\cdot \\mathrm{g})(t) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(t) = 2 \\cdot t + 9) \\wedge (\\mathrm{g}(t) = 2 \\cdot t - 1) \\rightarrow \\mathrm{f}(\\mathrm{g}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(t) = 2 \\cdot t + 9) \\wedge (\\mathrm{g}(t) = 2 \\cdot t - 1) \\rightarrow \\mathrm{g}(\\mathrm{f}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(t) = 2 \\cdot t + 9) \\wedge (\\mathrm{g}(t) = 2 \\cdot t - 1) \\rightarrow \\mathrm{g}(\\mathrm{g}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(x) = x^2 + 1) \\wedge (\\mathrm{g}(x) = 6 - 4 \\cdot x) \\rightarrow \\mathrm{g}(\\mathrm{h}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(x) = x^2 + 1) \\wedge (\\mathrm{g}(x) = 6 - 4 \\cdot x) \\rightarrow \\mathrm{h}(\\mathrm{g}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(x) = x^2 + 1) \\wedge (\\mathrm{g}(x) = 6 - 4 \\cdot x) \\rightarrow \\mathrm{h}(\\mathrm{h}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(x) = x^2 + 1) \\wedge (\\mathrm{g}(x) = 6 - 4 \\cdot x) \\rightarrow (\\mathrm{g} \\cdot \\mathrm{h})(x) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(w) = 2 \\cdot w^2 + 9) \\wedge (\\mathrm{R}(w) = 1 - 2 \\cdot w - w^2) \\rightarrow (\\mathrm{A} \\cdot \\mathrm{R})(w) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(w) = 2 \\cdot w^2 + 9) \\wedge (\\mathrm{R}(w) = 1 - 2 \\cdot w - w^2) \\rightarrow \\mathrm{A}(\\mathrm{R}(w)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(w) = 2 \\cdot w^2 + 9) \\wedge (\\mathrm{R}(w) = 1 - 2 \\cdot w - w^2) \\rightarrow \\mathrm{R}(\\mathrm{A}(w)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{A}(w) = 2 \\cdot w^2 + 9) \\wedge (\\mathrm{R}(w) = 1 - 2 \\cdot w - w^2) \\rightarrow \\mathrm{A}(\\mathrm{A}(w)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = 9 \\cdot x^2 + 10 \\cdot x + 12) \\wedge (\\mathrm{g}(x) = 2) \\rightarrow \\mathrm{g}(\\mathrm{f}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = 9 \\cdot x^2 + 10 \\cdot x + 12) \\wedge (\\mathrm{g}(x) = 2) \\rightarrow \\mathrm{f}(\\mathrm{g}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = 9 \\cdot x^2 + 10 \\cdot x + 12) \\wedge (\\mathrm{g}(x) = 2) \\rightarrow \\mathrm{g}(\\mathrm{g}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = 9 \\cdot x^2 + 10 \\cdot x + 12) \\wedge (\\mathrm{g}(x) = 2) \\rightarrow (\\mathrm{f} \\cdot \\mathrm{g})(x) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{g}(t) = t + 1) \\wedge (\\mathrm{h}(t) = \\frac{2}{t - 3}) \\rightarrow (\\mathrm{g} \\cdot \\mathrm{h})(x) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{g}(t) = t + 1) \\wedge (\\mathrm{h}(t) = \\frac{2}{t - 3}) \\rightarrow \\mathrm{g}(\\mathrm{h}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{g}(t) = t + 1) \\wedge (\\mathrm{h}(t) = \\frac{2}{t - 3}) \\rightarrow \\mathrm{h}(\\mathrm{g}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{g}(t) = t + 1) \\wedge (\\mathrm{h}(t) = \\frac{2}{t - 3}) \\rightarrow \\mathrm{h}(\\mathrm{h}(t)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = \\frac{1}{2} \\cdot x - 3) \\wedge (\\mathrm{g}(x) = t \\geq 0 \\rightarrow 2 \\cdot x + 6) \\rightarrow \\mathrm{f}(\\mathrm{g}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{f}(x) = \\frac{1}{2} \\cdot x - 3) \\wedge (\\mathrm{g}(x) = t \\geq 0 \\rightarrow 2 \\cdot x + 6) \\rightarrow \\mathrm{g}(\\mathrm{f}(x)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = \\frac{1}{w - 3}) \\wedge (\\mathrm{f}(w) = \\frac{1 + 3 \\cdot w}{w}) \\rightarrow \\mathrm{h}(\\mathrm{f}(w)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$(\\mathrm{h}(w) = \\frac{1}{w - 3}) \\wedge (\\mathrm{f}(w) = \\frac{1 + 3 \\cdot w}{w}) \\rightarrow \\mathrm{f}(\\mathrm{h}(w)) = \\blank{5 \\cdot x + 21}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = 12 \\cdot x - 7 \\rightarrow \\mathrm{P}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = 7 \\cdot x \\rightarrow \\mathrm{g}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{h}(x) = \\frac{3}{4} - \\frac{9}{7} \\cdot x \\rightarrow \\mathrm{h}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{A}(x) = 4 - (x + 3)^5 \\rightarrow \\mathrm{A}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 2 \\cdot (1 - 4 \\cdot x)^3 + 1 \\rightarrow \\mathrm{f}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{P}(x) = \\sqrt[7]{5 - 8 \\cdot x} \\rightarrow \\mathrm{P}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = 1 + \\sqrt[3]{3 \\cdot x + 4} \\rightarrow \\mathrm{g}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{10 - 3 \\cdot x}{8 \\cdot x} \\rightarrow \\mathrm{f}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{g}(x) = \\frac{6 \\cdot x - 7}{4 + x} \\rightarrow \\mathrm{g}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = \\frac{3 - x}{9 - 7 \\cdot x} \\rightarrow \\mathrm{f}^{-1}(x) = \\blank{\\frac{x + 7}{12}}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -4 \\cdot x^2$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = (x - 6)^2 + 1$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = (x + 2)^2 - 4$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 3 \\cdot (x - 1)^2 + 12$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -6 \\cdot (x + 5)^2 + 54$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -(x - 7)^2 - 3$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 2 \\cdot (x + 3)^2 - 6$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 - 8$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -4 \\cdot x^2 - 1$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 - 2 \\cdot x + 5$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 - 16 \\cdot x + 55$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 4 \\cdot x^2 + 16 \\cdot x$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 + 10 \\cdot x + 25$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -2 \\cdot x^2 + 24 \\cdot x - 64$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = 3 \\cdot x^2 + 6 \\cdot x - 12$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -4 \\cdot x^2 + 12 \\cdot x - 9$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = -x^2 + 6 \\cdot x - 16$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = x^2 + 8 \\cdot x + 5$ kohta palun visanda graafik, mis peab sisaldama haripunkti, lõikepunkti ordinaatteljega, olemasolul lõikepunkte abstsissteljega ja vähemalt üht punkti kummalgi pool haripunkti."
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = x^2 + 4 \\cdot x = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = x^2 - 6 \\cdot x + 19 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = -x^2 + 2 \\cdot x + 6 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = 7 \\cdot x^2 + 56 \\cdot x + 111 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = 3 \\cdot x^2 - 60 \\cdot x + 306 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = 25 \\cdot x^2 + 10 \\cdot x + 1 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="$\\mathrm{f}(x) = a \\cdot (x - h)^2 + k \\rightarrow \\mathrm{f}(x) = -2 \\cdot x^2 - 16 \\cdot x - 18 = \\blank{(x + 2)^2 - 4}.$"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x + 5)^2}{4} + \\frac{(y - 2)^2}{9} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $(x - 4)^2 + \\frac{y^2}{16} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x + 1)^2}{25} + \\frac{(y + 6)^2}{4} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x - 3)^2}{5} + \\frac{(y + 1)^2}{12} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $9 \\cdot (x - 2)^2 + 4 \\cdot (y - 3)^2 = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x - 3)^2}{9} + 2 \\cdot (y + 4)^2 = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x - 4)^2}{9} + \\frac{(y - 1)^2}{9} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta $4 \\cdot x^2 - 16 \\cdot x + y^2 + 2 \\cdot y + 13 = 0$ ümber ellipsi valemi standardkujule!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta $x^2 + 6 \\cdot x + 4 \\cdot y^2 + 16 \\cdot y + 9 = 0$ ümber ellipsi valemi standardkujule!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Kirjuta $5 \\cdot x^2 + 10 \\cdot x + 3 \\cdot y^2 - 6 \\cdot y - 7 = 0$ ümber ellipsi valemi standardkujule!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $y = -2 \\cdot x + 7$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{f}(x) = |x + 4|$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{g}(x) = \\sqrt{x} - 5$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{g}(x) = \\mathrm{tan}(x + \\frac{\\pi}{3})$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{f}(x) = \\mathrm{sec}(x) + 2$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{h}(x) = |x + 2| - 4$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{Q}(x) = e^{-x - 3} + 6$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{V}(x) = \\sqrt{x - 6} + 3$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{g}(x) = \\mathrm{sin}(x + \\frac{\\pi}{6}) - 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{h}(x) = (x + 6)^2 - 8$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{W}(y) = (y + 5)^2 + 3$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{f}(y) = (y - 9)^2 - 2$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{f}(x) = (x - 1)^2 + 6$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{R}(x) = -\\mathrm{ln}(x)$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{g}(x) = \\mathrm{ln}(-x)$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{h}(x) = x^2 + 8 \\cdot x - 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{Y}(x) = -3 \\cdot x^2 - 6 \\cdot x + 5$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{f}(y) = -y^2 - 4 \\cdot y -2$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\mathrm{h}(y) = 2 \\cdot y^2 + 2 \\cdot y - 3$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $x^2 - 6 \\cdot x + y^2 + 8 \\cdot y + 24 = 0$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $x^2 + y^2 + 10 \\cdot y = -9$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x+4)^2}{25} + \\frac{(y + 2)^2}{25} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $x^2 - 2 \\cdot x + 4 \\cdot y^2 - 16 \\cdot y + 16 = 0$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(x + 6)^2}{4} + 16 \\cdot (y - 5)^2 = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $\\frac{(y - 1)^2}{25} - \\frac{(x - 3)^2}{4} = 1$ graafik!"
+  ),
+  list(
+    goal=1,
+    level=2,
+    task="Visanda $(x - 4)^2 - 9 \\cdot (y + 7)^2 = 1$ graafik!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa komajärgset kohta: $(\\mathrm{f}(x) = x^3 - 3 \\cdot x^2) \\wedge (P_x = 3) \\wedge$
+    \\begin{enumerate}
+      \\item $(Q = \\num{3,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{3,1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{3,01})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{3,001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{3,0001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{2,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{2,9})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{2,99})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{2,999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{2,9999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda $\\mathrm{f}(x)$ puutuja tõusu kohal $x = 3$.\\leavevmode\\
+    Kirjuta selle puutuja võrrand!
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa komajärgset kohta: $(\\mathrm{g}(x) = \\frac{x}{x^2 + 4}) \\wedge (P_x = 0) \\wedge$
+    \\begin{enumerate}
+      \\item $(Q = \\num{1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,01})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-0,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-0,1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-0,01})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-0,001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda $\\mathrm{g}(x)$ puutuja tõusu kohal $x = 0$.\\leavevmode\\
+    Kirjuta selle puutuja võrrand!
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa komajärgset kohta: $(\\mathrm{h}(x) = 2 - (x + 2)^2) \\wedge (P_x = -2) \\wedge$
+    \\begin{enumerate}
+      \\item $(Q = \\num{-2,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-2,1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-2,01})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-2,001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-2,001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1,5})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1,9})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1,99})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1,999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{-1,9999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda $\\mathrm{g}(x)$ puutuja tõusu kohal $x = -2$.\\leavevmode\\
+    Kirjuta selle puutuja võrrand!
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa komajärgset kohta: $(\\mathrm{P}(x) = e^{2 - 8 \\cdot x^2}) \\wedge (P_x = 0,5) \\wedge$
+    \\begin{enumerate}
+      \\item $(Q = \\num{1})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,51})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,501})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,5001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,50001})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,49})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,499})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,4999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+      \\item $(Q = \\num{0,49999})\\rightarrow m_{PQ}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda $\\mathrm{g}(x)$ puutuja tõusu kohal $x = 0,5$.\\leavevmode\\
+    Kirjuta selle puutuja võrrand!
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vilja kogus tünnis on arvutatav valemiga $(\\mathrm{V}(t) = \\frac{11 \\cdot t + 4}{t + 4})$. Arvuta täpsusega vähemalt kaheksa kohta pärast koma vilja koguse muudu keskmine määr tünnis ajavahemikus alates $t = 6$'st kuni järgnevate $t$ väärtusteni:
+    \\begin{enumerate}
+      \\item $(t = \\num{6,5})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{6,1})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{6,01})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{6,001})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{6,0001})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,5})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,9})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,99})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,999})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,9999})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda vilja ruumala muudu hetkemäära tünnis ajahetkes $t = 6$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Putukate populatsioon tuhandetes on arvutatav valemiga $(\\mathrm{P}(t) = 2 - \\frac{1}{\\pi} \\cdot \\mathrm{cos}(3 \\cdot \\pi \\cdot t) \\cdot \\mathrm{sin}(\\frac{\\pi \\cdot t}{2})$. Arvuta täpsusega vähemalt kaheksa kohta pärast koma putukate populatsiooni muudu keskmine määr ajavahemikus alates $t = 4$'st kuni järgnevate $t$ väärtusteni:
+    \\begin{enumerate}
+      \\item $(t = \\num{4,5})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,1})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,01})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,001})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,0001})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{3,5})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{3,9})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{3,99})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{3,999})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{3,9999})\\rightarrow \\overline{\\Delta(P)}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda putukate populatsiooni muudu hetkemäära ajahetkes $t = 4$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Akvaariumis oleva vee kogus on arvutatav valemiga $(\\mathrm{V}(t) = 8 \\cdot t^4 - t^2 + 7$. Arvuta täpsusega vähemalt kaheksa kohta pärast koma akvaariumis oleva vee muudu keskmine määr ajavahemikus alates $t = \\num{0,25}$'st kuni järgnevate $t$ väärtusteni:
+    \\begin{enumerate}
+      \\item $(t = \\num{1})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,5})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,251})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,2501})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,25001})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,1})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,249})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,2499})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+      \\item $(t = \\num{0,24999})\\rightarrow \\overline{\\Delta(V)}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda akvaariumis oleva vee koguse muudu hetkemäära ajahetkes $t = \\num{0,25}$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Sihitise asukoht on arvutatav valemiga $(\\mathrm{s}(t) = x^2 + \\frac{72}{x + 1}$. Arvuta täpsusega vähemalt kaheksa kohta pärast koma sihitise keskmine kiirus ajavahemikus alates $t = \\num{5}$'st kuni järgnevate $t$ väärtusteni:
+    \\begin{enumerate}
+      \\item $(t = \\num{5,5})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,1})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,01})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,001})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{5,0001})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,5})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,9})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,99})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,999})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{4,9999})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda sihitise hetkekiirust ajahetkes $t = \\num{5}$ ja tee kindlaks, kas sihitis liigub paremale (hetkekiirus on positiivne) või vasakule või ei liigu see sihitis üldse.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Sihitise asukoht on arvutatav valemiga $(\\mathrm{s}(t) = 2 \\cdot \\mathrm{cos}(4 \\cdot t - 8) - 7 \\cdot \\mathrm{sin}(t - 2)$. Pane tähele, et negatiivne asukoht tähendab asukohta nullasukohast vasakul. Arvuta täpsusega vähemalt kaheksa kohta pärast koma sihitise keskmine kiirus ajavahemikus alates $t = \\num{2}$'st kuni järgnevate $t$ väärtusteni:
+    \\begin{enumerate}
+      \\item $(t = \\num{2,5})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{2,1})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{2,01})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{2,001})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{2,0001})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{1,5})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{1,9})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{1,99})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{1,999})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+      \\item $(t = \\num{1,9999})\\rightarrow \\overline{v}=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda sihitise hetkekiirust ajahetkes $t = \\num{2}$ ja tee kindlaks, kas sihitis liigub paremale (hetkekiirus on positiivne) või vasakule või ei liigu see sihitis üldse.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Sihitise asukoht on arvutatav valemiga $(\\mathrm{s}(t) = t^2 - 10 \\cdot t + 11$. Pane tähele, et negatiivne asukoht tähendab asukohta nullasukohast vasakul. Tee kindlaks ajahetked, millal sihitise asukoht on $s = \\num{-5}$.
+    Eelneva põhjal hinda sihitise hetkekiirust nendes ajahetkedes!
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa kohta pärast koma: $\\mathrm{g}(x) = \\frac{x^2 + 6 \\cdot x + 9}{x^2 + 3 \\cdot x} \\rightarrow$
+    \\begin{enumerate}
+      \\item $\\mathrm{g}(\\num{-2,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-2,9})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-2,99})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-2,999})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-2,9999})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-3,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-3,1})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-3,01})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-3,001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{-3,0001})=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda: $\\mathrm{lim}_{x \\rightarrow -3}(\\mathrm{g}(x))$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa kohta pärast koma: $\\mathrm{f}(z) = \\frac{10 \\cdot z - 9 - z^2}{z^2 - 1} \\rightarrow$
+    \\begin{enumerate}
+      \\item $\\mathrm{f}(\\num{1,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{1,1})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{1,01})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{1,001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{1,0001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{0,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{0,9})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{0,99})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{0,999})=\\blank{8,12345678}.$
+      \\item $\\mathrm{f}(\\num{0,9999})=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda: $\\mathrm{lim}_{z \\rightarrow 1}(\\mathrm{f}(z))$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa kohta pärast koma: $\\mathrm{h}(t) = \\frac{2 - \\sqrt{4 + 2 \\cdot t}}{t} \\rightarrow$
+    \\begin{enumerate}
+      \\item $\\mathrm{h}(\\num{0,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{0,1})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{0,01})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{0,001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{0,0001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{-0,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{-0,1})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{-0,01})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{-0,001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{h}(\\num{-0,0001})=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda: $\\mathrm{lim}_{t \\rightarrow 0}(\\mathrm{h}(t))$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Vähemalt kaheksa kohta pärast koma: $\\mathrm{g}(\\Theta) = \\frac{\\mathrm{cos}(\\Theta - 4) - 1}{2 \\cdot \\Theta - 8} \\rightarrow$
+    \\begin{enumerate}
+      \\item $\\mathrm{g}(\\num{4,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{4,1})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{4,01})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{4,001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{4,0001})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{3,5})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{3,9})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{3,99})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{3,999})=\\blank{8,12345678}.$
+      \\item $\\mathrm{g}(\\num{3,9999})=\\blank{8,12345678}.$
+    \\end{enumerate}
+    Eelneva põhjal hinda: $\\mathrm{lim}_{\\Theta \\rightarrow 4}(\\mathrm{g}(\\Theta))$.
+    "
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-1) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -2$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-1) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -1$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-1) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 2$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-1) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 3$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-2) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -3$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-2) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -1$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-2) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 1$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-2) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 3$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-3) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -4$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-3) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = -2$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-3) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 1$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Joonisel \\@ref(fig:tasks-graph-continuity-3) oleva $\\mathrm{f}(x)$'i graafikule märgitud punkti $a = 4$ kohta tee kindlaks $\\mathrm{f}(a)$ ja $\\mathrm{lim}_{x \\rightarrow a}(\\mathrm{f}(x))$. Kui seda suurust pole, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Mida tähendab $\\mathrm{lim}_{x \\rightarrow 12}(\\mathrm{f}(x)) = 6$."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="$\\mathrm{lim}_{x \\rightarrow -7}(\\mathrm{f}(x)) = 18$. Kui võimalik, tee kindlaks $\\mathrm{f}(-7)$ väärtus! Kui see pole võimalik, selgita, miks."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kas on võimalik, et $\\mathrm{lim}_{x \\rightarrow 1}(\\mathrm{f}(x)) = -23$ ja $\\mathrm{f}(1) = 107$? Selgita!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Määra, kus on joonisel \\@ref(fig:tasks-graph-continuity-4) oleva $\\mathrm{f}(x)$'i graafik katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Määra, kus on joonisel \\@ref(fig:tasks-graph-continuity-1) oleva $\\mathrm{f}(x)$'i graafik katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Määra, kus on joonisel \\@ref(fig:tasks-graph-continuity-3) oleva $\\mathrm{f}(x)$'i graafik katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{f}(x) = \\frac{6 + 2 \\cdot x}{7 \\cdot x - 14}$ on pidev või katkev kohal $x = -3$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{f}(x) = \\frac{6 + 2 \\cdot x}{7 \\cdot x - 14}$ on pidev või katkev kohal $x = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{f}(x) = \\frac{6 + 2 \\cdot x}{7 \\cdot x - 14}$ on pidev või katkev kohal $x = 2$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{R}(y) = \\frac{2 \\cdot y}{y^2 - 25}$ on pidev või katkev kohal $y = -5$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{R}(y) = \\frac{2 \\cdot y}{y^2 - 25}$ on pidev või katkev kohal $y = -1$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{R}(y) = \\frac{2 \\cdot y}{y^2 - 25}$ on pidev või katkev kohal $y = 3$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(z) = \\frac{5 \\cdot z - 20}{z^2 - 12 \\cdot z}$ on pidev või katkev kohal $z = -1$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(z) = \\frac{5 \\cdot z - 20}{z^2 - 12 \\cdot z}$ on pidev või katkev kohal $z = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(z) = \\frac{5 \\cdot z - 20}{z^2 - 12 \\cdot z}$ on pidev või katkev kohal $z = 4$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{W}(x) = \\frac{2 + x}{x^2 + 6 \\cdot x - 7}$ on pidev või katkev kohal $x = -7$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{W}(x) = \\frac{2 + x}{x^2 + 6 \\cdot x - 7}$ on pidev või katkev kohal $x = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{W}(x) = \\frac{2 + x}{x^2 + 6 \\cdot x - 7}$ on pidev või katkev kohal $x = 1$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{h}(z) = \\begin{cases}z < -1 \\rightarrow 2 \\cdot z^2\\\\
+    z \\geq -1 \\rightarrow 4 \\cdot z + 6\\end{cases}$ on pidev või katkev kohal $x = -6$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{h}(z) = \\begin{cases}z < -1 \\rightarrow 2 \\cdot z^2\\\\
+    z \\geq -1 \\rightarrow 4 \\cdot z + 6\\end{cases}$ on pidev või katkev kohal $x = -1$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(z) = \\begin{cases}x < 0 \\rightarrow x + e^x\\\\
+    x \\geq 0 \\rightarrow x^2\\end{cases}$ on pidev või katkev kohal $x = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(z) = \\begin{cases}x < 0 \\rightarrow x + e^x\\\\
+    x \\geq 0 \\rightarrow x^2\\end{cases}$ on pidev või katkev kohal $x = 4$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{Z}(t) = \\begin{cases}t < 5 \\rightarrow 8\\\\
+    t \\geq 5 \\rightarrow 1 - 6 \\cdot t\\end{cases}$ on pidev või katkev kohal $t = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{Z}(t) = \\begin{cases}t < 5 \\rightarrow 8\\\\
+    t \\geq 5 \\rightarrow 1 - 6 \\cdot t\\end{cases}$ on pidev või katkev kohal $t = 5$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{h}(z) = \\begin{cases}x < -4 \\rightarrow z + 2\\\\
+    x = -4 \\rightarrow 0\\\\
+    z > -4 \\rightarrow 18 - z^2\\end{cases}$ on pidev või katkev kohal $z = -4$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{h}(z) = \\begin{cases}x < -4 \\rightarrow z + 2\\\\
+    x = -4 \\rightarrow 0\\\\
+    z > -4 \\rightarrow 18 - z^2\\end{cases}$ on pidev või katkev kohal $z = 2$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{f}(x) = \\begin{cases}x < 2 \\rightarrow 1 - x^2\\\\
+    x = 2 \\rightarrow -3\\\\
+    2 < x < 7 \\rightarrow 2 \\cdot x -7\\\\
+    x = 7 \\rightarrow 0\\\\
+    x > 7 \\rightarrow x^2\\end{cases}$ on pidev või katkev kohal $x = 2$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{f}(x) = \\begin{cases}x < 2 \\rightarrow 1 - x^2\\\\
+    x = 2 \\rightarrow -3\\\\
+    2 < x < 7 \\rightarrow 2 \\cdot x -7\\\\
+    x = 7 \\rightarrow 0\\\\
+    x > 7 \\rightarrow x^2\\end{cases}$ on pidev või katkev kohal $x = 7$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(w) = \\begin{cases}w < 0 \\rightarrow 3 \\cdot w\\\\
+    w = 0 \\rightarrow 0\\\\
+    0 < w < 8 \\rightarrow w + 6\\\\
+    w = 8 \\rightarrow 14\\\\
+    w > 8 \\rightarrow 22 - w\\end{cases}$$ on pidev või katkev kohal $w = 0$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Kasuta ainult piirväärtuse omadusi, ühepoolse piirväärtuse omadusi, kui vaja, ja pidevuse definitsiooni tegemaks kindlaks, kas funktsioon $\\mathrm{g}(w) = \\begin{cases}w < 0 \\rightarrow 3 \\cdot w\\\\
+    w = 0 \\rightarrow 0\\\\
+    0 < w < 8 \\rightarrow w + 6\\\\
+    w = 8 \\rightarrow 14\\\\
+    w > 8 \\rightarrow 22 - w\\end{cases}$$ on pidev või katkev kohal $w = 8$. Küsi selleks lehed õpetajalt!"
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{f}(x) = \\frac{11 - 2 \\cdot x}{2 \\cdot x^2 - 13 \\cdot x - 7}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{Q}(z) = \\frac{3}{2 \\cdot z^2 + 3 \\cdot z - 4}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{h}(t) = \\frac{t^2 - 1}{t^3 + 6 \\cdot t^2 + t}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{f}(z) = \\frac{4 \\cdot z + 1}{5 \\cdot \\mathrm{cos}(\\frac{z}{2}) + 1}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{h}(x) = \\frac{1 - x}{x \\cdot \\mathrm{sin}(x - 1)}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{f}(x) = \\frac{3}{4 \\cdot e^{x - 7} - 1}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{R}(w) = \\frac{e^{w^2 + 1}}{e^w - 2 \\cdot e^{1 - w}}$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{g}(x) = \\mathrm{cot}(4 \\cdot x)$ on katkev."
+  ),
+  list(
+    goal=2,
+    level=2,
+    task="Tee kindlaks, kas $\\mathrm{f}(t) = \\mathrm{sec}(\\sqrt{t})$ on katkev."
+  )
+)
+
+tasks <- c(
+  tasks
+)
+
+dataframe_tasks <- do.call(rbind, lapply(tasks, as.data.frame, stringsAsFactors = FALSE))
+number_goals <- length(goals)
+
+librarian::shelf(c(
+  "dplyr"
+))
+
+goals_in_use <- unique(dataframe_tasks$goal)
+number_of_goals_in_use <- length(goals_in_use)
+random_sample_df <- function(df, new_size) {
+  base_size <- floor(new_size / nrow(df))  
+  remaining <- new_size %% nrow(df)
+
+  repeated_df <- df[rep(1:nrow(df), each = base_size), , drop = FALSE]
+
+  extra_rows <- df[sample(1:nrow(df), remaining, replace = FALSE), , drop = FALSE]
+
+  final_df <- rbind(repeated_df, extra_rows)
+  final_df <- final_df[sample(1:nrow(final_df)), , drop = FALSE]
+
+  return(final_df)
+}
+
+number_of_tasks <- nrow(dataframe_tasks)
+df_segatud <- dataframe_tasks[sample(number_of_tasks), ]
+arranged_sampled_tasks <- arrange(df_segatud, goal, level)
+
+```
+
+## Ülesanded
+
+```{r label="list-of-tasks-for-finish-one-per-pupil", echo=FALSE, results='asis'}
+
+for (index_of_pupil in 1:length(names)) {
+  cat(paste("### Eksam: ", names[index_of_pupil], "\n\n", sep = ""))
+
+  cat("
+
+Kirjuta oma muljed sellest kursusest tudengile, kes järgmisena seda kursust läbima asub: 
+
+\\vspace{0.2\\textheight}
+
+Kirjuta oma nõuanded talle selle kursuse edukaks läbimiseks:
+
+\\vspace{0.2\\textheight}
+
+Tänane kuupäev on \\blank{2024-12-29}.
+
+Arutlemine kaastudengitega ja üldse kõrvaliste vahendite kasutamine ei ole lubatud, sest see rikuks testi. Et mõistaksin, kuidas sa mõtled, palun näita võimalusel lahenduskäik. Kirjutada võid kõikjale, kus on vaba ruumi.\n\n
+  ")
+  
+  achieved_idx <- which(data_frame[names[index_of_pupil], ] == 1)
+  if (length(achieved_idx) == 0) achieved_idx <- c(1) 
+  # cat(paste0("saavutuss", length(achieved_idx)))
+  # for (index in 1:length(achieved_idx)) {
+  # cat(paste0("eesmärk", goals[[as.integer(colnames(data_frame)[index])]]$goal))
+  # cat(paste0("jeesmärk", achieved_idx[index]))
+  # }
+  for (index in 1:length(achieved_idx)) {
+
+    cat(paste(
+      "**\\color[hsb]{0.",
+      goals[[goals_in_use[index]]]$level - 1,
+      ", 1, .75}{Õpiväljund:}** Õpilane ",
+      goals[[goals_in_use[index]]]$goal,
+      ".\n\n",
+      sep = ""
+    ))
+
+    for (index_of_levels in 1:6) {
+      tasks_goal_level <- subset(arranged_sampled_tasks, index_of_levels == `level` & goals_in_use[index] == `goal`)
+      number_of_tasks_goal_level <- nrow(tasks_goal_level)
+      if (number_of_tasks_goal_level > 0) {
+        number_of_chosen_tasks <- 3
+        indices_of_chosen_tasks <- sample(seq(1:number_of_tasks_goal_level), size = number_of_chosen_tasks, replace = FALSE)
+        for (index_of_chosen_task in 1:number_of_chosen_tasks) {
+          
+          cat(
+            "**",
+            index_of_levels,
+            ". taseme ülesanne:** ",
+            sep = ""
+          )
+          cat(tasks_goal_level[indices_of_chosen_tasks[index_of_chosen_task], ]$task, "\n\n", sep = "")
+        }
+      }
+
+    }
+
+   }
+
+  cat("\\newpage")
+}
+
+```
+
+## Joonised
+
+```{r label = "tasks-graph-continuity-1", echo=FALSE, fig.cap = "Katkev funktsioon 1."}
+include_external_graphics("rmd/image001.png")
+
+```
+
+```{r label = "tasks-graph-continuity-2", echo=FALSE, fig.cap = "Katkev funktsioon 2."}
+include_external_graphics("rmd/image002.png")
+
+```
+
+```{r label = "tasks-graph-continuity-3", echo=FALSE, fig.cap = "Katkev funktsioon 3."}
+include_external_graphics("rmd/image003.png")
+
+```
+
+```{r label = "tasks-graph-continuity-4", echo=FALSE, fig.cap = "Katkev funktsioon 4."}
+include_external_graphics("rmd/image004.gif")
+
+```

@@ -596,7 +596,7 @@ librarian::shelf(c(
   "dplyr"
 ))
 
-number_of_pupils <- 64
+number_of_pupils <- 0
 
 goals_in_use <- unique(dataframe_tasks$goal)
 # print(" dataframe_tasks ")
