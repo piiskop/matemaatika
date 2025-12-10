@@ -1644,7 +1644,7 @@ arranged_sampled_tasks <- arrange(df_segatud, goal, level)
 ```{r label="list-of-tasks-for-finish-one-per-pupil", echo=FALSE, results='asis'}
 
 for (index_of_pupil in 1:length(names)) {
-  cat(paste("### Eksam: ", names[index_of_pupil], "\n\n", sep = ""))
+  cat(paste("\n### Eksam: ", names[index_of_pupil], "\n\n", sep = ""))
 
   cat("
 
@@ -1701,7 +1701,7 @@ Arutlemine kaastudengitega ja üldse kõrvaliste vahendite kasutamine ei ole lub
 
    }
 
-  cat("\\newpage")
+  cat("\\cleardoublepage")
 }
 
 ```

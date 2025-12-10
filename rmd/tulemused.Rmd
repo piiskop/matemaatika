@@ -2083,23 +2083,23 @@ grades <- data.frame(
   	1, # Anna Levchenko
   	1, # Olesja Makarova
   	1, # Egor Mikhaylov
-  	NA, # Sergey Mikheev
+  	1, # Sergey Mikheev
   	1, # Ruslana Nekrakha
   	1, # Irina Nitsenko
-  	NA, # Nikita Norman
+  	1, # Nikita Norman
   	NA, # Angelina Pajuni
-  	NA, # Ivan Puzanov
+  	1, # Ivan Puzanov
   	NA, # Uuno Puus
   	1, # Azhar Ryskhan
   	NA, # Andrii Shnayder
   	1, # Vladislav Smirnov
-  	NA, # Mihhail Startsev
+  	1, # Mihhail Startsev
   	1, # Semjon Suhhotin
   	1, # Arina Šiškova
   	1, # Anton Zakharchenko
   	1, # Ivanna Zimina
   	1, # Marie Tombu
-  	NA # Max Välja
+  	1 # Max Välja
   ),
   c( # 2
   	1, # Daniil Bondar
