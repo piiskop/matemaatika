@@ -316,6 +316,10 @@ ggplot(df, aes(x, y)) +
 
 ```
 
+## Ruutvõrrandi lahendamise üldvalem
+
+$$a \cdot x^2 + b \cdot x + r = 0\\ \rightarrow x = \pm \sqrt{-\frac{r}{a}+ \left(\frac{b}{2 \cdot a}\right)^2} - \frac{b}{2 \cdot a}\\ = \pm \sqrt{\frac{-4 \cdot a \cdot r + b^2}{4 \cdot a^2}} - \frac{b}{2 \cdot a}\\ = \frac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot r}}{2 \cdot a}.$${#eq-quadratic-equation-solution}
+
 ## Haripunkti arvutamine 2
 
 Parabooli haripunkti abstsiss on vastava võrrandi lahendite (@eq-quadratic-equation-solution) aritmeetiline keskmine (@eq-vertex-abscissa).
