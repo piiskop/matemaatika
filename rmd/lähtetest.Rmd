@@ -596,7 +596,7 @@ librarian::shelf(c(
   "dplyr"
 ))
 
-number_of_pupils <- 0
+number_of_pupils <- 2
 
 goals_in_use <- unique(dataframe_tasks$goal)
 # print(" dataframe_tasks ")
@@ -630,41 +630,41 @@ arranged_sampled_tasks <- arrange(df_segatud, goal, level)
 
 
 
-# chosen_tasks <- c()
-# # })
-# 
-# 
-# for (index_of_task in 1:number_of_tasks) { # 1-512
-# 
-#   for (index in 1:number_of_goals_in_use) {
-#     tasks_of_goal <- subset(arranged_sampled_tasks, goals_in_use[index] == `goal`)
-#     levels_in_use <- unique(tasks_of_goal$level)
-#     number_of_levels_in_use <- length(levels_in_use)
-#     
-#     for (index_of_level in 1:number_of_levels_in_use) {
-#       tasks_at_level <- subset(tasks_of_goal, levels_in_use[index_of_level] == `level`)
-#       print(" number tasks_at_level ")
-#       print(goals_in_use[index])
-#       print(levels_in_use[index_of_level])
-#       print(nrow(tasks_at_level))
-#       print(" lõpp number tasks_at_level ")
-#       # sampled_tasks_at_level <- random_sample_df(df = tasks_at_level, new_size = number_of_pupils)
-#       if (number_of_tasks_at_level_per_pupil > nrow(tasks_at_level)) {
-#         number_of_chosen_tasks_at_level <- nrow(tasks_at_level)
-#       } else {
-#         number_of_chosen_tasks_at_level <- number_of_tasks_at_level_per_pupil
-#       }
-#       if (length(chosen_tasks) > 0) {
-#         chosen_tasks <- rbind(chosen_tasks, tasks_at_level[1:number_of_chosen_tasks_at_level, ])
-#       } else {
-#         chosen_tasks <- tasks_at_level[1:number_of_chosen_tasks_at_level, ]
-#       }
-#       
-#     }
-#       
-#   }
-#   
-# }
+chosen_tasks <- c()
+# })
+
+
+for (index_of_task in 1:number_of_tasks) { # 1-512
+
+  for (index in 1:number_of_goals_in_use) {
+    tasks_of_goal <- subset(arranged_sampled_tasks, goals_in_use[index] == `goal`)
+    levels_in_use <- unique(tasks_of_goal$level)
+    number_of_levels_in_use <- length(levels_in_use)
+
+    for (index_of_level in 1:number_of_levels_in_use) {
+      tasks_at_level <- subset(tasks_of_goal, levels_in_use[index_of_level] == `level`)
+      print(" number tasks_at_level ")
+      print(goals_in_use[index])
+      print(levels_in_use[index_of_level])
+      print(nrow(tasks_at_level))
+      print(" lõpp number tasks_at_level ")
+      # sampled_tasks_at_level <- random_sample_df(df = tasks_at_level, new_size = number_of_pupils)
+      if (number_of_tasks_at_level_per_pupil > nrow(tasks_at_level)) {
+        number_of_chosen_tasks_at_level <- nrow(tasks_at_level)
+      } else {
+        number_of_chosen_tasks_at_level <- number_of_tasks_at_level_per_pupil
+      }
+      if (length(chosen_tasks) > 0) {
+        chosen_tasks <- rbind(chosen_tasks, tasks_at_level[1:number_of_chosen_tasks_at_level, ])
+      } else {
+        chosen_tasks <- tasks_at_level[1:number_of_chosen_tasks_at_level, ]
+      }
+
+    }
+
+  }
+
+}
 # print(" unique sampled_tasks ")
 # print(unique(sampled_tasks$task[grep("c\\(", sampled_tasks$task)]))
 # print(" lõpp unique ")
@@ -763,117 +763,117 @@ for (index_of_pupil in 1:number_of_pupils) {
 
 ```{r label="tasks-many-per-pupil", echo=FALSE, results='asis'}
 # profvis({
-# 
-# for (index_of_pupil in 1:number_of_pupils) {
-#   cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
-# 
-#   for (index in 1:number_of_goals_in_use) {
-#     # print(" index_goals_in_use ")
-#     # print(index)
-#     # print(" lõpp index_goals_in_use ")
-#     cat(paste(
-#       "**\\color[hsb]{0.",
-#       goals[[goals_in_use[index]]]$level - 1,
-#       ", 1, .75}{Õpiväljund:}** Õpilane ",
-#       goals[[goals_in_use[index]]]$goal,
-#       ".\n\n", 
-#       sep = ""
-#     ))
-#     
-#     # tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
-#     # levels_in_use <- unique(x = tasks_of_goal$level)
-#     # number_of_levels_in_use <- length(levels_in_use)
-# 
-#     for (index_of_levels in 1:5) {
-#       tasks_goal_level <- subset(arranged_sampled_tasks, index_of_levels == `level` & goals_in_use[index] == `goal`)
-#       number_of_tasks_goal_level <- nrow(tasks_goal_level)
-#       if (number_of_tasks_goal_level > 1) {
-#         
-#         cat(
-#           "**",
-#           index_of_levels,
-#           ". taseme ülesanded:**\n\n",
-#           sep = ""
-#         )
-#       
-#         # cat(tasks_goal_level[index_of_pupil %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
-#       } else if (number_of_tasks_goal_level > 0) {
-#         
-#         cat(
-#           "**",
-#           index_of_levels,
-#           ". taseme ülesanne:** ",
-#           sep = ""
-#         )
-#         
-#       }
-#       
-#       if (number_of_tasks_goal_level > 0) {
-#         max_number_of_tasks <- 8 - 1
-#         # cat("\\begin{enumerate}[label=\\alph*.]\n")
-#         for (index_of_task_goal_level in 0:max_number_of_tasks) {
-#           cat(index_of_pupil, "-", index, "-", index_of_levels, "-", index_of_task_goal_level, ". ", tasks_goal_level[(index_of_pupil + index_of_task_goal_level) %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
-#         }
-#         # cat("\\end{enumerate}\n")
-#       }
-# 
-#       # tasks_at_level <- subset(
-#       #   tasks_of_goal,
-#       #   levels_in_use[index_of_levels] == `level`
-#       # )
-#     }
-# 
-#   }
-# 
-# }
+
+for (index_of_pupil in 1:number_of_pupils) {
+  cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
+
+  for (index in 1:number_of_goals_in_use) {
+    # print(" index_goals_in_use ")
+    # print(index)
+    # print(" lõpp index_goals_in_use ")
+    cat(paste(
+      "**\\color[hsb]{0.",
+      goals[[goals_in_use[index]]]$level - 1,
+      ", 1, .75}{Õpiväljund:}** Õpilane ",
+      goals[[goals_in_use[index]]]$goal,
+      ".\n\n",
+      sep = ""
+    ))
+
+    # tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
+    # levels_in_use <- unique(x = tasks_of_goal$level)
+    # number_of_levels_in_use <- length(levels_in_use)
+
+    for (index_of_levels in 1:5) {
+      tasks_goal_level <- subset(arranged_sampled_tasks, index_of_levels == `level` & goals_in_use[index] == `goal`)
+      number_of_tasks_goal_level <- nrow(tasks_goal_level)
+      if (number_of_tasks_goal_level > 1) {
+
+        cat(
+          "**",
+          index_of_levels,
+          ". taseme ülesanded:**\n\n",
+          sep = ""
+        )
+
+        # cat(tasks_goal_level[index_of_pupil %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
+      } else if (number_of_tasks_goal_level > 0) {
+
+        cat(
+          "**",
+          index_of_levels,
+          ". taseme ülesanne:** ",
+          sep = ""
+        )
+
+      }
+
+      if (number_of_tasks_goal_level > 0) {
+        max_number_of_tasks <- 8 - 1
+        # cat("\\begin{enumerate}[label=\\alph*.]\n")
+        for (index_of_task_goal_level in 0:max_number_of_tasks) {
+          cat(index_of_pupil, "-", index, "-", index_of_levels, "-", index_of_task_goal_level, ". ", tasks_goal_level[(index_of_pupil + index_of_task_goal_level) %% number_of_tasks_goal_level + 1, ]$task, "\n\n", sep = "")
+        }
+        # cat("\\end{enumerate}\n")
+      }
+
+      # tasks_at_level <- subset(
+      #   tasks_of_goal,
+      #   levels_in_use[index_of_levels] == `level`
+      # )
+    }
+
+  }
+
+}
 # })
-# current_pupil <- 1
-# 
-# for (index_of_pupil in 1:number_of_pupils) {
-#   cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
-# 
-#   for (index in 1:number_of_goals_in_use) {
-#     
-#     cat(paste(
-#       "**\\color[hsb]{0.",
-#       goals[[goals_in_use[index]]]$level - 1,
-#       ", 1, 1}{Õpiväljund:}** Õpilane ",
-#       goals[[goals_in_use[index]]]$goal,
-#       ".\n\n", 
-#       sep = ""
-#     ))
-# 
-#     tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
-#     levels_in_use <- unique(x = tasks_of_goal$level)
-#     number_of_levels_in_use <- length(levels_in_use)
-# 
-#     for (index_of_levels in 1:number_of_levels_in_use) {
-#           
-#       cat(
-#         "**",
-#         levels_in_use[index_of_levels],
-#         ". taseme ülesanded:**\n\n ",
-#         sep = ""
-#       )
-# 
-#       tasks_at_level <- subset(
-#         tasks_of_goal,
-#         levels_in_use[index_of_levels] == `level`
-#       )
-#       
-#       number_of_tasks_at_level <- nrow(tasks_at_level)
-#       last_task_for_pupil <- current_pupil + number_of_tasks_at_level_per_pupil - 1
-#       
-#       for (index_of_task in current_pupil:last_task_for_pupil) {
-#         cat(index_of_task, ". ", tasks_at_level[index_of_task, ]$task, "\n\n", sep = "")
-#       }
-#       
-#       current_pupil <- current_pupil + number_of_tasks_at_level_per_pupil
-#     }
-# 
-#   }
-# 
-# }
+current_pupil <- 1
+
+for (index_of_pupil in 1:number_of_pupils) {
+  cat(paste("### Test: ", index_of_pupil, ". õpilane\n\n", sep = ""))
+
+  for (index in 1:number_of_goals_in_use) {
+
+    cat(paste(
+      "**\\color[hsb]{0.",
+      goals[[goals_in_use[index]]]$level - 1,
+      ", 1, 1}{Õpiväljund:}** Õpilane ",
+      goals[[goals_in_use[index]]]$goal,
+      ".\n\n",
+      sep = ""
+    ))
+
+    tasks_of_goal <- subset(chosen_tasks, goals_in_use[index] == `goal`)
+    levels_in_use <- unique(x = tasks_of_goal$level)
+    number_of_levels_in_use <- length(levels_in_use)
+
+    for (index_of_levels in 1:number_of_levels_in_use) {
+
+      cat(
+        "**",
+        levels_in_use[index_of_levels],
+        ". taseme ülesanded:**\n\n ",
+        sep = ""
+      )
+
+      tasks_at_level <- subset(
+        tasks_of_goal,
+        levels_in_use[index_of_levels] == `level`
+      )
+
+      number_of_tasks_at_level <- nrow(tasks_at_level)
+      last_task_for_pupil <- current_pupil + number_of_tasks_at_level_per_pupil - 1
+
+      for (index_of_task in current_pupil:last_task_for_pupil) {
+        cat(index_of_task, ". ", tasks_at_level[index_of_task, ]$task, "\n\n", sep = "")
+      }
+
+      current_pupil <- current_pupil + number_of_tasks_at_level_per_pupil
+    }
+
+  }
+
+}
 
 ```
 

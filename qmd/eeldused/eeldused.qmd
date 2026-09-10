@@ -1172,3 +1172,14 @@ ggplot(df, aes(x, y)) +
 ```
 
 [Matemaatika](/../../)
+
+<!-- algarv kuni lineaarvõrrandi ülesanne 2 1,5 h -->
+<!-- lineaarvõrrandi ülesanne 3 kuni ruutvõrrand juurimisega 4 h 55 minutit -->
+<!-- täisruudu tekitamine 4,5 h -->
+<!-- ruutvõrrandi lahendamise üldvalem 2 h -->
+<!-- graafiku punktid, lõikepunktid telgedega, funktsioonid pöördfunktsioonita, parabooli esimene ülesanne 2 h 20 minutit -->
+<!-- parabooli esimese ploki kaks viimast ülesannet, haripunkti arvutamine, parabooli teise ploki esimene ülesanne 2 h -->
+<!-- funktsioonide 3.4 ülesanded 1 h 10 minutit -->
+<!-- parabooli teise ploki ülejäänud ülesanded, ruutfunktsiooni vormi ülesanded 1 h 40 minutit -->
+<!-- iseseisvaks lahendamiseks jäetud ülesanded ruutfunktsiooni graafiku visandamise ja teisendamise kohta 1 h 55 minutit -->
+<!-- pöördfunktsioon õpilase näidisülesandega koos asümptootide tuletamisega ning slaididelt esimese ülesande lahendamiseni ilma kontrollita 2 h -->

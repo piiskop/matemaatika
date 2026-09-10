@@ -60,24 +60,62 @@ library(librarian)
 #' This function displays external graphics by making the appropriate conversion aforehead.
 #' 
 #' @param path the path to the image file
-include_external_graphics = function(path) {
-
-  if (knitr::is_latex_output() && ("pdf" != xfun::file_ext(path))) {
-    output = xfun::with_ext(path, 'pdf')
+include_external_graphics = function(path,
+                                     landscape = FALSE,
+                                     caption = NULL,
+                                     width = "0.95\\linewidth",
+                                     height = "0.85\\textheight") {
+  
+  output <- path
+  
+  if (knitr::is_latex_output()) {
+    pdf_candidate <- xfun::with_ext(path, "pdf")
     
-    if ("svg" == xfun::file_ext(path)) {
-      system2('rsvg-convert', c('-f', 'pdf', '-a', '-o', shQuote(c(output, path))))
-    } else {
-      system(paste('gm convert ', path, ' ', output), intern = FALSE, ignore.stdout = FALSE, ignore.stderr = FALSE, wait = TRUE) # graphicsmagick
+    # Kui sama nimega PDF on olemas, kasuta seda.
+    # See on Mermaid diagrammide puhul tähtis.
+    if (xfun::file_ext(path) != "pdf" && file.exists(pdf_candidate)) {
+      output <- pdf_candidate
+    } else if (xfun::file_ext(path) != "pdf") {
+      output <- pdf_candidate
+      
+      if (xfun::file_ext(path) == "svg") {
+        system2(
+          "rsvg-convert",
+          c("-f", "pdf", "-a", "-o", shQuote(output), shQuote(path))
+        )
+      } else {
+        system(
+          paste("gm convert", shQuote(path), shQuote(output)),
+          intern = FALSE,
+          ignore.stdout = FALSE,
+          ignore.stderr = FALSE,
+          wait = TRUE
+        )
+      }
     }
+  }
+  
+  if (knitr::is_latex_output() && landscape) {
+    tex <- c(
+      "\\begin{landscape}",
+      "\\begin{figure}[p]",
+      "\\centering",
+      sprintf(
+        "\\includegraphics[width=%s,height=%s,keepaspectratio]{%s}",
+        width,
+        height,
+        output
+      ),
+      if (!is.null(caption)) sprintf("\\caption{%s}", caption),
+      "\\end{figure}",
+      "\\end{landscape}"
+    )
     
-  } else {
-    output = path
+    return(knitr::asis_output(paste(tex, collapse = "\n")))
   }
   
   knitr::include_graphics(output)
 }
-
 #' This function creates and displays a table.
 #' 
 #' @param table the data frame or matrix
@@ -230,3 +268,53 @@ render_color <- function(color, text) {
 # Sissejuhatus {-}
 
 Palun vaata tabelist \@ref(tab:achievements), millises teemas on sinule märgitud *NA*, misjärel suundu [eelõpiväljundite slaidile](http://matemaatika.ons.ee/qmd/eeldused/eeldused.html#/eelsihtide-saavutamine-1), leia selle teema õppeallikad ja asu õppima! Kui õpiväljundi kohta on märgitud ülaindeks, siis liigu hiirekursoriga sellele, misjärel ilmub modaalaken, kus sees on linke, kuhu vajutada. Kui õpiväljundi kohta pole märgitud ülaindeksit, siis leiad vastava teema faili [Moodle'st](https://moodle.ut.ee/course/section.php?id=247629).
+
+```{r label = "relations", echo=FALSE, fig.cap = "Seosed."}
+name_of_file_of_relations <- "rmd/relations."
+mmd_file <- paste0(name_of_file_of_relations, "mmd")
+svg_file <- paste0(name_of_file_of_relations, "svg")
+pdf_file <- paste0(name_of_file_of_relations, "pdf")
+
+mmdc <- "./node_modules/.bin/mmdc"
+puppeteer_config <- "puppeteer-config.json"
+
+status_svg <- system2(
+  mmdc,
+  c(
+    "-i", mmd_file,
+    "-o", svg_file,
+    "-p", puppeteer_config,
+    "-b", "transparent",
+    "-w", "1600",
+    "-H", "1200"
+  )
+)
+
+if (!identical(status_svg, 0L)) {
+  stop("SVG genereerimine ebaõnnestus.")
+}
+
+status_pdf <- system2(
+  mmdc,
+  c(
+    "-i", mmd_file,
+    "-o", pdf_file,
+    "-p", puppeteer_config,
+    "-b", "transparent",
+    "-w", "2200",
+    "-H", "1200",
+    "--pdfFit"
+  )
+)
+
+if (!identical(status_pdf, 0L)) {
+  stop("PDF genereerimine ebaõnnestus.")
+}
+
+include_external_graphics(
+  "rmd/relations.svg",
+  landscape = TRUE,
+  caption = "Seosed."
+)
+
+```

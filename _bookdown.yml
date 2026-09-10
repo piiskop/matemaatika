@@ -1,11 +1,11 @@
-book_filename: "eksam"
+book_filename: "matemaatika"
 new_session: false
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
-  "rmd/hindamine.Rmd",
-  "rmd/lähtetest.Rmd",
-  "rmd/tulemused.Rmd",
-  "rmd/suubetest.Rmd",
+  # "rmd/hindamine.Rmd",
+  # "rmd/lähtetest.Rmd",
+  # "rmd/tulemused.Rmd",
+  # "rmd/suubetest.Rmd",
   "references.Rmd"
 ]

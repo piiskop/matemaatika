@@ -1,0 +1,65 @@
+flowchart LR
+
+%% Aritmeetiline eeldustee
+loendamine --> arv
+arv --> number
+number --> arvusüsteem
+
+korrutamine --> jagamine
+
+hulk --> arvuhulk
+arvusüsteem --> arvuhulk
+
+
+jagamine --> algarv
+algarv --> factoringIntoPrimes[tegurdamine algarvudeks]
+
+dividingIntegers --> ratsionaalarv
+arvuhulk --> naturaalarv
+naturaalarv --> täisarv
+täisarv --> addingIntegers[täisarvude liitmine]
+addingIntegers --> multiplyingIntegers[täisarvude korrutamine]
+multiplyingIntegers --> dividingIntegers[täisarvude jagamine]
+naturaalarv --> algarv
+ratsionaalarv --> irratsionaalarv
+irratsionaalarv --> reaalarv
+
+multiplyingOnes --> eesliited
+multiplyingOnes --> astendamine
+
+arvusüsteem --> ümardamine
+ümardamine --> tüvenumbrid
+
+%% Mõõtmise ja ühikute eeldustee
+suurus --> ühik
+suurus --> mõõde
+mõõde --> mõõtmeanalüüs
+ühik --> unitRelations[ühikutevahelised seosed]
+jagamine --> unitRelations
+mõõtmeanalüüs --> SI
+unitRelations --> SI[Système Internationale]
+
+liitmine --> addingValuesOfVariables[muutujate väärtuste liitmine]
+addingValuesOfVariables --> gatheringSimilarTerms[sarnaste üksliikmete koondamine]
+
+korrutamine --> valueOfQuantity[suuruse väärtus]
+ühik --> valueOfQuantity
+
+korrutamine --> multiplyingValuesOfVariables[muutujate väärtuste korrutamine]
+
+addingValuesOfVariables --> multiplyingMultiterms[hulkliikmete korrutamine]
+multiplyingValuesOfVariables --> multiplyingMultiterms
+
+%% harija
+
+%% fundamentaalsed loodusteadused matemaatiliselt
+  %% H spekter
+  %% aatomi ehitus
+  %% voltimine
+  %% CanSat
+  %% rakett
+  %% pimekamber
+%% mehaanika
+  %% 
+%% looduseuurimine
+%% keemia

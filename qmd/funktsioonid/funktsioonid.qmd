@@ -255,27 +255,21 @@ $$\mathrm{f}^{-1}(x) \neq \frac{1}{\mathrm{f}(x)}.$${#eq-inverse-function-not-re
 
 $$\mathrm{f}(x) = x + 1.$$
 
-1.  Vaheta kõikjal omavahel sisend ja väljund (@exm-inverting-function-replacing)!
+1.  Pane sisendi asemele pöördväljund ja väljundi asemele sisend (@exm-inverting-function-replacing)!
     
     ::: {#exm-inverting-function-replacing}
-    $$x = \mathrm{f}(x) + 1.$$
+    $$x = \mathrm{f}^{-1}(x) + 1.$$
     :::
 
-2.  Lahenda võrrand uue tundmatu suhtes (@exm-inverting-function-solving)!
+2.  Lahenda võrrand uue sisendi suhtes (@exm-inverting-function-solving)!
     
     ::: {#exm-inverting-function-solving}
-    $$\mathrm{f}(x) = x - 1.$$
-    :::
-
-## Pöördfunktsiooni arvutamine 3-4
-
-3.  Asenda väljund pöördväljundiga (@exm-inverting-function-designating)!
-    
-    ::: {#exm-inverting-function-designating}
     $$\mathrm{f}^{-1}(x) = x - 1.$$
     :::
 
-4.  Kontrolli, et funktsiooni ja pöördfunktsiooni liitfunktsioon võrduks sisendiga kumbagi pidi (@exm-inverting-function-checking)!
+## Pöördfunktsiooni arvutamine 3
+
+3.  Kontrolli, et funktsiooni ja pöördfunktsiooni liitfunktsioon võrduks sisendiga kumbagi pidi (@exm-inverting-function-checking)!
     
     ::: {#exm-inverting-function-checking}
     $$\mathrm{f}^{-1}(\mathrm{f}(x)) = (x + 1) - 1 = x.$$

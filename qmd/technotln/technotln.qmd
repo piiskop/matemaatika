@@ -1,0 +1,257 @@
+---
+author:
+  - name: 'peacecop kalmer:'
+bibliography: technotln.bib
+csl: ../../apa-numeric-superscript-brackets.csl
+title: |
+    | Matemaatika
+    | Tallinna
+    | Tehnoloogiakolledžis
+output-file: technotln.html
+format:
+  revealjs:
+    hash: true
+    incremental: false
+    multiplex:
+      url: 'http://manual-for-rstudio.ons.ee:1948/'
+      secret: "16759825730498538629"
+      socketId: "f3edf0ff0d09982e"
+language: ../et.yml
+crossref: 
+  exm-prefix: näide
+  exm-title: Näide
+  exr-prefix: ülesanne
+  exr-title: Ülesanne
+  fig-prefix: joonis
+  
+---
+
+## Nimed
+
+nimede mäng
+
+## Õpetaja
+
+e-portfoolio[@_2025_sissejuhatus]
+
+## Õpiväljundid
+
+```{r label="preamble"}
+
+#' This function displays external graphics by making the appropriate conversion aforehead.
+#' 
+#' @param path the path to the image file
+include_external_graphics = function(path,
+                                     landscape = FALSE,
+                                     caption = NULL,
+                                     width = "0.95\\linewidth",
+                                     height = "0.85\\textheight") {
+  
+  output <- path
+  
+  if (knitr::is_latex_output()) {
+    pdf_candidate <- xfun::with_ext(path, "pdf")
+    
+    # Kui sama nimega PDF on olemas, kasuta seda.
+    # See on Mermaid diagrammide puhul tähtis.
+    if (xfun::file_ext(path) != "pdf" && file.exists(pdf_candidate)) {
+      output <- pdf_candidate
+    } else if (xfun::file_ext(path) != "pdf") {
+      output <- pdf_candidate
+      
+      if (xfun::file_ext(path) == "svg") {
+        system2(
+          "rsvg-convert",
+          c("-f", "pdf", "-a", "-o", shQuote(output), shQuote(path))
+        )
+      } else {
+        system(
+          paste("gm convert", shQuote(path), shQuote(output)),
+          intern = FALSE,
+          ignore.stdout = FALSE,
+          ignore.stderr = FALSE,
+          wait = TRUE
+        )
+      }
+    }
+  }
+  
+  if (knitr::is_latex_output() && landscape) {
+    tex <- c(
+      "\\begin{landscape}",
+      "\\begin{figure}[p]",
+      "\\centering",
+      sprintf(
+        "\\includegraphics[width=%s,height=%s,keepaspectratio]{%s}",
+        width,
+        height,
+        output
+      ),
+      if (!is.null(caption)) sprintf("\\caption{%s}", caption),
+      "\\end{figure}",
+      "\\end{landscape}"
+    )
+    
+    return(knitr::asis_output(paste(tex, collapse = "\n")))
+  }
+  
+  knitr::include_graphics(output)
+}
+
+```
+
+```{r label = "relations", echo=FALSE, fig.cap = "Seosed."}
+name_of_file_of_relations <- "../../rmd/relations."
+mmd_file <- paste0(name_of_file_of_relations, "mmd")
+svg_file <- paste0(name_of_file_of_relations, "svg")
+pdf_file <- paste0(name_of_file_of_relations, "pdf")
+
+mmdc <- "../../node_modules/.bin/mmdc"
+puppeteer_config <- "../../puppeteer-config.json"
+
+status_svg <- system2(
+  mmdc,
+  c(
+    "-i", mmd_file,
+    "-o", svg_file,
+    "-p", puppeteer_config,
+    "-b", "transparent",
+    "-w", "1600",
+    "-H", "1200"
+  )
+)
+
+if (!identical(status_svg, 0L)) {
+  stop("SVG genereerimine ebaõnnestus.")
+}
+
+status_pdf <- system2(
+  mmdc,
+  c(
+    "-i", mmd_file,
+    "-o", pdf_file,
+    "-p", puppeteer_config,
+    "-b", "transparent",
+    "-w", "2200",
+    "-H", "1200",
+    "--pdfFit"
+  )
+)
+
+if (!identical(status_pdf, 0L)) {
+  stop("PDF genereerimine ebaõnnestus.")
+}
+
+include_external_graphics(
+  "../../rmd/relations.svg",
+  landscape = TRUE,
+  caption = "Seosed."
+)
+
+invisible(file.copy(
+  svg_file,
+  "../../_book/rmd/relations.svg",
+  overwrite = TRUE
+))
+
+```
+
+## Õppeaeg
+
+Esimene nädal: lähtetaseme test ja õpe.
+
+Teine ja kolmas nädal: õpe.
+
+Neljas nädal: õpe ja kokkuvõttev test.
+
+Viies kuni kaheksas nädal: õpe.
+
+Üheksas nädal: õpe ja kokkuvõttev test.
+
+## Hindamine: lähtetest
+
+1. Lähtetest, et me teaksime, mida sa oskad, tead, mäletad.
+
+2. Lähtetesti tulemuste põhjal individuaalne õpijärg.
+
+## Õppeprotsess
+
+Sama järjega õpilased õpivad koos sammhaaval iga õpiväljundi suunas täites kõik oma lüngad teadmistes-oskustes:
+
+1. Selgitan teooriat.
+
+2. Väikese variatsiooniga harjutusülesanded.
+
+3. Suure variatsiooniga harjutusülesanded.
+
+4. Sulandsortimine.
+
+Keelatud on kõik abivahendid, välja arvatud need, mis on minu poolt ekstra lubatud.
+
+## Hindamine: sulandsortimine
+
+1. Kaks õpilast, kel harjutusülesanded sooritatud, lahendavad üheaegselt sama ülesannet.
+
+2. Kiirem õige lahenduse esitaja võidab. Moodustub kahene edetabel.
+
+3. Võrreldakse kõiki moodustunud edetabeleid omavahel samamoodi paarikaupa võisteldes, kuni meil on selle õpiväljundi kohta lõplik edetabel.
+
+4. Lõplikku edetabelisse mitte viimasena paigutunud õpilane saab teema kohta hindeks *5*.
+
+5. Edetabeli viimane õpilane saab eritoetust, edetabeli esimestelt on mõistlik nõu küsida.
+
+## Hindamine: kokkuvõttev hindamine
+
+- *MathCityMap*iga[@mathcitymap]
+
+- välistingimustes
+
+- nutitelefoniga
+
+- rühmas
+
+- igasuguse ilmaga.
+
+## Hindamine: osakaalud
+
+- õppesessiooni väline lõpunilahendamine 10 %,
+
+- sulandsortimise hinded 30 %:
+
+  - ainult kohapeal,
+  
+  - igas õppepaaris vaja vähemalt üht hinnet, muidu *X*,
+
+- vahekokkuvõtete hinded 60 %
+
+kursuse hinnet.
+
+## Vahendid
+
+- *A4*-vihik, ruuduline,
+
+- kirjutusvahend,
+
+- vastavas osas joonestusvahendid,
+
+- vastavas osas kalkulaator.
+
+## Õppimise järgud
+
+1. Uue teabe vastuvõtmine.
+
+2. Uue teabe kasutamine.
+
+3. Õpetamise ettevalmistamine.
+
+4. Õpetamine.
+
+## Välised allikad
+
+```{=tex}
+\hyphenpenalty=10000
+\fontspec{Symbola}
+
+```
+
+[Matemaatika](/../../)
